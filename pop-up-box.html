@@ -1,0 +1,245 @@
+<!DOCTYPE html><!--
+by todorokiscute.tumblr.com
+--><html>
+<head>
+<title>My First Pop Up Box</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+ 
+</head>
+<style>
+*{
+box-sizing: border-box;
+cursor:url(https://i.imgur.com/fxqyPPr.png),auto;
+}
+a:hover{
+cursor:url(https://i.imgur.com/0Me0mof.png),progress!important;
+}
+
+body{
+margin:0;
+font:1em/1.8 'Roboto';
+background:#ffefff;
+}
+
+img{
+display:block;
+max-width:100%;
+height:auto;
+}
+h1, h2{
+margin:0;
+font-weight:100;
+font-family:'Roboto Condensed';
+color:#bdc2e8;
+text-align:center;
+font-size:1.6em;
+}
+h2{
+color:#ffd198;
+font-size:.1.5em;
+}
+p{
+margin-block-start:0;
+margin-block-end:.5em;
+}
+
+.content{
+  width:80%;
+  margin:2em auto;
+}
+.box{
+
+background:white;
+max-width:500px;
+padding:1em;
+margin:auto;
+text-align:justify;
+color:#444;
+}
+ .cat-1{
+   width:150px;
+   height:150px;
+   object-fit:cover;
+   float:left;
+   margin-right:.8em;
+   border-radius:4px;
+ }
+ .cat-2{
+   width:150px;
+   height:150px;
+   object-fit:cover;
+   float:right;
+   margin-left:.8em;
+   border-radius:4px;
+ }
+.popup-button{
+  border:none;
+  outline:none;
+  background:#faa2c1;
+padding:.3em .6em;
+font-family:'Roboto Condensed';
+  display:block;
+  margin:auto;
+  cursor:url(https://i.imgur.com/0Me0mof.png),progress!important;
+  font-size:1em;
+}
+
+.popup-content{
+ 
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgb(230, 230, 250, 0.8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+.popup-box{
+  width:80%;
+  background:white;
+  max-width:500px;
+  height:75vh;
+  padding:1em;
+}
+.popup-body{
+  padding:1em;
+  max-width:500px;
+  height:70vh;
+  overflow:scroll;
+
+  text-align:justify;
+}
+.popup-close{
+  float:right;
+  margin-top:-2.3em;
+    margin-right:-2em;
+--size:25px;
+width:var(--size);
+height:var(--size);
+background:pink;
+display:flex;
+justify-content:center;
+align-items:center;
+ padding:1em;
+cursor:url(https://i.imgur.com/0Me0mof.png),progress!important;
+}
+
+.popup{
+  display:none;
+}
+
+::-webkit-scrollbar{
+width:8px;
+height:0;
+background:#ffefff;
+}
+::-webkit-scrollbar-thumb{
+background:#f5c6b6;
+}
+div#qTip {
+display: none;  
+position: absolute; 
+font-family:'Roboto Condensed';
+z-index: 1000;  
+background:#fff;
+color: #444;
+border:1px solid #ddd;
+font-size: .7em;
+padding: .3em;
+margin-top:-40px;  
+margin-left:-120px;
+}
+.credits{
+position:fixed;
+bottom:.6em;
+right:.6em;
+}
+.credits img{
+width:16px;
+height:16px;
+object-fit:cover;
+cursor:url(https://i.imgur.com/0Me0mof.png),progress!important;
+}
+@media(max-width:400px){
+ .cat-1,
+ .cat-2{
+   float:none;
+   width:100%;
+   margin:0;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+ <div class="content">
+
+<div class="box">
+ <img class="cat-1" src="https://i.imgur.com/ZB0hIk4.gif"/>
+ <h1>My first pop up box yeass</h1>
+<p>Cat ipsum dolor sit amet, ab yet aut or dolores. Aspernatur cupidatat. Occaecat illum yet veritatis molestiae. Sequi eos
+aliqua and do, mollit so minim. Dolor autem. Culpa. Quae numquam consequatur and lorem. Consequatur ipsum. Nostrum consectetur
+commodi aliqua, cupidatat so et. </p>
+<p>Cat ipsum dolor sit amet, ab yet aut or dolores. Aspernatur cupidatat. Occaecat illum yet veritatis molestiae. Sequi eos
+	aliqua and do, mollit so minim. Dolor autem. Culpa. Quae numquam consequatur and lorem. Consequatur ipsum. Nostrum consectetur
+	commodi aliqua, cupidatat so et. </p> 
+<button class="popup-button">Read More</button>
+  </div>
+
+   </div>
+<div class="popup">
+<div class="popup-content">
+<div class="popup-box">
+<div class="popup-close">x</div>
+<div class="popup-body">
+  <img class="cat-2" src="https://i.imgur.com/gvZgSCa.gif"/>
+<h2>My first pop up box content yeass</h2>
+<p>Cat ipsum dolor sit amet, ab yet aut or dolores. Aspernatur cupidatat. Occaecat illum yet veritatis molestiae. Sequi
+	eos aliqua and do, mollit so minim. Dolor autem. Culpa. Quae numquam consequatur and lorem. Consequatur ipsum. Nostrum consectetur
+	commodi aliqua, cupidatat so et. </p>
+<p>Cat ipsum dolor sit amet, ab yet aut or dolores. Aspernatur cupidatat. Occaecat illum yet veritatis molestiae. Sequi
+	eos aliqua and do, mollit so minim. Dolor autem. Culpa. Quae numquam consequatur and lorem. Consequatur ipsum. Nostrum consectetur
+	commodi aliqua, cupidatat so et. </p>
+
+<p>Cat ipsum dolor sit amet, ab yet aut or dolores. Aspernatur cupidatat. Occaecat illum yet veritatis molestiae. Sequi
+	eos aliqua and do, mollit so minim. Dolor autem. Culpa. Quae numquam consequatur and lorem. Consequatur ipsum. Nostrum consectetur
+	commodi aliqua, cupidatat so et. </p>
+<p>Cat ipsum dolor sit amet, ab yet aut or dolores. Aspernatur cupidatat. Occaecat illum yet veritatis molestiae. Sequi
+	eos aliqua and do, mollit so minim. Dolor autem. Culpa. Quae numquam consequatur and lorem. Consequatur ipsum. Nostrum consectetur
+	commodi aliqua, cupidatat so et. </p>
+<p>Cat ipsum dolor sit amet, ab yet aut or dolores. Aspernatur cupidatat. Occaecat illum yet veritatis molestiae. Sequi
+	eos aliqua and do, mollit so minim. Dolor autem. Culpa. Quae numquam consequatur and lorem. Consequatur ipsum. Nostrum consectetur
+	commodi aliqua, cupidatat so et. </p>
+  </div>
+  </div>
+  </div>
+</div>
+    <script>
+        $(document).ready(function () {
+  $('.popup-button').click(function () {
+    $('.popup').fadeIn();
+  });
+  $('.popup-close, .popup-content').click(function () {
+    $('.popup').fadeOut();
+  });
+});
+    </script>
+</body>
+</html>
