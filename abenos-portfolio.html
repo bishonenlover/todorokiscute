@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abeno Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+</head>
+<style>
+/* ------------------
+       css reset  
+--------------------*/
+ *{
+box-sizing: border-box;
+}
+ 
+
+body{
+margin:0;
+font:1em/1.8 'Roboto';
+overflow-x: hidden;
+}
+
+img{
+display:block;
+max-width:100%;
+ 
+}
+
+h1, h2{
+margin:0;
+line-height:1.3;
+font-weight:normal;
+}
+p{
+margin-block-start:0;
+margin-block-end:0;
+}
+
+pre{
+white-space:pre-line;
+font-family:'Roboto';
+}
+
+/* ------------
+     css start
+ -------------*/
+
+:root{
+  --white: #f6f6f6;
+  --light-gray: #ebdbef;
+  --grey: #444;
+  --dark-grey: #ccb1b8;
+  --accent: #ed95ad;
+  --dark-blue:#bdc2e8;
+
+  --main-font: 'Roboto';
+  --second-font:'Roboto Condensed';
+}
+body{
+  color:var(--grey);
+  font-family:var(--main-font);
+  line-height:1.8;
+  background:var(--white);
+}
+h1{
+  color:var(--grey);
+  line-height:1;
+  font-size:2rem;
+  
+}
+h1, h2, p{
+  margin-top:0;
+  margin-bottom:1em;
+}
+h1 span{
+  color:#f0718c;
+  font-family: var(--second-font);
+  dislay:block;
+  font-size:4rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:100;
+}
+h2{
+font-size:2rem;
+letter-spacing:3px;
+color:var(--dark-grey);
+line-height:1;
+font-family:var(--second-font);
+}
+  
+/* WELCOME */
+
+ .welcome{
+   background-image:url(https://i.imgur.com/pacfP7v.gif);
+   background-size:cover;
+   background-position:center;
+   width:100%;
+   height:100vh;
+    display:flex;
+    justify-content:center;
+   align-items:center;
+   position:relative;    
+
+ }
+ .welcome::after{
+   content:'';
+   display:block;
+   background:rgba(250,250,250,.6);
+   width:100%;
+   height:100%;
+   position:absolute;
+   left:0;
+   top:0;
+    
+ 
+  
+ }
+ .welcome h1{
+   font-size:1.5rem;
+   font-weight:100;
+   line-height:1.2;
+   text-align:center;
+color:black;
+  position:absolute;
+   z-index:1;
+display:flex;
+flex-direction:column;
+
+    
+ }
+ .welcome h1::before,
+ .welcome h1::after{
+   content:'';
+   display:block;
+   margin:0 auto 1.5em;
+   width:60%;
+   height:1px;
+   background:black;
+ }
+.welcome h1::before{
+  margin:0 auto 1.5em;
+}
+
+.welcome h1::after{
+  margin:1em auto 0;
+}
+
+ /* INTRO */
+
+.intro{
+  display:flex;
+   color:var(--white);
+ background:var(--dark-blue);
+}
+.intro-middle{
+  background:var(--dark-blue);
+  padding:2.5em 5vw;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+
+
+ 
+}
+.intro h2{
+  color:var(--white);
+
+}
+.intro-left img,
+.intro-right img{ 
+  min-height:100%;
+  min-width:100%;
+  opacity:.4;
+  object-fit:cover;
+   
+
+}
+
+.intro h2::after{
+content:'';
+width:30%;
+display:block;
+height:1px;
+background:rgb(250,250,250,0.5);
+margin:1em auto 0;
+}
+
+
+
+/* PORTFOLIO ABOUT */
+
+.about-image{
+  max-width:150px;
+  height:250px;
+  object-fit:cover;
+}
+
+
+/* container */
+.about-me,
+.contact,
+.social-icons{
+  width:90%;
+  margin:1em auto;
+  max-width:1200px;
+}
+
+.about-me{
+  display:grid;
+  grid-template-columns:[port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+}
+.about-image{
+grid-column: port-start / img-end;
+ grid-row:1 / 2;
+}
+
+.about-title{
+  grid-column: name / port;
+  grid-row:1 / 2;
+  align-self:end;
+  margin-bottom:.25em; 
+  font-size:2.5em;
+  color:black;
+}
+.about-subtitle,
+.about-text{
+grid-column:port /port;
+}
+.about-subtitle{
+  margin:.5em 0;
+}
+
+.about-me{
+  max-width:500px;
+   margin-top:5em;
+  margin-bottom:3em;
+}
+
+
+/* portfolio */
+figure{
+  margin:0;
+
+}
+figure img{
+   width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.portfolio{
+  text-align:center;
+  background:var(--light-gray);
+  padding:5em;
+  margin:0 auto;
+width:100%;
+}
+ 
+.portfolio h1{
+  font-size:2em;
+  color:black;
+}
+.portfolio-item{
+  position:relative;
+  overflow:hidden;
+}
+.portfolio-item figcaption{
+  position:absolute;
+  background:rgb(240, 113, 140,0.6);
+  top:100%;
+  bottom:0;
+  left:0;
+  right:0;
+  color:var(--white);
+  text-align:left;
+display:flex;
+flex-direction:column;
+padding:1em;
+transition:top ease-in-out 250ms;
+}
+.portfolio-item:hover figcaption,
+.porfolio-item:focus figcaption{
+top:0;
+}
+.portfolio h1{
+  margin-bottom:2em;
+}
+.portfolio-title{
+  color:var(--white);
+  font-size:1.6em;
+  margin-bottom:auto;
+}
+.portfolio-desc{
+  display:none;
+}
+.portfolio-link{
+  color: white;
+font-size:.8em;
+  text-decoration:none;
+  border-bottom:2px solid var(--white);
+  align-self:flex-start;
+}
+.portfolio-link::after{
+content:'  ➜';
+display:inline-block;
+margin-left:.5em;
+
+}
+
+
+.portfolio-items{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr));
+}
+.portfolio-item.featured{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.featured .portfolio-desc{
+  display:block;
+}
+.featured .portfolio-title{
+  font-size:2em;
+}
+.featured figcaption{
+  padding:2em;
+}
+.featured img{
+  height:300px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+}
+.contact{
+  padding:5em 0;
+}
+.contact h1{
+  text-align:center;
+  margin-bottom:2em;
+}
+.contact label{
+  display:block;
+  margin-top:1em;
+  color:#444;
+}
+.contact input,
+.contact textarea{
+  display:block;
+  padding:.75em;
+  outline:none;
+  width:100%;
+  background:var(--light-gray);
+  border: 1px solid #ccc;
+  font-size:1rem;
+}
+.contact textarea{
+  height:25vh;
+}
+input.button{
+  display:block;
+ width:auto;
+  margin-top:1.5em;
+  margin-left:auto;
+  background:var(--accent);
+  border:none;
+  color:white;
+  font-family:var(--second-font);
+padding:.6em 1.5em;
+}
+
+footer{
+  background:var(--dark-blue);
+  padding:3em 2em;
+  text-align:center;
+
+}
+.social-icons{
+max-width:600px;
+  display:flex;
+  justify-content:space-evenly;
+  margin: 1.25em auto ;
+}
+ 
+svg.social-icon{
+  box-sizing:content-box;
+ fill:white;
+ width:40px;
+}
+.copyright::before{
+content:' ';
+display:block;
+background:var(--white);;
+height:1px;
+margin:0 auto;
+margin-bottom:4em;
+width:30%;
+
+}
+
+
+.menu-button{
+  position:absolute;
+  top:3em;
+  left:2em;
+  background:transparent;
+  border:0;
+  outline:none;
+  z-index:9;
+cursor:pointer;
+}
+.menu-button svg{
+  box-sizing:content-box;
+  width:25px;
+  height:20px;
+  fill:#444;
+}
+
+nav{
+  position:fixed;
+  top: 0;
+  bottom:0;
+  left:0%;
+  right:20%;
+  z-index:10;
+  transform:translateX(-100%);
+  transition: all ease-in-out .3s;
+}
+nav ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  justify-content:space-around;
+  align-items:center;
+  background:lightblue;
+  font-family:var(--second-font);
+   align-items:stretch;
+  font-size:1.5rem;
+
+}
+nav li{
+  border-bottom:1px solid #444;
+  text-align:center;
+ 
+ 
+}
+nav a{
+  display:inline-block;
+  color:#444;
+  text-decoration:none;
+  padding:  calc(100vh/8)0;
+  line-height:0;
+  width:100%;
+  transition: all  ease-in-out .3s;
+}
+.close{
+display:none;
+}
+
+nav a:hover,
+nav a:focus{
+  background:var(--accent);
+}
+
+.nav-is-open nav{
+transform:translateX(0);
+
+}
+.nav-is-open .container-all{
+  transform: translate(80%);
+   
+}
+.nav-is-open .close{
+  display:block;
+}
+
+.nav-is-open .hamburger{
+  display:none;
+}
+ 
+.container-all{
+  transition:all ease-in-out .3s;
+ 
+ 
+}
+ 
+
+.nav-is-open{
+  height:100vh;
+  overflow-y:hidden;
+}
+
+
+
+
+/* modal */
+.portfolio-modal{
+  position:fixed;
+  z-index:10;
+  top:2em;
+  bottom:2em;
+  left:2em;
+  right:2em;
+  background:white;
+  box-shadow:0 0 0 5em rgba(0,0,0,0.75);
+  overflow-y:scroll;
+  overflow-x:hidden;
+
+
+  display:none;
+
+}
+.portfolio-modal.is-open {
+  display:block;
+}
+
+.portfolio-header{
+  text-align:left;
+  padding:5em 0;
+  margin-bottom:1.4em;
+}
+.portfolio-header{
+  background-image:url(https://i.imgur.com/pacfP7v.gif);
+  background-size:cover;
+  background-position:center;
+}
+.portfolio-title-box{
+ background:rgb(240, 113, 140,0.6);
+ padding:3em 2em; 
+ color:white;
+ width:70%;
+}
+
+.portfolio-header .portfolio-title::after{
+  content:' ';
+  height:1px;
+  margin:.5em 0;
+  background:white;
+  display:inline-block;
+  width:100%;
+  }
+
+.portfolio-subtitle{
+  font-size:1rem;
+  font-family:var(--second-font);
+}
+.portfolio-content{
+  text-align:left;
+  width:95%;
+  margin:0 auto;
+  padding-bottom:1em;
+}
+.portfolio-full-width{
+  width:100vw;
+  max-width:initial;
+  margin:2em calc(50% - 50vw);
+  max-height:20vh;
+  object-fit:cover;
+  
+}
+
+
+.modal-close{
+  
+  position:fixed;
+  left:1.5em;
+  top:1.5em;
+  border:0;
+  outline:none;
+border-radius:50%;
+background:white;
+width:20px;
+  height:20px;
+  box-shadow:0 0 5px rgba(0,0,0,0.5);
+ padding:4px;
+ cursor:pointer;
+ 
+}
+svg.close-icon{
+  box-sizing:content-box;
+  
+}
+
+
+
+@media(min-width:40em){
+  .portfolio-full-left{
+    width:65%;
+    float:left;
+    margin-right:2em;
+  }
+  .portfolio-full-right{
+    width:65%;
+    float:right;
+    margin-left:2em;
+  }
+}
+
+
+@keyframes modalIn{
+  0% { opacity:0;}
+  100% { opacity: 1;}
+}
+@keyframes modalOut{
+  0% { opacity:1;}
+  100% { opacity: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width:50em){
+  body{
+    font-size:1.125rem;
+}
+.welcome h1{
+font-size:2.5vw;
+}
+.welcome span{
+  font-size:8vw;
+}
+.intro-middle h2{
+font-size:2.7rem;
+}
+.about-me h1{
+  font-size:3.5rem;
+}
+.about-image{
+  grid-row:1 / 4;
+}
+.about-subtitle,
+.about-text{
+  grid-column:image-end / port-end;
+
+  
+}
+.about-subtitle{
+  grid-row: 2 / 3;
+  font-size:2rem;
+}
+.about-text{
+  grid-row:3 / 4;
+}
+.about-image{
+  max-width:200px;
+}
+
+ .portfolio-items{
+   grid-template-columns:repeat(4, 1fr);
+   max-width:1200px;
+   margin:0 auto;
+ }
+ .featured img{
+   height:100%;
+ }
+ .contact form{
+display:grid;
+grid-gap:1em;
+grid-column:1fr 1fr;
+grid-template-areas:
+ "name   email"
+"message messsage"
+"    .   button"
+ }
+ .name{
+   grid-area:name;
+ }
+ .email{
+   grid-area:email;
+
+ }
+ .message{
+   grid-area:message;
+    grid-column: 1 / span 2;
+   
+  
+ }
+ .button{
+   grid-area:button;
+ }
+ 
+
+ 
+}
+ 
+
+</style>
+<body>
+
+<nav>
+<ul>
+  <li>
+    <a href="#home">Home</a>
+    </li>
+<li>
+  <a href="#about">About</a>
+  </li>
+<li>
+  <a href="#portfolio">Portfolio</a>
+  </li> 
+<li>
+  <a href="#contact">Contact</a>
+  </li>
+  
+  </ul>
+  </nav>
+
+<div class="container-all">
+<div class="welcome" id="home">
+  <button class="menu-button">
+<svg class="hamburger" viewBox="0 0 24 24">
+
+	<path d="M24,3c0-0.6-0.4-1-1-1H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V3z" />
+	<path d="M24,11c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V11z" />
+	<path d="M24,19c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V19z" />
+</svg>
+<svg class="close" viewBox="0 0 212.982 212.982">
+	<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
+		c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
+		l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
+		c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z" />
+
+</svg>
+</button>
+
+
+<h1 class="">Welcome to Abeno's <span>Portfolio</span></h1>
+  </div>
+<section class="intro">
+<div class="intro-left"> 
+<img src="https://i.imgur.com/yldPksD.gif"/>
+</div>
+<div class="intro-middle">
+<h2>Making it Happen</h2>
+<p>Cat ipsum dolor sit amet, veniam yet totam aliquid quasi. Aliquip nostrum but magnam ea yet duis. Aliquid occaecat so do
+and aut aliquip. </p></div>
+<div class="intro-right">
+  <img src="https://i.imgur.com/lRMAR20.gif" />
+</div>
+  </section>
+
+<section class="about-me" id="about">
+<img class="about-image" src="https://i.imgur.com/3Mfj7Vv.gif" alt="A picture of Abeno"/>
+<h1 class="about-title">Abeno's  Portfolio</h1>
+<h2 class="about-subtitle">Mononokean's Master</h2>
+<div class="about-text">
+<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur sunt
+or sint sit voluptatem sit est.<p>
+<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+	sunt or sint sit voluptatem sit est.<p>
+  </div>
+  </section>
+
+<section class="portfolio" id="portfolio">
+ 
+  <h1>His Work</h1>
+
+<div class="portfolio-items">
+
+<!-- porfolio item 01 -->
+  <figure class="portfolio-item featured">
+      <img src="https://i.imgur.com/0s8CFZX.gif" alt="Abeno and Sunflowers"/>
+      <figcaption>
+        <h2 class="portfolio-title">Sunflower</h2>
+        <p class="portfolio-desc">Itsuki and Sunflowers</p>
+        <a href="#" class="portfolio-link">More Info</a>
+ 
+        </figcaption>
+
+		<!-- portfolio modal 01-->
+    <div class="portfolio-modal">
+<button class="modal-close">
+  	<svg class="close-icon" viewBox="0 0 212.982 212.982">
+		<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
+			c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
+			l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
+			c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z" />
+	
+	</svg>
+  </button>
+      <div class="portfolio-header">
+        <div class="portfolio-title-box">
+            <h2 class="portfolio-title">Sunflower</h2>
+            <p class="portfolio-subtitle">Itsuki and sunflowers
+              </p>
+              
+          </div>
+          </div><!-- porfolio header-->
+          <div class="portfolio-content">
+            <p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur sunt
+			or sint sit voluptatem sit est.</p>
+      <img class="portfolio-full-width" src="https://i.imgur.com/0s8CFZX.gif"/>
+	<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+		sunt or sint sit voluptatem sit est.</p>
+	<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+		sunt or sint sit voluptatem sit est.</p>
+	<img class="portfolio-full-left" src="https://i.imgur.com/0s8CFZX.gif"/>
+		<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+			sunt or sint sit voluptatem sit est.</p>
+		<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+			sunt or sint sit voluptatem sit est.</p>
+
+	<img class="portfolio-full-right" src="https://i.imgur.com/0s8CFZX.gif"/>
+		<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+			sunt or sint sit voluptatem sit est.</p>
+		<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+			sunt or sint sit voluptatem sit est.</p>
+	 
+            </div>
+      </div>
+  <!-- modal -->
+
+    </figure>
+	<!-- porfolio item 02 -->
+	<figure class="portfolio-item">
+		<img src="https://i.imgur.com/JTylsJO.gif"  />
+	      <figcaption>
+	        <h2 class="portfolio-title">Bush</h2>
+	        <p class="portfolio-desc">Itsuki behind a bush</p>
+	        <a href="#" class="portfolio-link">More Info</a>
+	 
+	        </figcaption>
+		<!-- portfolio modal 01-->
+		<div class="portfolio-modal">
+			<button class="modal-close">
+		  	<svg class="close-icon" viewBox="0 0 212.982 212.982">
+				<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
+					c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
+					l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
+					c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z" />
+			
+			</svg>
+		  </button>
+		      <div class="portfolio-header">
+		        <div class="portfolio-title-box">
+		            <h2 class="portfolio-title">Bush</h2>
+		            <p class="portfolio-subtitle">Itsuki behind the bush
+		              </p>
+		              
+		          </div>
+		          </div><!-- porfolio header-->
+		          <div class="portfolio-content">
+		            <p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur sunt
+					or sint sit voluptatem sit est.</p>
+		      <img class="portfolio-full-width" src="https://i.imgur.com/JTylsJO.gif"/>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<img class="portfolio-full-left" src="https://i.imgur.com/JTylsJO.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+		
+			<img class="portfolio-full-right" src="https://i.imgur.com/JTylsJO.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+			 
+		            </div>
+		      </div>
+		  <!-- modal -->
+	    </figure>
+	<!-- porfolio item 03 -->
+	<figure class="portfolio-item">
+		<img src="https://i.imgur.com/Ee6TgFs.gif" />
+	      <figcaption>
+	        <h2 class="portfolio-title">Shinigami</h2>
+	        <p class="portfolio-desc">Itsuki is the Shinigami</p>
+	        <a href="#!" class="portfolio-link">More Info</a>
+	 
+	        </figcaption>
+		<!-- portfolio modal 01-->
+		<div class="portfolio-modal">
+			<button class="modal-close">
+		  	<svg class="close-icon" viewBox="0 0 212.982 212.982">
+				<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
+					c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
+					l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
+					c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z" />
+			
+			</svg>
+		  </button>
+		      <div class="portfolio-header">
+		        <div class="portfolio-title-box">
+		            <h2 class="portfolio-title">Shinigami</h2>
+		            <p class="portfolio-subtitle">Itsuki is the Shinigami
+		              </p>
+		              
+		          </div>
+		          </div><!-- porfolio header-->
+		          <div class="portfolio-content">
+		            <p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur sunt
+					or sint sit voluptatem sit est.</p>
+		      <img class="portfolio-full-width" src="https://i.imgur.com/Ee6TgFs.gif"/>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<img class="portfolio-full-left" src="https://i.imgur.com/Ee6TgFs.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+		
+			<img class="portfolio-full-right" src="https://i.imgur.com/Ee6TgFs.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+			 
+		            </div>
+		      </div>
+		  <!-- modal -->
+	    </figure>
+	<!-- porfolio item 04 -->
+	<figure class="portfolio-item">
+		<img src="https://i.imgur.com/1ajAGu8.gif"  />
+	      <figcaption>
+	        <h2 class="portfolio-title">Book</h2>
+	        <p class="portfolio-desc">Itsuki is reading a Book</p>
+	        <a href="#" class="portfolio-link">More Info</a>
+	 
+	        </figcaption>
+		<!-- portfolio modal 01-->
+		<div class="portfolio-modal">
+			<button class="modal-close">
+		  	<svg class="close-icon" viewBox="0 0 212.982 212.982">
+				<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
+					c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
+					l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
+					c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z" />
+			
+			</svg>
+		  </button>
+		      <div class="portfolio-header">
+		        <div class="portfolio-title-box">
+		            <h2 class="portfolio-title">Book</h2>
+		            <p class="portfolio-subtitle">Itsuki is reading a Book.
+		              </p>
+		              
+		          </div>
+		          </div><!-- porfolio header-->
+		          <div class="portfolio-content">
+		            <p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur sunt
+					or sint sit voluptatem sit est.</p>
+		      <img class="portfolio-full-width" src="https://i.imgur.com/1ajAGu8.gif"/>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<img class="portfolio-full-left" src="https://i.imgur.com/1ajAGu8.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+		
+			<img class="portfolio-full-right" src="https://i.imgur.com/1ajAGu8.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+			 
+		            </div>
+		      </div>
+		  <!-- modal -->
+	    </figure>
+	<!-- porfolio item 05 -->
+	<figure class="portfolio-item">
+		<img src="https://i.imgur.com/gik8Tu9.gif"  />
+	      <figcaption>
+	        <h2 class="portfolio-title">Money</h2>
+	        <p class="portfolio-desc">Itsuki gives Ashiya money</p>
+	        <a href="#" class="portfolio-link">More Info</a>
+	 
+	        </figcaption>
+		<!-- portfolio modal 01-->
+		<div class="portfolio-modal">
+			<button class="modal-close">
+		  	<svg class="close-icon" viewBox="0 0 212.982 212.982">
+				<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312
+					c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312
+					l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937
+					c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z" />
+			
+			</svg>
+		  </button>
+		      <div class="portfolio-header">
+		        <div class="portfolio-title-box">
+		            <h2 class="portfolio-title">Money</h2>
+		            <p class="portfolio-subtitle">Itsuki is giving Ashiya money.
+		              </p>
+		              
+		          </div>
+		          </div><!-- porfolio header-->
+		          <div class="portfolio-content">
+		            <p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur sunt
+					or sint sit voluptatem sit est.</p>
+		      <img class="portfolio-full-width" src="https://i.imgur.com/gik8Tu9.gif"/>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+				sunt or sint sit voluptatem sit est.</p>
+			<img class="portfolio-full-left" src="https://i.imgur.com/gik8Tu9.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+		
+			<img class="portfolio-full-right" src="https://i.imgur.com/gik8Tu9.gif"/>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+				<p>Iste ex dolore. Velit commodo or quam so incidunt eaque. Iure aspernatur. Quae numquam numquam and aliqua. Excepteur
+					sunt or sint sit voluptatem sit est.</p>
+			 
+		            </div>
+		      </div>
+		  <!-- modal -->
+	    </figure>
+
+  </div>
+
+  </section>
+
+<section class="contact" id="contact">
+<h1>Contact me</h1>
+<form action="">
+
+ <label class="name">Name:
+ <input type="text" id="name">
+</label>
+
+<label class="email" >Email:
+ <input type="email" id="email">
+</label>
+  
+<label message="message" id="message" class="message">Message:
+ <textarea name=""  id="message"></textarea>
+</label>
+<input class="button form-button" type="submit" value="SEND">
+  </form>
+
+
+  </section>
+
+<footer>
+<p>Follow me on Social Media</p>
+<div class="social-icons">
+<svg class="social-icon" viewBox="0 0 49.652 49.652">
+	<path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+			C49.652,11.137,38.516,0,24.826,0z M33.219,36.659c-1.15,0.542-2.196,0.926-3.134,1.144c-0.936,0.217-1.944,0.328-3.032,0.328
+			c-1.233,0-1.963-0.156-2.91-0.467c-0.949-0.313-1.758-0.76-2.427-1.333c-0.672-0.577-1.134-1.19-1.393-1.839
+			c-0.259-0.65-0.389-1.593-0.389-2.828v-9.466h-3.668v-3.824c1.06-0.344,2.289-0.837,3.044-1.48
+			c0.758-0.645,1.365-1.416,1.82-2.318c0.461-0.899,0.775-2.048,0.948-3.438h3.839v6.241h6.241v4.82h-6.241v6.92
+			c0,1.565-0.021,2.471,0.146,2.914c0.166,0.44,0.578,0.899,1.027,1.164c0.601,0.358,1.28,0.538,2.049,0.538
+			c1.367,0,2.728-0.443,4.078-1.332v4.256H33.219L33.219,36.659z" />
+
+</svg>
+
+
+<svg class="social-icon" viewBox="0 0 486.392 486.392">
+	<path d="M243.196,0C108.891,0,0,108.891,0,243.196s108.891,243.196,243.196,243.196
+			s243.196-108.891,243.196-243.196C486.392,108.861,377.501,0,243.196,0z M364.186,188.598l0.182,7.752
+			c0,79.16-60.221,170.359-170.359,170.359c-33.804,0-65.268-9.91-91.776-26.904c4.682,0.547,9.454,0.851,14.288,0.851
+			c28.059,0,53.868-9.576,74.357-25.627c-26.204-0.486-48.305-17.814-55.935-41.586c3.678,0.699,7.387,1.034,11.278,1.034
+			c5.472,0,10.761-0.699,15.777-2.067c-27.39-5.533-48.031-29.7-48.031-58.701v-0.76c8.086,4.499,17.297,7.174,27.116,7.509
+			c-16.051-10.731-26.63-29.062-26.63-49.825c0-10.974,2.949-21.249,8.086-30.095c29.518,36.236,73.658,60.069,123.422,62.562
+			c-1.034-4.378-1.55-8.968-1.55-13.649c0-33.044,26.812-59.857,59.887-59.857c17.206,0,32.771,7.265,43.714,18.908
+			c13.619-2.706,26.448-7.691,38.03-14.531c-4.469,13.984-13.953,25.718-26.326,33.135c12.069-1.429,23.651-4.682,34.382-9.424
+			C386.073,169.659,375.889,180.208,364.186,188.598z" />
+
+</svg>
+
+
+
+<svg class="social-icon" viewBox="0 0 508.52 508.52">
+	<path   d="M254.26,0C113.845,0,0,113.845,0,254.26s113.845,254.26,254.26,254.26
+					s254.26-113.845,254.26-254.26C508.52,113.813,394.675,0,254.26,0z M412.727,310.451c0,56.509-45.989,102.308-102.943,102.308
+					H198.831c-56.891,0-103.102-45.735-103.102-102.308V198.132c0.032-56.541,46.18-102.371,103.102-102.371h51.964
+					c56.954,0,102.53,42.525,102.53,99.066c0.731,10.584,10.298,19.8,21.167,19.8h17.766c11.378,0,20.5,11.95,20.5,23.233
+					L412.727,310.451L412.727,310.451z" />
+	<path d="M313.693,293.893H194.827c-10.901,0-19.8,8.899-19.8,19.801c0,10.87,8.931,19.8,19.8,19.8
+					h118.866c10.901,0,19.8-8.931,19.8-19.8C333.494,302.792,324.594,293.893,313.693,293.893z" />
+	<path  d="M194.827,214.627h59.433c10.901,0,19.8-8.931,19.8-19.8c0-10.901-8.931-19.8-19.8-19.8h-59.433
+					c-10.901,0-19.8,8.931-19.8,19.8C174.994,205.728,183.925,214.627,194.827,214.627z" />
+
+</svg>
+  </div>
+  <p class="copyright">
+Copywrite 2019 Abeno's Portfolio
+    </p>
+  </footer>
+  </div>
+<script>
+
+// navigation
+const navToggle = document.querySelector('.menu-button')
+
+navToggle.addEventListener('click', _ =>{
+  document.body.classList.toggle('nav-is-open')
+})
+
+
+// modal
+const portfolioContainer = document.querySelector('.portfolio-items')
+
+portfolioContainer.addEventListener('click', e => {
+  e.preventDefault()
+  const modalToggle = e.target.closest('.portfolio-link')
+
+
+  if (!modalToggle) return
+
+  const modal = modalToggle.parentNode.nextElementSibling
+  const closeButton = modal.querySelector('.modal-close')
+
+  const modalOpen = _ => {
+    modal.classList.add('is-open')
+    modal.style.animation = 'modalIn 500ms forwards'
+  document.body.style.overflowY = 'hidden'
+  }
+  const modalClose = _ => {
+    modal.classList.remove('is-open')
+  modal.removeEventListener('animationend', modalClose)
+}
+  closeButton.addEventListener('click', _ => {
+    modal.style.animation = 'modalOut 500ms forwards'
+    modal.addEventListener('animationend', modalClose)
+    document.body.style.overflowY = 'scroll'
+  })
+  document.addEventListener('keydown', e => {
+    if (e.keyCode === 27) {
+      modal.style.animation = 'modalOut 500ms forwards'
+      modal.addEventListener('animationend', modalClose)
+}
+  })
+ modalOpen()
+   })
+
+
+</script>
+</body>
+</html>
