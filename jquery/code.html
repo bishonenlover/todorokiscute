@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<title>My First Jquery Code</title>
+<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+*{
+box-sizing:border-box;
+}
+body {
+ margin:0;
+ padding:0;
+ background:#fffaf0;
+ font:1em/1.8 'Roboto';
+}
+.box{
+position:fixed;
+max-width:700px;
+height:400px;
+ 
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+background:white;
+padding:1em;
+box-shadow:0 0 20px rgb(0,0,0,0.05);
+border-radius:4px;
+ 
+}
+.text{
+height:365px;
+overflow:scroll;
+position:relative;
+text-align:justify;
+ padding:.5em;
+}
+::-webkit-scrollbar{
+width:9px;
+height:0;
+background:#e2ffb5;
+border:4px solid #fff;
+}
+::-webkit-scrollbar-thumb{
+background:#e2ffb5;
+}
+ .image{
+ position:relative;
+ }
+.image img{
+ width:50%;
+ height:365px;
+ object-fit:cover;
+float:left;
+margin-right:1em;
+}
+.menu{
+position:absolute;
+background:#ffe4e1;
+width:calc(100% - 1em);
+height:100%;
+ display:none;
+ padding:1em;
+ z-index:2;
+}
+button{
+position:absolute;
+left:0;
+background:none;
+border:none;
+outline:none;
+cursor:pointer;
+padding:.3em;
+z-index:6;
+}
+button svg{
+width:20px;
+cursor:pointer;
+}
+.close{
+ overflow:hidden;
+ }
+ 
+.btn-menu-close{
+ margin-left:calc(90% - 4px);
+ margin-top:calc( -1em - 1px);
+ background:lightblue;
+padding:.6em;
+ cursor:pointer;
+
+}
+.btn-menu-close-2{
+ margin-left:calc(90% - 6px);
+ margin-top:calc( -1em - 3px);
+padding:.6em;
+ cursor:pointer;
+
+}
+.btn-menu{
+background:pink;
+padding:.8em; 
+}
+.little{
+background:rgba(250,250,250,0.5);
+border-radius:4px;
+padding:.5em;
+font-size:.8em;
+margin:.7em 0;
+}
+.menu h1, 
+.text h1{
+font-weight:normal;
+margin:0;
+padding:0;
+font-size:1.1em;
+position:relative;
+display:block;
+}
+.text h1{
+font-size:1.3em;
+}
+.menu{
+font-size:.9em;
+}
+.one{
+background:#c2d6f0;
+padding:.3em .4em;
+font-size:.8em;
+}
+.two{
+background:#e7f7bd;
+padding:.3em .4em;
+font-size:.8em;
+}
+ .icon img{
+ width:20px;
+ height:20px;
+ object-fit:cover;
+ float:left;
+ margin-right:.5em;
+ margin-top:6px;
+ }
+ blockquote{
+ background:#ffeaea;
+ padding:.5em;
+ border-radius:3px;
+ font-size:.9em;
+ margin:.5em auto;
+ width:calc(100% - 1em);
+ }
+ .links{
+ margin-top:4em;
+ background:#ece6e6;
+ width:40px;
+ height:40px;
+ }
+ .link-list{
+ position:absolute;
+background:#e6dee9;
+width:calc(100% - 1em);
+height:100%;
+ display:none;
+ padding:1em;
+ z-index:2;
+ }
+ .link-list a{
+ display:flex;
+ width:100%;
+ color:#333;
+ line-height:0;
+ margin:unset;
+ padding:calc(100vh / 16) 0;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+transition: all ease-in-out .3s;
+ }
+ .link-list a:hover{
+ background:pink;
+ color:black;
+ }
+ 
+@media(max-width:730px){
+ .box{
+ width:90%;
+ max-width:none;
+ }
+ .menu{
+ overflow:scroll;
+ }
+ .menu::-webkit-scrollbar{
+ display:none;
+ }
+ .btn-menu-close,
+ .btn-menu-close-2{
+ position:fixed;
+ z-index:99999;
+margin-top:-3em;
+ position:fixed;
+ z-index:99999;
+margin-top:-3em;
+ }
+ }
+</style>
+<body>
+<div class="box">
+
+<div class="image">
+<button class="btn-menu">
+<svg viewBox="0 0 512 512" >
+
+		<path d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"/>
+
+		<path d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"/>
+ <path d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"/>
+ 
+</svg>
+</button>
+<button class="links">links</button>
+<img src="https://i.imgur.com/0s8CFZX.gif"/>
+</div><!-- image -->
+
+
+<div class="text">
+<div class="menu">
+<button class="btn-menu-close">
+<svg viewBox="0 0 47.971 47.971">
+
+	<path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
+		c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242
+		C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879
+		s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+ 
+</svg>
+</button>
+<div class="icon"><img src="https://i.imgur.com/IAw7UuM.png">
+</div><h1>this is my menu</h1> 
+<div class="a little">
+and this is the first code I write, basing with jquery basics .click, .toggleClass(), .hide() and .show().
+</div><p>
+I can't believe I just started the script with <span class="one">$(".btn-menu").click(function(){</span> and tried a few things I've learned so far and actually wrote my own very first jquery code.<p>
+Obviously, this is nothing new and very simple, but I'm actually so happy I <span class="two">WROTE</span> this by <b>myself</b>.
+</div><!-- menu -->
+
+<div class="link-list">
+<button class="btn-menu-close-2">
+<svg viewBox="0 0 47.971 47.971">
+
+	<path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
+		c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242
+		C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879
+		s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+ 
+</svg>
+</button>
+<a href="https://todorokiscute.tumblr.com" target="_blank">Main Blog</a>
+<a href="https://todorokiscute.tumblr.com/ask" target="_blank">Contact</a>
+<a href="https://todorokiscute.github.io"target="_blank">Github</a>
+<a href="https://bishonenlover.tumblr.com" target="_blank">Anime Blog</a>
+
+</div><!-- links-->
+<h1>My first Jquery code</h1>
+<blockquote> This is my first ever jquery code</blockquote><p>
+<center><span class="two">This is no responsive though</span> <span class="two">I'll edit soon</span></center>
+<p><b>Some dummy text to make it scrollable:</b> Sit on human they not getting up ever terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry. Gate keepers of hell. Eat from dog's food annoy owner until he gives you food say meow repeatedly until belly rubs, feels good. Scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food attack</p><p> the dog then pretend like nothing happened so destroy couch as revenge yet touch my tail, i shred your hand purrrr, so pet my belly, you know you want to; seize the hand and shred it! for kitty scratches couch bad kitty. I vomit in the bed in the middle of the night annoy the old grumpy cat, start a fight and then retreat to wash when i lose but cat mojo .</p><p> Sit in a box for hours fall asleep on the washing machine sit on human or rub butt on table claw drapes. Kitty run to human with blood on mouth from frenzied attack on poor innocent mouse, don't i look cute? run outside as soon as door open murr i hate humans they are so annoying meow for food, then when human fills food dish, take a few bites of food and continue meowing. </p><p>Climb a tree, wait for a fireman jump to fireman then scratch his face rub face on owner steal the warm chair right after you get up but warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats if it fits i sits. Attack the child under the bed. Pee in human's bed until he cleans the litter box eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter so ptracy, and show belly claws in your leg under the bed. Love chew iPad power cord, or eats owners hair then claws head annoy owner until he gives you food say meow </p>
+</div><!-- text -->
+ 
+
+
+</div><!-- box -->
+ 
+<script>
+// I'm so fucking happy because I wrote this all myself.
+
+$(".btn-menu").click(function(){
+$(".menu").toggle();
+$(".btn-menu").hide();
+$(".text").toggleClass('close');
+  $(".links").hide();
+});
+$(".btn-menu-close").click(function(){
+$(".menu").toggle();
+$(".btn-menu").show();
+$(".text").toggleClass('close');
+$(".links").show();
+});
+$(".links").click(function(){
+$(".link-list").toggle();
+$(".links").hide();
+$(".text").toggleClass('close');
+ $(".btn-menu").hide();
+
+});
+$(".btn-menu-close-2").click(function(){
+$(".link-list").toggle();
+$(".links").show();
+$(".text").toggleClass('close');
+ $(".btn-menu").show();
+});
+</script>
+</body>
+</html>
