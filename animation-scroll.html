@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animate Images on Scroll</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+<link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<style>
+*, *::after, *::before{
+box-sizing: border-box;
+}
+
+body {
+margin:0;
+font:1em/1.8 'Roboto';
+cursor:default;
+background:#fafafa;
+ overflow-x:hidden;
+}
+ .content{
+ width:80%;
+ max-width:600px;
+text-align:justify;
+margin:3em auto;
+ }
+img{
+max-width:100%;
+display:block;
+}
+[data-anime]{
+opacity:0;
+transition:.4s;
+
+}
+
+[data-anime="left"]{
+transform: translate3d(-100px, 200px, 0);
+ float:left;
+ margin-right:1.5em;
+}
+[data-anime="right"]{
+transform: translate3d(200px, 200px, 0);
+ float:right;
+ margin-left:1.5em;
+ 
+}
+[data-anime].animate{
+opacity:1;
+transform: translate3d(0px, 0px, 0px);
+}
+
+@media( max-width:600px){
+[data-anime]{
+float:none;
+margin:0;
+}
+}
+</style>
+</head>
+<body>
+
+ <div class="content">
+<p>Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequat eius or velit ullamco eiusmod for amet and eius. Exercitationem vitae, est laboris. Dicta illum suscipit but velitesse. Consectetur. Mollit nisi ipsam but ipsam odit yet nequeporro for fugiat. Consequuntur molestiae tempora so laudantium. Nulla occaecat vitae. Aute sit yet elit yet molestiae occaecat yet et. Perspiciatis dolor. Natus in so aut ullam modi. Fugiat aspernatur, so quis. Ex minim, and quo, aute. Voluptas consequuntur. Voluptatem iure. Officia nisi modi. Doloremque velit architecto.  Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequat eius or velit ullamco eiusmod for amet and eius. Exercitationem vitae, est laboris. Dicta illum suscipit but velitesse. Consectetur. Mollit nisi ipsam but ipsam odit yet nequeporro for fugiat. Consequuntur molestiae tempora so laudantium. Nulla occaecat vitae. Aute sit yet elit yet molestiae occaecat yet et. Perspiciatis dolor. Natus in so aut ullam modi. Fugiat aspernatur, so quis. Ex minim, and quo, aute. Voluptas consequuntur. Voluptatem iure. Officia nisi modi. Doloremque velit architecto. </p>
+
+<div class="imagem" data-anime="left" >
+<img  src="https://66.media.tumblr.com/e7d7261b1c535716b15bef56a8f0f4ac/tumblr_pp1h48hlaq1vlvhpho10_400.gif">
+</div>
+
+<p>Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequat eius or velit ullamco eiusmod for amet and eius. Exercitationem vitae, est laboris. Dicta illum suscipit but velitesse. Consectetur. Mollit nisi ipsam but ipsam odit yet nequeporro for fugiat. Consequuntur molestiae tempora so laudantium. Nulla occaecat vitae. Aute sit yet elit yet molestiae occaecat yet et. Perspiciatis dolor. Natus in so aut ullam modi. Fugiat aspernatur, so quis. Ex minim, and quo, aute. Voluptas consequuntur. Voluptatem iure. Officia nisi modi. Doloremque velit architecto.  Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequat eius or velit ullamco eiusmod for amet and eius. Exercitationem vitae, est laboris. Dicta illum suscipit but velitesse. Consectetur. Mollit nisi ipsam but ipsam odit yet nequeporro for fugiat. Consequuntur molestiae tempora so laudantium. Nulla occaecat vitae. Aute sit yet elit yet molestiae occaecat yet et. Perspiciatis dolor. Natus in so aut ullam modi. Fugiat aspernatur, so quis. Ex minim, and quo, aute. Voluptas consequuntur. Voluptatem iure. Officia nisi modi. Doloremque velit architecto. </p>
+<div class="imagem"  data-anime="right" >
+<img  src="https://66.media.tumblr.com/b23fade8719dd807927581df1c8e938b/tumblr_pp1h48hlaq1vlvhpho6_400.gif">
+</div>
+<p>Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequat eius or velit ullamco eiusmod for amet and eius. Exercitationem vitae, est laboris. Dicta illum suscipit but velitesse. Consectetur. Mollit nisi ipsam but ipsam odit yet nequeporro for fugiat. Consequuntur molestiae tempora so laudantium. Nulla occaecat vitae. Aute sit yet elit yet molestiae occaecat yet et. Perspiciatis dolor. Natus in so aut ullam modi. Fugiat aspernatur, so quis. Ex minim, and quo, aute. Voluptas consequuntur. Voluptatem iure. Officia nisi modi. Doloremque velit architecto.  Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequat eius or velit ullamco eiusmod for amet and eius. Exercitationem vitae, est laboris. Dicta illum suscipit but velitesse. Consectetur. Mollit nisi ipsam but ipsam odit yet nequeporro for fugiat. Consequuntur molestiae tempora so laudantium. Nulla occaecat vitae. Aute sit yet elit yet molestiae occaecat yet et. Perspiciatis dolor. Natus in so aut ullam modi. Fugiat aspernatur, so quis. Ex minim, and quo, aute. Voluptas consequuntur. Voluptatem iure. Officia nisi modi. Doloremque velit architecto. </p>
+
+
+ </div><!-- content -->
+
+
+<script>
+ 
+
+
+const  target = document.querySelectorAll('[data-anime]')
+const animationClass = 'animate';
+
+function animeScroll (){
+const windowTop = window.pageYOffset +  ((window.innerHeight * 3) / 4);
+ target.forEach(function(element){
+if((windowTop) > element.offsetTop){
+element.classList.add('animate');
+} else{
+element.classList.remove('animate');
+}
+
+})
+}
+
+window.addEventListener('scroll', function(){
+ animeScroll();
+
+})
+</script>
+</body>
+</html>
