@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My first pop up box with Javascript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<style>
+*{
+box-sizing:border-box;
+}
+body {
+background:#f1f1f1;
+margin:0;
+font:1em/1.8 'Roboto Condensed';
+color:#444;
+cursor:default;
+}
+.popup-open{
+background:lightblue;
+border:none;
+outline:none;
+cursor:pointer;
+padding:.4em .7em;
+display:block;
+margin-left:auto;
+margin-bottom:.8em;
+}
+ 
+.popup{
+position:fixed;
+background:rgba(0,0,0,0.3);
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:visibility .3s, opacity .3s; 
+visibility:hidden; 
+opacity:0 
+  
+}
+.opened.popup{
+visibility:visible;
+opacity:1
+}
+ 
+ .box{
+ background:white;
+ padding:2em;
+ width:80%;
+ max-width:600px;
+ margin:4em auto;
+ text-align:justify;
+ 
+ }
+
+.popup-box{
+width:80%;
+max-width:600px;
+position:relative;
+background:white;
+padding:2em;
+box-shadow:0 0 20px rgba(0,0,0,0.1);
+border-radius:5px; 
+}
+.popup-content{
+ 
+height:70vh;
+overflow:scroll;
+margin:auto;
+padding:1em;
+text-align:justify;
+} 
+ .close{
+ position:absolute;
+ font-size:1.3em;
+ background:pink;
+ bottom:calc(100% - 1em);
+ right:calc(100% - 1em);
+ border-radius:100%;
+ width:28px;
+ height:28px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ padding:.7em;
+ cursor:pointer;
+ }
+ ::-webkit-scrollbar{
+ width:9px;
+ height:0;
+ background:#f1f1f1;
+ }
+ ::-webkit-scrollbar-thumb{
+ background:thistle;
+ border-radius:5px;
+ }
+ h1, h2{
+  margin-top:0;
+  margin-bottom:.5em;
+  line-height:1.5;
+  font-weight:normal;
+}
+p{
+  margin-top:0;
+  margin-bottom:.5em;
+}
+ 
+</style>
+</head>
+<body>
+
+<div class="box">
+<button class="popup-open">Open</button>
+<p>Cat dog hate mouse eat string barf pillow no baths hate everything catch mouse and gave it as a present throw down all the stuff in the kitchen. Meow chase the pig around the house so catasstrophe kick up litter or fall asleep upside-down climb leg. Poop on floor and watch human clean up sleep everywhere, but not in my bed, cat slap dog in face but under the bed bite nose of your human instead of drinking water from the cat bowl, make sure to steal water from the toilet or i like fish. Leave hair on owner's clothes toilet paper attack claws fluff everywhere meow miao french ciao litterbox meow loudly just to annoy owners. No, you can't close the door, i haven't decided whether or not i wanna go out i like frogs and 0 gravity and pounce on unsuspecting person. You call this cat food wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again so cccsssssss or hack up furballs but lick sellotape eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter and attack feet. Hack meow in empty rooms and i love cuddles but who's the baby, yet gnaw the corn cob you have cat to be kitten me right meow. Chew foot cat mojo , claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? so hide head under blanket so no one can see pet me pet me pet me pet me, bite, scratch, why are you petting me or plan steps for world domination sleep in the bathroom sink. Give attitude. Eat too much then proceed to regurgitate all over living room carpet while humans eat dinner bite nose of your human, chase laser and i am the best and playing with balls of wool but eat from dog's food. Human give me attention meow try to jump onto window and fall while scratching at wall soft kitty warm kitty little ball of furr. Stare at ceiling light when owners are asleep, cry for no apparent reason for attack dog, run away and pretend to be victim hiss at vacuum cleaner. This human feeds me, i should be a god chase after silly colored fish toys around the house, and tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad sniff all the things eat and than sleep on your face but be superior. Weigh eight pounds but take up a full-size bed who's the baby i just saw other cats inside the house and nobody ask me 
+</p>
+</div>
+<div class="popup">
+
+<div class="popup-box">
+ <div class="close">x</div>
+<div class="popup-content">
+
+<h1>This is a pop up box</h1>
+Cat dog hate mouse eat string barf pillow no baths hate everything catch mouse and gave it as a present throw down all the stuff in the kitchen. Meow chase the pig around the house so catasstrophe kick up litter or fall asleep upside-down climb leg. Poop on floor and watch human clean up sleep everywhere, but not in my bed, cat slap dog in face but under the bed bite nose of your human instead of drinking water from the cat bowl, make sure to steal water from the toilet or i like fish. Leave hair on owner's clothes toilet paper attack claws fluff everywhere meow miao french ciao litterbox meow loudly just to annoy owners. No, you can't close the door, i haven't decided whether or not i wanna go out i like frogs and 0 gravity and pounce on unsuspecting person. You call this cat food wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again so cccsssssss or hack up furballs but lick sellotape eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter and attack feet. Hack meow in empty rooms and i love cuddles but who's the baby, yet gnaw the corn cob you have cat to be kitten me right meow. Chew foot cat mojo , claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? so hide head under blanket so no one can see pet me pet me pet me pet me, bite, scratch, why are you petting me or plan steps for world domination sleep in the bathroom sink. Give attitude. Eat too much then proceed to regurgitate all over living room carpet while humans eat dinner bite nose of your human, chase laser and i am the best and playing with balls of wool but eat from dog's food. Human give me attention meow try to jump onto window and fall while scratching at wall soft kitty warm kitty little ball of furr. Stare at ceiling light when owners are asleep, cry for no apparent reason for attack dog, run away and pretend to be victim hiss at vacuum cleaner. This human feeds me, i should be a god chase after silly colored fish toys around the house, and tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad sniff all the things eat and than sleep on your face but be superior. Weigh eight pounds but take up a full-size bed who's the baby i just saw other cats inside the house and nobody ask me 
+</div>
+</div>
+</div>
+<script>
+
+var open = document.querySelector('.popup-open')
+  var close = document.querySelector('.close, .popup')
+var popup = document.querySelector('.popup')
+
+
+open.addEventListener('click', function(){
+	popup.classList.toggle('opened');
+ 
+})
+ 
+ 
+close.addEventListener('click', function(){
+ popup.classList.toggle('opened');
+ 
+})
+ 
+ 
+</script>
+</body>
+</html>
