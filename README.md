@@ -21,7 +21,7 @@
  ☆ <b>Image animation on scroll:</b><p> It was a tutorial I've learned with this <a href="https://www.youtube.com/user/origamidlabs" target="_blank">brazilian youtube channel</a>. <a href="https://bishonenlover.github.io/todorokiscute/animation-scroll" target="_blank">view</a>
  <hr/>
 
- ☆ <b>CSS Grid Layout with Column-Count:</b> Was a tutorial I've refreshed my memory with this <a href="https://w3bits.com/css-masonry/" target="_blank">site</a>. <a href="https://bishonenlover.github.io/todorokiscute/grid-layout" target="_blank">view</a>
+ ☆ <b>CSS Grid Layout with Column-Count:</b> <p>Was a tutorial I've refreshed my memory with this <a href="https://w3bits.com/css-masonry/" target="_blank">site</a>. <a href="https://bishonenlover.github.io/todorokiscute/grid-layout" target="_blank">view</a>
  <hr/>
  
  ☆ <b>My first Sticky with Javascript:</b> <p>The first javascript code I wrote ever!!! I've tried some js things I've learned in the past week<p> and came up alone, with a sticky sidebar on scroll effect!!! <a href="https://bishonenlover.github.io/todorokiscute/first-js-sticky.html" target="_blank">view</a>
