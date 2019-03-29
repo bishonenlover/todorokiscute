@@ -22,7 +22,9 @@
  <hr/>
 
  ☆ <b>CSS Grid Layout with Column-Count:</b> Was a tutorial I've refreshed my memory with this <a href="https://w3bits.com/css-masonry/" target="_blank">site</a>. <a href="https://bishonenlover.github.io/todorokiscute/grid-layout" target="_blank">view</a>
+ <hr/>
  
  ☆ <b>My first Sticky with Javascript:</b> <p>The first javascript code I wrote ever!!! I've tried some js things I've learned in the past week<p> and came up alone, with a sticky sidebar on scroll effect!!! <a href="https://bishonenlover.github.io/todorokiscute/first-js-sticky.html" target="_blank">view</a>
+ <hr/>
  
  ☆ <b>My first Pop Up Box with Javascript:</b> <p> After doing the sticky sidebar with javascript only,  <p>I tried a few things and could create a click show and hide box,  <p>a popup box with fade in and out effects!! <a href="https://bishonenlover.github.io/todorokiscute/first-js-popup" target="_block">view</a>
