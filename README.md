@@ -32,4 +32,7 @@
   <hr/>
  
  ☆ <b>Posts changing content to a menu content</b> <p> It was inspired by those false iframe <p>menu that was trend in tumblrs of tutorials, back in 2013. <a href="https://bishonenlover.github.io/todorokiscute/menu" target="_block">view</a>
+  <hr/>
+ 
+ ☆ <b>Menu Fake Iframe</b> <p> Since I wrote a post content that changes into a menu content,<p> based on the <a href="https://www.google.com/search?q=menu+falso+iframe&oq=menu+falso+iframe&aqs=chrome..69i57j69i60.3155j1j7&sourceid=chrome&ie=UTF-8" target="_blank">fake iframe tutorial</a>, I decided to make the actual menu fake iframe following some of these tutorials. I created nothing here. <a href="https://bishonenlover.github.io/todorokiscute/fakeiframe.html" target="_block">view</a>
 
