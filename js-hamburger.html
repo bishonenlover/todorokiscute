@@ -1,0 +1,191 @@
+<!DOCTYPE html><!--
+
+
+
+by todorokiscute.tumblr.com
+
+
+
+
+--><html>
+<head>
+<title>Hamburger Menu with javascript</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+
+
+</head>
+<style>
+*{
+box-sizing:border-box;
+}
+body{
+margin:0;
+font:1em/1.8 'Roboto Condensed';
+background: #f1f1f1 url(https://static.tumblr.com/hb9yb56/No4pk7skb/background.jpg) fixed;
+}
+ .menu{
+width:100%;
+padding:1.5em;
+background:#e6e6fa;
+word-spacing:1em;
+ position:fixed;
+ top:0;
+left:0;
+ }
+ 
+ .menu a{
+ text-decoration:none;
+ color:lightcoral;
+ padding:.7em 1em;
+
+ }
+
+  .menu a + a{
+ margin-left:2em;
+ }
+ 
+ .box{
+ width:80%;
+ max-width:600px;
+ background:white;
+ color:#444;
+ text-align:justify;
+ padding:2em;
+margin:auto;
+margin-top:8em;
+margin-bottom:4em;
+box-shadow:0 0 10px rgba(0,0,0,0.05);
+ }
+p{
+margin-top:0;
+margin-bottom:.5em;
+}
+
+
+@media(max-width:600px){
+
+.header{
+ display:flex;
+ align-items:center;
+ height:60px;
+width:100%;
+padding:1.5em;
+background:#e6e6fa;
+ 
+ top:0;
+left:0;
+ 
+ } 
+ 
+.menu-toggle{
+padding:1em;
+ position:fixed;
+ right:.3em;
+ top:.6em;
+ cursor:pointer;
+  
+ }
+ 
+ .hamburger,
+ .hamburger::before,
+ .hamburger::after{
+ content:' ';
+ display:block;
+ background:lightcoral;
+ height:3px;
+ width:1.7em;
+ border-radius:3px;
+transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+ }
+ .hamburger::before{
+ transform:translateY(-7px);
+ }
+  .hamburger::after{
+ transform:translateY(4px);
+ }
+ 
+ .menu-open .hamburger{
+ transform:rotate(45deg);
+  transition:.3s;
+ }
+  .menu-open .hamburger::after{
+ transform:rotate(-90deg) translate(3px);
+ }
+ 
+  .menu-open .hamburger::before{
+  transform:translateY(0);
+  opacity:0;
+ }
+ 
+  .menu{
+ display:none;
+ width:100%;
+ position:fixed;
+ margin:0;
+ padding:0;
+ word-spacing:0;
+ top:0;
+ left:0;
+ height:100%; 
+  
+ }
+ .menu a + a{
+ margin:0;
+ }
+.menu a{
+width:100%;
+padding:calc(100vh / 12); 
+text-align:center;
+ transition: all ease-in-out .3s;
+ font-size:1.5em;
+}
+.menu a:hover{
+background:pink;
+}
+ .menu.open{
+ display:flex;
+  justify-content:center;
+ align-items:center;
+ flex-direction:column;
+ }
+ .box{
+ margin-top:4em;
+ }
+  }
+ 
+</style>
+<div class="menu">
+<a href="">Posts</a>
+<a href="">About</a>
+<a href="">Tags</a>
+<a href="">Blog</a>
+</div>
+
+<div class="header">
+ <div class="menu-toggle">
+<div class="hamburger"></div>
+ </div>
+ </div>
+  
+  <div class="box">
+  <p>Meowing chowing and wowing nya nya nyan spend six hours per day washing, but still have a crusty butthole mrow for eat and than sleep on your face i like cats because they are fat and fluffy yet freak human out make funny noise mow mow mow mow mow mow success now attack human. All of a sudden cat goes crazy. Has closed eyes but still sees you has closed eyes but still sees you but if human is on laptop sit on the keyboard so chew foot, hunt by meowing loudly at 5am next to human slave food dispenser. Nya nya nyan paw at your fat belly. Scratch leg; meow for can opener to feed me hiiiiiiiiii feed me now drool so i just saw other cats inside the house and nobody ask me before using my litter box. Attack the dog then pretend like nothing happened relentlessly pursues moth lick the other cats lick sellotape but headbutt owner's knee and cat dog hate mouse eat string barf pillow no baths hate everything.
+  </p>
+    <p>Meowing chowing and wowing nya nya nyan spend six hours per day washing, but still have a crusty butthole mrow for eat and than sleep on your face i like cats because they are fat and fluffy yet freak human out make funny noise mow mow mow mow mow mow success now attack human. All of a sudden cat goes crazy. Has closed eyes but still sees you has closed eyes but still sees you but if human is on laptop sit on the keyboard so chew foot, hunt by meowing loudly at 5am next to human slave food dispenser. Nya nya nyan paw at your fat belly. Scratch leg; meow for can opener to feed me hiiiiiiiiii feed me now drool so i just saw other cats inside the house and nobody ask me before using my litter box. Attack the dog then pretend like nothing happened relentlessly pursues moth lick the other cats lick sellotape but headbutt owner's knee and cat dog hate mouse eat string barf pillow no baths hate everything.
+  </p>
+  </div>
+  
+<script>
+var open = document.querySelector('.menu-toggle');
+var menu = document.querySelector('.menu');
+
+ open.addEventListener('click', function(){
+ menu.classList.toggle('open');
+ open.classList.toggle('menu-open');
+ });
+
+</script>
