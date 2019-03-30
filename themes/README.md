@@ -1,5 +1,17 @@
 <h1>My Fave Old Themes</h1>
 <blockquote> These are the themes I've used in many of my different blogs, <p>and decided to make previews to idk, keep seeying them lol</blockquote>
 <b>Kuroshitsuji</b> <p>
-☆  A theme I used in my Anime Reviews blog back in 2015. <p>It's not fluid or responsive, since it was made with PSD. <a href="https://bishonenlover.github.io/todorokiscute/themes/kuroshitsuji.html">view</a>
+☆ A theme I used in my Anime Reviews blog back in 2015. <p>It's not fluid or responsive, since it was made with PSD. <a href="https://bishonenlover.github.io/todorokiscute/themes/kuroshitsuji.html">view</a>
+  <hr />
+☆ <h1>Purple and Pink</h1><p>
+One of my faves themes of my anime reviews blog. It's quite simple but very colorful and charming. <a href="https://bishonenlover.github.io/todorokiscute/themes/roxo-rosa-preferido.html">view</a>
+  <hr />
+☆ <h1>Gray and Purple</h1><p>
+Actually not responsive at all. But I played a lot with jquery in this, to make sticky both sidebar and menu. <a href="https://bishonenlover.github.io/todorokiscute/themes/151218.html">view</a>
+  <hr />
+☆ <h1>Contained Purple and Blue</h1><p>
+  This is the first contained theme I've used in my anime reviews blog. It was very cute!! And has a lot of gradients. Not responsive. <a href="https://bishonenlover.github.io/todorokiscute/themes/contained-eichi.html">view</a>
+  <hr />
+☆ <h1>Black and Pink </h1><p>
+  This is the first version of my actual anime reviews theme. It changed a lot since the first version. <a href="https://bishonenlover.github.io/todorokiscute/themes/black-and-pink-ver1.html">view</a>
   
