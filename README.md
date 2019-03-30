@@ -28,3 +28,8 @@
  <hr/>
  
  ☆ <b>My first Pop Up Box with Javascript:</b> <p> After doing the sticky sidebar with javascript only,  <p>I tried a few things and could create a click show and hide box,  <p>a popup box with fade in and out effects!! <a href="https://bishonenlover.github.io/todorokiscute/first-js-popup" target="_block">view</a>
+ 
+  <hr/>
+ 
+ ☆ <b>Posts changing content to a menu content</b> <p> It was inspired by those false iframe <p>menu that was trend in tumblrs of tutorials, back in 2013. <a href="https://bishonenlover.github.io/todorokiscute/menu" target="_block">view</a>
+
