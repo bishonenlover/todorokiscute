@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html>
+<head>
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<title>Menu Fake Iframe</title>
+<style>
+ *{
+ box-sizing:border-box;
+ }
+ body{
+ background:#f1f1;
+ margin:0;
+font:1em/1.8 'Roboto';
+cursor:default;
+ }
+ .content{
+ max-width:800px;
+ display:grid;
+ grid-template-columns:1fr 2fr;
+ margin:1em auto;
+ grid-gap:10px;
+ text-align:justify;
+ }
+ .sidebar{
+ margin-top:40px;
+ max-width:200px;
+ }
+ .post{
+ background:white;
+ padding:1em;
+
+ }
+ span{
+ background:lightblue;
+margin-bottom:.3em;
+padding:.5em;
+display:block;
+cursor:pointer;
+ }
+ @media(max-width:600px){
+ .content{
+ grid-template-columns:1fr;
+ width:calc(100% - 4em);
+ }
+ .sidebar{
+ max-width:none;
+ margin-top:0;
+ }
+ .post{
+ margin-top:2em;
+ }
+</style>
+</head>
+<body>
+ 
+ <div class="content">
+ <div class="sidebar">
+ Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos.
+ <p>
+ <span onClick="document.querySelector('.post').innerHTML = 
+document.querySelector('.one').innerHTML">ONE</span>
+
+<span onClick="document.querySelector('.post').innerHTML = 
+document.querySelector('.two').innerHTML">TWO</span>
+<span onClick="document.querySelector('.post').innerHTML = 
+document.querySelector('.four').innerHTML">THREE</span>
+ 
+ <span onClick="document.querySelector('.post').innerHTML = 
+document.querySelector('.three').innerHTML">POSTS</span>
+ 
+ 
+ </div>
+
+ 
+ <div class="post">
+  
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ 
+ 
+</div>
+
+<div class="one" style="display:none">
+Box one content 1.
+</div> 
+
+<div class="two" style="display:none">
+Box two content 2.
+</div>
+<div class="four" style="display:none">
+Box two content 3.
+</div>
+ 
+ <div class="three" style="display:none">
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ 
+ </div>
+ 
+  </div>
+</body>
+
+ 
+
+</html>
