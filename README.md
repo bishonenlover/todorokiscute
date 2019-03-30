@@ -27,12 +27,16 @@
  ☆ <b>My first Sticky with Javascript:</b> <p>The first javascript code I wrote ever!!! I've tried some js things I've learned in the past week<p> and came up alone, with a sticky sidebar on scroll effect!!! <a href="https://bishonenlover.github.io/todorokiscute/first-js-sticky.html" target="_blank">view</a>
  <hr/>
  
- ☆ <b>My first Pop Up Box with Javascript:</b> <p> After doing the sticky sidebar with javascript only,  <p>I tried a few things and could create a click show and hide box,  <p>a popup box with fade in and out effects!! <a href="https://bishonenlover.github.io/todorokiscute/first-js-popup.html" target="_block">view</a>
+ ☆ <b>My first Pop Up Box with Javascript:</b> <p> After doing the sticky sidebar with javascript only,  <p>I tried a few things and could create a click show and hide box,  <p>a popup box with fade in and out effects!! <a href="https://bishonenlover.github.io/todorokiscute/first-js-popup.html"  target="_blank">view</a>
  
   <hr/>
  
- ☆ <b>Posts changing content to a menu content</b> <p> It was inspired by those false iframe <p>menu that was trend in tumblrs of tutorials, back in 2013. <a href="https://bishonenlover.github.io/todorokiscute/change-content.html" target="_block">view</a>
+ ☆ <b>Posts changing content to a menu content</b> <p> It was inspired by those false iframe <p>menu that was trend in tumblrs of tutorials, back in 2013. <a href="https://bishonenlover.github.io/todorokiscute/change-content.html"  target="_blank">view</a>
   <hr/>
  
- ☆ <b>Menu Fake Iframe</b> <p> Since I wrote a post content that changes into a menu content,<p> based on the <a href="https://www.google.com/search?q=menu+falso+iframe&oq=menu+falso+iframe&aqs=chrome..69i57j69i60.3155j1j7&sourceid=chrome&ie=UTF-8" target="_blank">fake iframe tutorial</a>, I decided to make the actual menu fake iframe following some of these tutorials. I created nothing here. <a href="https://bishonenlover.github.io/todorokiscute/fakeiframe.html" target="_block">view</a>
+ ☆ <b>Menu Fake Iframe</b> <p> Since I wrote a post content that changes into a menu content,<p> based on the <a href="https://www.google.com/search?q=menu+falso+iframe&oq=menu+falso+iframe&aqs=chrome..69i57j69i60.3155j1j7&sourceid=chrome&ie=UTF-8" target="_blank">fake iframe tutorial</a>, I decided to make the actual menu fake iframe following some of these tutorials. I created nothing here. <a href="https://bishonenlover.github.io/todorokiscute/fakeiframe.html" target="_blank">view</a>
+ 
+  <hr/>
+ 
+ ☆ <b>My Hamburger Menu with Pure Javascript</b> <p> I just made a hamburger menu with javascript only! <p>The horizontal menu changes to a full page and vertical menu on mobile.  <a href="https://bishonenlover.github.io/todorokiscute/js-hamburger.html" target="_blank">view</a>
 
