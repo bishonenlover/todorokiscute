@@ -36,6 +36,7 @@ word-spacing:1em;
  position:fixed;
  top:0;
 left:0;
+text-align:center;
  }
  
  .menu a{
@@ -66,7 +67,16 @@ margin-top:0;
 margin-bottom:.5em;
 }
 
-
+::-webkit-scrollbar{
+width:8px;
+height:0;
+background:#f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+background:#e6e6fa;
+border:1px solid #d0d0e8;
+border-radius:4px;
+}
 @media(max-width:600px){
 
 .header{
@@ -155,6 +165,9 @@ background:pink;
  }
  .box{
  margin-top:4em;
+ }
+ ::-webkit-scrollbar{
+ display:none;
  }
   }
  
