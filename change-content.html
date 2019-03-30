@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<title>Changing the post content to a menu content</title>
+<style>
+ *{
+ box-sizing:border-box;
+ }
+ body{
+ background:#f1f1;
+ margin:0;
+font:1em/1.8 'Roboto';
+cursor:default;
+ }
+ .content{
+ max-width:800px;
+ margin:1em auto;
+ text-align:justify;
+ width:90%;
+ }
+ .sidebar{
+ position:fixed;
+
+ }
+ .posts{
+ width:70%;
+float:right;
+}
+ .post{
+ background:white;
+ padding:1em;
+
+ }
+ .sidebar>div{
+ background:lightblue;
+margin-bottom:.3em;
+padding:.5em;
+display:block;
+cursor:pointer;
+font-family:'Roboto Condensed';
+ }
+
+ ::-webkit-scrollbar{
+ width:8px;
+ height:0;
+ background:pink;
+ border:3px solid white;
+ }
+ ::-webkit-scrollbar-thumb{
+ background:pink;
+ border-radius:10px;
+ }
+  @media(min-width:771px){
+  .sidebar{
+  top:50%;
+ transform:translateY(-50%);
+ max-width:200px;
+ }
+ }
+ @media(max-width:770px){
+ .content{
+margin:2em auto;
+ }
+ .sidebar{
+ position:static;
+ max-width:none;
+ 
+ }
+ .posts{
+ float:none;
+ width:100%;
+ }
+ .post{
+ margin-top:2em;
+ }
+ 
+}
+</style>
+</head>
+<body>
+ 
+ <div class="content">
+ <div class="sidebar">
+ Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos.
+ <p>
+ <div class="button">Menu</div>
+ <div class="close">Posts</div>
+ 
+ </div>
+
+ <div class="posts">
+ <div class="post">
+  
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ 
+ 
+</div>
+</div>
+<div style="display:none" class="open">
+THIS IS THE MENU
+</div> 
+ 
+ 
+ <div style="display:none" class="posty">
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ 
+ </div>
+ 
+  </div>
+</body>
+
+ 
+<script>
+const post = document.querySelector('.post');
+const posty = document.querySelector('.posty');
+const menu = document.querySelector('.open');
+const button = document.querySelector('.button');
+const close = document.querySelector('.close');
+
+button.addEventListener('click', function(){
+ post.innerHTML = menu.innerHTML;
+})
+ close.addEventListener('click', function(){
+post.innerHTML = posty.innerHTML;
+})
+ 
+</script>
+</html>
