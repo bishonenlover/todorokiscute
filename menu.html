@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
 <title>Changing the post content to a menu content</title>
 <style>
  *{
@@ -14,18 +19,18 @@ cursor:default;
  }
  .content{
  max-width:800px;
- display:grid;
- grid-template-columns:1fr 2fr;
  margin:1em auto;
- grid-gap:10px;
  text-align:justify;
  width:90%;
-align-items:center;
  }
  .sidebar{
- margin-top:40px;
- max-width:200px;
+ position:fixed;
+
  }
+ .posts{
+ width:70%;
+float:right;
+}
  .post{
  background:white;
  padding:1em;
@@ -37,6 +42,7 @@ margin-bottom:.3em;
 padding:.5em;
 display:block;
 cursor:pointer;
+font-family:'Roboto Condensed';
  }
 
  ::-webkit-scrollbar{
@@ -49,20 +55,25 @@ cursor:pointer;
  background:pink;
  border-radius:10px;
  }
- @media(min-width:751px){
-  .posts{
-  height:80vh;
- overflow:scroll;
+  @media(min-width:771px){
+  .sidebar{
+  top:50%;
+ transform:translateY(-50%);
+ max-width:200px;
  }
  }
- @media(max-width:750px){
+ @media(max-width:770px){
  .content{
- grid-template-columns:1fr;
- width:calc(100% - 4em);
+margin:2em auto;
  }
  .sidebar{
+ position:static;
  max-width:none;
- margin-top:0;
+ 
+ }
+ .posts{
+ float:none;
+ width:100%;
  }
  .post{
  margin-top:2em;
