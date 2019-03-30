@@ -1,4 +1,4 @@
-<h1>Codes I made </h1>
+<h1>My Codes </h1>
 <blockquote>This is a repository to host some layouts types I've <br/>learned and made while following tutorials.
 </blockquote><p>
 
