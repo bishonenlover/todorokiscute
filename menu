@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+ *{
+ box-sizing:border-box;
+ }
+ body{
+ background:#f1f1;
+ margin:0;
+font:1em/1.8 'Roboto';
+cursor:default;
+ }
+ .content{
+ max-width:800px;
+ display:grid;
+ grid-template-columns:1fr 2fr;
+ margin:1em auto;
+ grid-gap:10px;
+ text-align:justify;
+ width:90%;
+align-items:center;
+ }
+ .sidebar{
+ margin-top:40px;
+ max-width:200px;
+ }
+ .post{
+ background:white;
+ padding:1em;
+
+ }
+ .sidebar>div{
+ background:lightblue;
+margin-bottom:.3em;
+padding:.5em;
+display:block;
+cursor:pointer;
+ }
+
+ ::-webkit-scrollbar{
+ width:8px;
+ height:0;
+ background:pink;
+ border:3px solid white;
+ }
+ ::-webkit-scrollbar-thumb{
+ background:pink;
+ border-radius:10px;
+ }
+ @media(min-width:751px){
+  .posts{
+  height:90vh;
+ overflow:scroll;
+ }
+ }
+ @media(max-width:750px){
+ .content{
+ grid-template-columns:1fr;
+ width:calc(100% - 4em);
+ }
+ .sidebar{
+ max-width:none;
+ margin-top:0;
+ }
+ .post{
+ margin-top:2em;
+ }
+ 
+}
+</style>
+</head>
+<body>
+ 
+ <div class="content">
+ <div class="sidebar">
+ Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos.
+ <p>
+ <div class="button">Menu</div>
+ <div class="close">Posts</div>
+ 
+ </div>
+
+ <div class="posts">
+ <div class="post">
+  
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ 
+ 
+</div>
+</div>
+<div style="display:none" class="open">
+THIS IS THE MENU
+</div> 
+ 
+ 
+ <div style="display:none" class="posty">
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ <p>Run outside as soon as door open sit in a box for hours i bet my nine lives on you-oooo-ooo-hooo ask to go outside and ask to come inside and ask to go outside and ask to come inside or it's 3am, time to create some chaos </p>
+ 
+ </div>
+ 
+  </div>
+</body>
+
+ 
+<script>
+const post = document.querySelector('.post');
+const posty = document.querySelector('.posty');
+const menu = document.querySelector('.open');
+const button = document.querySelector('.button');
+const close = document.querySelector('.close');
+
+button.addEventListener('click', function(){
+ post.innerHTML = menu.innerHTML;
+})
+ close.addEventListener('click', function(){
+post.innerHTML = posty.innerHTML;
+})
+ 
+</script>
+</html>
