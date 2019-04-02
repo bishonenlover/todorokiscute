@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample Page</title>
+
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+*, *::after, *::before{
+box-sizing: border-box;
+}
+
+
+body{
+margin:0;
+font:.9em/1.8 'Roboto';
+cursor:default;
+color:#444;
+background:#e6e6fa;
+}
+
+a{
+text-decoration:none;
+transition: all ease-in-out .3s;
+color:lightcoral;
+}
+
+
+img{
+max-width:100%;
+display:block;
+height:auto;
+}
+
+
+h1, h2{
+  margin-top:0;
+  margin-bottom:.5em;
+  line-height:1.5;
+  font-weight:normal;
+}
+p{
+  margin-top:0;
+  margin-bottom:.5em;
+}
+
+pre{
+white-space:pre-line;
+font-family:'Roboto';
+}
+blockquote{
+  margin:auto;
+}
+ 
+.posts{
+padding:3em;
+ display:grid;
+ grid-template-columns:repeat(6, 1fr);
+ margin-right:2em;
+height:100vh;
+  overflow-x:auto;
+ align-items:center;
+ grid-gap:6em;
+ overflow-y:hidden;
+}
+.post{
+  max-width:350px;
+  min-width:350px;
+  padding:1em;
+   background:white;
+}
+::-webkit-scrollbar{
+  width:0;
+  height:9px;
+  background:lavender;
+}
+::-webkit-scrollbar-thumb{
+  background:#f5c6b6;
+  border-radius:10px;
+}
+
+.reblog-info{
+  display:flex;
+  align-items:center;
+  margin:.5em 0;
+}
+.reblog-info img{
+  width:30px;
+  height:30px;
+  object-fit:cover;
+  margin-right:.4em;
+}
+ /* both buttons, for positioning purpose */ 
+.buttons{
+display:flex;
+align-items:center;
+ justify-content:flex-end;
+}
+ 
+.buttons svg {
+fill:#f5c6b6;
+ box-sizing:content-box;
+--size:14px;
+  width:var(--size);
+   height:var(--size);
+   display:block;
+   overflow:visible;
+  cursor:pointer;
+ }
+ 
+ 
+.buttons .reblog svg {
+--size:14px;
+  width:var(--size);
+   height:var(--size);
+ margin-left:.5em;
+
+
+}
+.buttons .like .liked + svg {
+   opacity:1;
+
+}
+.buttons .like .liked + svg path {
+ fill: #555;
+
+}
+.buttons .like .like_button {
+   position:relative;
+
+}
+.buttons .like .like_button iframe {
+   position:absolute;
+   top:0;
+   left:0;
+   bottom:0;
+   right:0;
+   z-index:2;
+   opacity:0;
+}
+
+.post-info{
+  display:flex;
+  justify-content:space-between;
+}
+
+
+</style>
+<body>
+<!-- posts wrapper start  -->
+<div class="posts">
+
+
+	<!-- post box start -->
+	<div class="post" id="183887776068">
+
+
+		<!-- notes -->
+		<div class="post-info">
+
+
+			<div class="notes">
+				21 notes
+			</div>
+
+			<!-- notes end here -->
+
+			<!-- date -->
+			<div class="date">
+				<!-- index date with permalink -->
+				<a href="https://todorokiscute.tumblr.com/post/183887776068/look-at-this-cutie-roy-i-love-this-face-omg" target="_blank">02.04.19</a>
+
+
+			</div>
+
+
+		</div>
+
+		<!-- date end here -->
+
+
+		<!-- text -->
+
+
+
+		<!-- tumblr's dashboard style captions -->
+
+
+
+		<div class="caption">
+			<div class="reblog-info">
+
+				<a href="http://aquaticnerd413.tumblr.com/post/183757776473" target="_blank">
+					<img src="https://i.imgur.com/7wcvX1x.gif">
+</a>
+
+
+ 
+<a target="_blank" class="reblog-name" href="/">bishonenlover</a>
+
+
+</div>
+<div class="reblog-content">
+<p></p><figure class="tmblr-full" data-orig-height="540" data-orig-width="486"><img src="https://66.media.tumblr.com/99662d42c331e96f2e7b7909bcbf509d/tumblr_pp1v76fJXL1uve4bn_500.png" data-orig-height="540" data-orig-width="486" width="486" height="540" alt="image" /></figure><p>Look at this cutie! Roy. I love this face. Omg. His reaction to being called a penny pincher is the best.</p>
+</div>
+</div>
+
+
+
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+ <!-- code to not appear on pages -->
+<!-- tags -->
+<div class="post-footer">
+    
+
+
+<div class="tags1">
+
+  <a href="https://todorokiscute.tumblr.com/tagged/anime">#anime</a>   
+
+
+  <a href="https://todorokiscute.tumblr.com/tagged/need-to-watch-again">#need to watch again</a>   
+
+
+</div>
+
+<!-- tags end here -->
+
+
+<!-- like and reblog buttons -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183887776068" data-blog-name="todorokiscute" id="like_button_183887776068"><iframe id="like_iframe_183887776068" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=todorokiscute&amp;post_id=183887776068&amp;color=black&amp;rk=5vdXCAKj&amp;root_id=183757776473" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183887776068"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183887776068/5vdXCAKj" target="_blank" class="reblog">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 361.095 361.095" style="enable-background:new 0 0 361.095 361.095;" xml:space="preserve"><g><g><path d="M182.595,325.678c-63.183,0-120.133-42.217-138.267-102.567c-2.833-9.067-12.183-14.167-21.25-11.333    c-9.067,2.833-14.167,12.183-11.333,21.25c22.95,75.933,91.517,126.65,170.85,126.65c98.317,0,178.5-80.183,178.5-178.5    s-80.183-178.5-178.5-178.5c-55.817,0-108.233,26.633-141.667,69.7l-7.083-56.1c-1.133-9.35-9.633-15.867-18.983-14.733    C5.511,2.678-1.005,11.178,0.128,20.528l13.317,103.7c1.133,8.5,8.5,14.733,16.717,14.733c0.567,0,1.417,0,1.983,0l102.567-11.617    c9.35-1.133,16.15-9.35,15.017-18.7s-9.35-16.15-18.7-15.017l-68.85,7.65c26.633-39.95,71.683-64.6,120.417-64.6    c79.617,0,144.5,64.883,144.5,144.5S262.211,325.678,182.595,325.678z"/></g></g></svg>
+</a>
+</div>
+<!-- like and reblog buttons end here -->
+</div>
+ 
+
+
+ </div><!-- post box end -->
+
+  
+ <!-- post box start -->
+ <div class="post" id="183887768128">
+
+  
+<!-- notes -->
+<div class="post-info">
+
+ 
+<div class="notes">
+32 notes
+</div>
+ 
+<!-- notes end here -->
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://todorokiscute.tumblr.com/post/183887768128" target="_blank">02.04.19</a>
+
+
+</div>
+
+    
+</div>
+
+<!-- date end here -->
+ 
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+<a href="#!" onclick="Tumblr.Lightbox.init([{ width: 341, height: 237, low_res: 'https://66.media.tumblr.com/e91ad7cf2a7dfc2eace59681e92ad1a2/tumblr_pp76wuc2Fk1w0wvwro1_400.jpg', high_res: 'https://66.media.tumblr.com/e91ad7cf2a7dfc2eace59681e92ad1a2/tumblr_pp76wuc2Fk1w0wvwro1_400.jpg' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+ <img class="light" src="https://66.media.tumblr.com/e91ad7cf2a7dfc2eace59681e92ad1a2/tumblr_pp76wuc2Fk1w0wvwro1_400.jpg"></a>
+
+<!-- tumblr's dashboard style captions -->
+ 
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+ <!-- code to not appear on pages -->
+<!-- tags -->
+<div class="post-footer">
+    
+
+
+<div class="tags1">
+
+  <a href="https://todorokiscute.tumblr.com/tagged/manga">#manga</a>   
+
+
+  <a href="https://todorokiscute.tumblr.com/tagged/oh">#oh</a>   
+
+
+  <a href="https://todorokiscute.tumblr.com/tagged/so-cute-here">#so cute here</a>   
+
+
+</div>
+
+<!-- tags end here -->
+
+
+<!-- like and reblog buttons -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183887768128" data-blog-name="todorokiscute" id="like_button_183887768128"><iframe id="like_iframe_183887768128" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=todorokiscute&amp;post_id=183887768128&amp;color=black&amp;rk=ei6fGaMx&amp;root_id=183836823717" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183887768128"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183887768128/ei6fGaMx" target="_blank" class="reblog">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 361.095 361.095" style="enable-background:new 0 0 361.095 361.095;" xml:space="preserve"><g><g><path d="M182.595,325.678c-63.183,0-120.133-42.217-138.267-102.567c-2.833-9.067-12.183-14.167-21.25-11.333    c-9.067,2.833-14.167,12.183-11.333,21.25c22.95,75.933,91.517,126.65,170.85,126.65c98.317,0,178.5-80.183,178.5-178.5    s-80.183-178.5-178.5-178.5c-55.817,0-108.233,26.633-141.667,69.7l-7.083-56.1c-1.133-9.35-9.633-15.867-18.983-14.733    C5.511,2.678-1.005,11.178,0.128,20.528l13.317,103.7c1.133,8.5,8.5,14.733,16.717,14.733c0.567,0,1.417,0,1.983,0l102.567-11.617    c9.35-1.133,16.15-9.35,15.017-18.7s-9.35-16.15-18.7-15.017l-68.85,7.65c26.633-39.95,71.683-64.6,120.417-64.6    c79.617,0,144.5,64.883,144.5,144.5S262.211,325.678,182.595,325.678z"/></g></g></svg>
+</a>
+</div>
+<!-- like and reblog buttons end here -->
+</div>
+ 
+
+
+ </div><!-- post box end -->
+
+  
+ <!-- post box start -->
+ <div class="post" id="183887765533">
+
+  
+<!-- notes -->
+<div class="post-info">
+
+ 
+<div class="notes">
+25 notes
+</div>
+ 
+<!-- notes end here -->
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://todorokiscute.tumblr.com/post/183887765533" target="_blank">02.04.19</a>
+
+
+</div>
+
+    
+</div>
+
+<!-- date end here -->
+ 
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+<a href="#!" onclick="Tumblr.Lightbox.init([{ width: 486, height: 297, low_res: 'https://66.media.tumblr.com/028e6d4ad9e9665b10cbb620c31b2524/tumblr_pp76x5cX8Q1w0wvwro1_500.jpg', high_res: 'https://66.media.tumblr.com/028e6d4ad9e9665b10cbb620c31b2524/tumblr_pp76x5cX8Q1w0wvwro1_500.jpg' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+ <img class="light" src="https://66.media.tumblr.com/028e6d4ad9e9665b10cbb620c31b2524/tumblr_pp76x5cX8Q1w0wvwro1_500.jpg"></a>
+
+<!-- tumblr's dashboard style captions -->
+ 
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+ <!-- code to not appear on pages -->
+<!-- tags -->
+<div class="post-footer">
+    
+
+
+<div class="tags1">
+
+  <a href="https://todorokiscute.tumblr.com/tagged/manga">#manga</a>   
+
+
+  <a href="https://todorokiscute.tumblr.com/tagged/%3C3">#&lt;3</a>   
+
+
+</div>
+
+<!-- tags end here -->
+
+
+<!-- like and reblog buttons -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183887765533" data-blog-name="todorokiscute" id="like_button_183887765533"><iframe id="like_iframe_183887765533" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=todorokiscute&amp;post_id=183887765533&amp;color=black&amp;rk=eAIFL4La&amp;root_id=183838504231" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183887765533"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183887765533/eAIFL4La" target="_blank" class="reblog">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 361.095 361.095" style="enable-background:new 0 0 361.095 361.095;" xml:space="preserve"><g><g><path d="M182.595,325.678c-63.183,0-120.133-42.217-138.267-102.567c-2.833-9.067-12.183-14.167-21.25-11.333    c-9.067,2.833-14.167,12.183-11.333,21.25c22.95,75.933,91.517,126.65,170.85,126.65c98.317,0,178.5-80.183,178.5-178.5    s-80.183-178.5-178.5-178.5c-55.817,0-108.233,26.633-141.667,69.7l-7.083-56.1c-1.133-9.35-9.633-15.867-18.983-14.733    C5.511,2.678-1.005,11.178,0.128,20.528l13.317,103.7c1.133,8.5,8.5,14.733,16.717,14.733c0.567,0,1.417,0,1.983,0l102.567-11.617    c9.35-1.133,16.15-9.35,15.017-18.7s-9.35-16.15-18.7-15.017l-68.85,7.65c26.633-39.95,71.683-64.6,120.417-64.6    c79.617,0,144.5,64.883,144.5,144.5S262.211,325.678,182.595,325.678z"/></g></g></svg>
+</a>
+</div>
+<!-- like and reblog buttons end here -->
+</div>
+ 
+
+
+ </div><!-- post box end -->
+
+  
+ <!-- post box start -->
+ <div class="post" id="183887745918">
+
+  
+<!-- notes -->
+<div class="post-info">
+
+ 
+<div class="notes">
+77 notes
+</div>
+ 
+<!-- notes end here -->
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://todorokiscute.tumblr.com/post/183887745918" target="_blank">02.04.19</a>
+
+
+</div>
+
+    
+</div>
+
+<!-- date end here -->
+ 
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+<a href="#!" onclick="Tumblr.Lightbox.init([{ width: 448, height: 529, low_res: 'https://66.media.tumblr.com/06a2142d5e300d9468bd22df093fdf81/tumblr_ppa3xinEk11w0wvwro1_500.jpg', high_res: 'https://66.media.tumblr.com/06a2142d5e300d9468bd22df093fdf81/tumblr_ppa3xinEk11w0wvwro1_500.jpg' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+ <img class="light" src="https://66.media.tumblr.com/06a2142d5e300d9468bd22df093fdf81/tumblr_ppa3xinEk11w0wvwro1_500.jpg"></a>
+
+<!-- tumblr's dashboard style captions -->
+ 
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+ <!-- code to not appear on pages -->
+<!-- tags -->
+<div class="post-footer">
+    
+
+
+<div class="tags1">
+
+  <a href="https://todorokiscute.tumblr.com/tagged/manga">#manga</a>   
+
+
+</div>
+
+<!-- tags end here -->
+
+
+<!-- like and reblog buttons -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183887745918" data-blog-name="todorokiscute" id="like_button_183887745918"><iframe id="like_iframe_183887745918" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=todorokiscute&amp;post_id=183887745918&amp;color=black&amp;rk=C5VO2NfC&amp;root_id=183871200871" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183887745918"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183887745918/C5VO2NfC" target="_blank" class="reblog">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 361.095 361.095" style="enable-background:new 0 0 361.095 361.095;" xml:space="preserve"><g><g><path d="M182.595,325.678c-63.183,0-120.133-42.217-138.267-102.567c-2.833-9.067-12.183-14.167-21.25-11.333    c-9.067,2.833-14.167,12.183-11.333,21.25c22.95,75.933,91.517,126.65,170.85,126.65c98.317,0,178.5-80.183,178.5-178.5    s-80.183-178.5-178.5-178.5c-55.817,0-108.233,26.633-141.667,69.7l-7.083-56.1c-1.133-9.35-9.633-15.867-18.983-14.733    C5.511,2.678-1.005,11.178,0.128,20.528l13.317,103.7c1.133,8.5,8.5,14.733,16.717,14.733c0.567,0,1.417,0,1.983,0l102.567-11.617    c9.35-1.133,16.15-9.35,15.017-18.7s-9.35-16.15-18.7-15.017l-68.85,7.65c26.633-39.95,71.683-64.6,120.417-64.6    c79.617,0,144.5,64.883,144.5,144.5S262.211,325.678,182.595,325.678z"/></g></g></svg>
+</a>
+</div>
+<!-- like and reblog buttons end here -->
+</div>
+ 
+
+
+ </div><!-- post box end -->
+
+  
+ <!-- post box start -->
+ <div class="post" id="183887735538">
+
+  
+<!-- notes -->
+<div class="post-info">
+
+ 
+<div class="notes">
+6 notes
+</div>
+ 
+<!-- notes end here -->
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://todorokiscute.tumblr.com/post/183887735538" target="_blank">02.04.19</a>
+
+
+</div>
+
+    
+</div>
+
+<!-- date end here -->
+ 
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+<a href="#!" onclick="Tumblr.Lightbox.init([{ width: 495, height: 186, low_res: 'https://66.media.tumblr.com/310ade9c2a3c1544ca9d03ea52ac6919/tumblr_ppa4pqeV1G1w0wvwro1_500.jpg', high_res: 'https://66.media.tumblr.com/310ade9c2a3c1544ca9d03ea52ac6919/tumblr_ppa4pqeV1G1w0wvwro1_500.jpg' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+ <img class="light" src="https://66.media.tumblr.com/310ade9c2a3c1544ca9d03ea52ac6919/tumblr_ppa4pqeV1G1w0wvwro1_500.jpg"></a>
+
+<!-- tumblr's dashboard style captions -->
+ 
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+ <!-- code to not appear on pages -->
+<!-- tags -->
+<div class="post-footer">
+    
+
+
+<div class="tags1">
+
+  <a href="https://todorokiscute.tumblr.com/tagged/manga">#manga</a>   
+
+
+  <a href="https://todorokiscute.tumblr.com/tagged/he%27s-so-cute">#he&#039;s so cute</a>   
+
+
+  <a href="https://todorokiscute.tumblr.com/tagged/%3C3">#&lt;3</a>   
+
+
+</div>
+
+<!-- tags end here -->
+
+
+<!-- like and reblog buttons -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183887735538" data-blog-name="todorokiscute" id="like_button_183887735538"><iframe id="like_iframe_183887735538" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=todorokiscute&amp;post_id=183887735538&amp;color=black&amp;rk=GJSoPQYI&amp;root_id=183885675364" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183887735538"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183887735538/GJSoPQYI" target="_blank" class="reblog">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 361.095 361.095" style="enable-background:new 0 0 361.095 361.095;" xml:space="preserve"><g><g><path d="M182.595,325.678c-63.183,0-120.133-42.217-138.267-102.567c-2.833-9.067-12.183-14.167-21.25-11.333    c-9.067,2.833-14.167,12.183-11.333,21.25c22.95,75.933,91.517,126.65,170.85,126.65c98.317,0,178.5-80.183,178.5-178.5    s-80.183-178.5-178.5-178.5c-55.817,0-108.233,26.633-141.667,69.7l-7.083-56.1c-1.133-9.35-9.633-15.867-18.983-14.733    C5.511,2.678-1.005,11.178,0.128,20.528l13.317,103.7c1.133,8.5,8.5,14.733,16.717,14.733c0.567,0,1.417,0,1.983,0l102.567-11.617    c9.35-1.133,16.15-9.35,15.017-18.7s-9.35-16.15-18.7-15.017l-68.85,7.65c26.633-39.95,71.683-64.6,120.417-64.6    c79.617,0,144.5,64.883,144.5,144.5S262.211,325.678,182.595,325.678z"/></g></g></svg>
+</a>
+</div>
+<!-- like and reblog buttons end here -->
+</div>
+ 
+
+
+ </div><!-- post box end -->
+
+  
+ <!-- post box start -->
+ <div class="post" id="183887694643">
+
+  
+<!-- notes -->
+<div class="post-info">
+
+ 
+<!-- notes end here -->
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://todorokiscute.tumblr.com/post/183887694643/didnt-liked-the-new-dororos-op-song" target="_blank">02.04.19</a>
+
+
+</div>
+
+    
+</div>
+
+<!-- date end here -->
+ 
+ 
+ <!-- text -->
+
+
+
+<!-- tumblr's dashboard style captions -->
+ 
+<div class="caption">
+
+<p>didn&rsquo;t liked the new dororo&rsquo;s op song :((</p>
+</div><!-- caption -->
+
+
+
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+ <!-- code to not appear on pages -->
+<!-- tags -->
+<div class="post-footer">
+    
+
+
+<div class="tags1">
+
+  <a href="https://todorokiscute.tumblr.com/tagged/me">#me</a>   
+
+
+  <a href="https://todorokiscute.tumblr.com/tagged/anime">#anime</a>   
+
+
+</div>
+
+<!-- tags end here -->
+
+
+<!-- like and reblog buttons -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183887694643" data-blog-name="todorokiscute" id="like_button_183887694643"><iframe id="like_iframe_183887694643" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=todorokiscute&amp;post_id=183887694643&amp;color=black&amp;rk=qXt0uSYt" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183887694643"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183887694643/qXt0uSYt" target="_blank" class="reblog">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 361.095 361.095" style="enable-background:new 0 0 361.095 361.095;" xml:space="preserve"><g><g><path d="M182.595,325.678c-63.183,0-120.133-42.217-138.267-102.567c-2.833-9.067-12.183-14.167-21.25-11.333    c-9.067,2.833-14.167,12.183-11.333,21.25c22.95,75.933,91.517,126.65,170.85,126.65c98.317,0,178.5-80.183,178.5-178.5    s-80.183-178.5-178.5-178.5c-55.817,0-108.233,26.633-141.667,69.7l-7.083-56.1c-1.133-9.35-9.633-15.867-18.983-14.733    C5.511,2.678-1.005,11.178,0.128,20.528l13.317,103.7c1.133,8.5,8.5,14.733,16.717,14.733c0.567,0,1.417,0,1.983,0l102.567-11.617    c9.35-1.133,16.15-9.35,15.017-18.7s-9.35-16.15-18.7-15.017l-68.85,7.65c26.633-39.95,71.683-64.6,120.417-64.6    c79.617,0,144.5,64.883,144.5,144.5S262.211,325.678,182.595,325.678z"/></g></g></svg>
+</a>
+</div>
+<!-- like and reblog buttons end here -->
+</div>
+ 
+
+
+ </div><!-- post box end -->
+
+  
+
+
+<!-- delete default source/via from posts -->
+
+</body>
+</html>
