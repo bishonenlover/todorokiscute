@@ -39,4 +39,8 @@
   <hr/>
  
  ☆ <b>My Hamburger Menu with Pure Javascript</b> <p> I just made a hamburger menu with javascript only! <p>The horizontal menu changes to a full page and vertical menu on mobile.  <a href="https://bishonenlover.github.io/todorokiscute/js-hamburger.html" target="_blank">view</a>
+ 
+  <hr/>
+ 
+ ☆ <b>Horizontal Layout with Display Grid</b> <p> A responsive horizontal layout using display grid. <a href="https://bishonenlover.github.io/todorokiscute/horizontal-grid.html" target="_blank">view</a>
 
