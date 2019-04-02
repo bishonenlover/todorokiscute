@@ -54,23 +54,7 @@ blockquote{
   margin:auto;
 }
  
-.posts{
-padding:3em;
- display:grid;
- grid-template-columns:repeat(6, 1fr);
- margin-right:2em;
-height:100vh;
-  overflow-x:auto;
- align-items:center;
- grid-gap:6em;
- overflow-y:hidden;
-}
-.post{
-  max-width:350px;
-  min-width:350px;
-  padding:1em;
-   background:white;
-}
+
 ::-webkit-scrollbar{
   width:0;
   height:9px;
@@ -146,7 +130,38 @@ fill:#f5c6b6;
   justify-content:space-between;
 }
 
-
+@media(min-width:601px){
+.posts{
+padding:3em;
+ display:grid;
+ grid-template-columns:repeat(6, 1fr);
+ margin-right:2em;
+height:100vh;
+  overflow-x:auto;
+ align-items:center;
+ grid-gap:6em;
+ overflow-y:hidden;
+}
+.post{
+  max-width:350px;
+  min-width:350px;
+  padding:1em;
+   background:white;
+}
+}
+@media(max-width:600px){
+.post{
+  padding:1em;
+   background:white;
+   margin-bottom:8em;
+   
+   }
+   .posts{
+   width:80%;
+   margin:3em auto;
+   }
+   
+  } 
 </style>
 <body>
 <!-- posts wrapper start  -->
@@ -934,7 +949,7 @@ fill:#f5c6b6;
 
  </div><!-- post box end -->
 
-  
+  </div>
 
 
 <!-- delete default source/via from posts -->
