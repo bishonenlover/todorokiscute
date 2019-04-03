@@ -17,5 +17,5 @@ Actually not responsive at all. But I played a lot with jquery in this, <p>to ma
   
     <hr />
 ☆ <b>Black and Pink Final Ver</b><p>
- I jus tought I should change that theme, since I was using for ages LOL. <p> This is the final version of my Anime Reviews Blog. <a href="https://bishonenlover.github.io/todorokiscute/themes/black-and-pink-br.html">view</a>
+ I jus tought I should change that theme, since I was using for ages LOL. <p> This is the final version of my Anime Reviews Blog. <a href="https://bishonenlover.github.io/todorokiscute/themes/black-and-pink-final.html">view</a>
   
