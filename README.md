@@ -43,4 +43,7 @@
   <hr/>
  
  ☆ <b>Horizontal Layout with Display Grid</b> <p> A responsive horizontal layout using display grid. <a href="https://bishonenlover.github.io/todorokiscute/horizontal-grid.html" target="_blank">view</a>
+ <hr/>
+ 
+ ☆ <b>Cool Sidebar</b> <p> A simple responsive layout with a cool sidebar style. <a href="https://bishonenlover.github.io/todorokiscute/cool-sidebar.html" target="_blank">view</a>
 
