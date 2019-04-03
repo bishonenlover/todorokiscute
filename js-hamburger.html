@@ -28,27 +28,13 @@ margin:0;
 font:1em/1.8 'Roboto Condensed';
 background: #f1f1f1 url(https://static.tumblr.com/hb9yb56/No4pk7skb/background.jpg) fixed;
 }
- .menu{
-width:100%;
-padding:1.5em;
-background:#e6e6fa;
-word-spacing:1em;
- position:fixed;
- top:0;
-left:0;
-text-align:center;
- }
- 
- .menu a{
- text-decoration:none;
- color:lightcoral;
- padding:.7em 1em;
-
- }
-
-  .menu a + a{
- margin-left:2em;
- }
+a{
+color:lightcoral;
+text-decoration:none;
+}
+  .content{
+  margin-top:7em;
+  }
  
  .box{
  width:80%;
@@ -77,7 +63,6 @@ background:#e6e6fa;
 border:1px solid #d0d0e8;
 border-radius:4px;
 }
-@media(max-width:600px){
 
 .header{
  display:flex;
@@ -86,7 +71,7 @@ border-radius:4px;
 width:100%;
 padding:1.5em;
 background:#e6e6fa;
- 
+ position:fixed;
  top:0;
 left:0;
  
@@ -98,7 +83,7 @@ padding:1em;
  right:.3em;
  top:.6em;
  cursor:pointer;
-  
+ z-index:9999999999;
  }
  
  .hamburger,
@@ -111,6 +96,7 @@ padding:1em;
  width:1.7em;
  border-radius:3px;
 transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+  
  }
  .hamburger::before{
  transform:translateY(-7px);
@@ -133,6 +119,7 @@ transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
  }
  
   .menu{
+  background:lavender;
  display:none;
  width:100%;
  position:fixed;
@@ -142,14 +129,14 @@ transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
  top:0;
  left:0;
  height:100%; 
-  
+ 
  }
  .menu a + a{
  margin:0;
  }
 .menu a{
 width:100%;
-padding:calc(100vh / 10); 
+padding:calc(100vh / 12); 
 text-align:center;
  transition: all ease-in-out .3s;
  font-size:1.5em;
@@ -170,29 +157,30 @@ background:pink;
  ::-webkit-scrollbar{
  display:none;
  }
-  }
+  
  
 </style>
 <body>
-<div class="menu">
-<a href="">Posts</a>
-<a href="">About</a>
-<a href="">Tags</a>
-<a href="">Blog</a>
-</div>
+<div class="content">
+
 
 <div class="header">
  <div class="menu-toggle">
 <div class="hamburger"></div>
  </div>
- </div>
-  
+  <div class="menu">
+<a href="">Posts</a>
+<a href="">About</a>
+<a href="">Tags</a>
+<a href="">Blog</a>
+</div></div>
   <div class="box">
   <p>Meowing chowing and wowing nya nya nyan spend six hours per day washing, but still have a crusty butthole mrow for eat and than sleep on your face i like cats because they are fat and fluffy yet freak human out make funny noise mow mow mow mow mow mow success now attack human. All of a sudden cat goes crazy. Has closed eyes but still sees you has closed eyes but still sees you but if human is on laptop sit on the keyboard so chew foot, hunt by meowing loudly at 5am next to human slave food dispenser. Nya nya nyan paw at your fat belly. Scratch leg; meow for can opener to feed me hiiiiiiiiii feed me now drool so i just saw other cats inside the house and nobody ask me before using my litter box. Attack the dog then pretend like nothing happened relentlessly pursues moth lick the other cats lick sellotape but headbutt owner's knee and cat dog hate mouse eat string barf pillow no baths hate everything.
   </p>
     <p>Meowing chowing and wowing nya nya nyan spend six hours per day washing, but still have a crusty butthole mrow for eat and than sleep on your face i like cats because they are fat and fluffy yet freak human out make funny noise mow mow mow mow mow mow success now attack human. All of a sudden cat goes crazy. Has closed eyes but still sees you has closed eyes but still sees you but if human is on laptop sit on the keyboard so chew foot, hunt by meowing loudly at 5am next to human slave food dispenser. Nya nya nyan paw at your fat belly. Scratch leg; meow for can opener to feed me hiiiiiiiiii feed me now drool so i just saw other cats inside the house and nobody ask me before using my litter box. Attack the dog then pretend like nothing happened relentlessly pursues moth lick the other cats lick sellotape but headbutt owner's knee and cat dog hate mouse eat string barf pillow no baths hate everything.
   </p>
   </div>
+    </div>
   </body>
 <script>
 var open = document.querySelector('.menu-toggle');
