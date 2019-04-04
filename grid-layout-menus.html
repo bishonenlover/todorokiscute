@@ -1,0 +1,159 @@
+<!DOCTYPE html><!--
+
+by todorokiscute / bishonenlover
+
+
+--><html>
+
+<head>
+	<title>A Grid Layout with grid menus</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+<link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png" />
+</head>
+<style>
+*{
+  box-sizing:border-box;
+}
+body{
+  background:#f8f8f8;
+  font:.9em/1.8 'Roboto';
+  margin:0;
+}
+
+.content{
+  width:80%;
+  margin:4em auto;
+  display:grid;
+  grid-template-areas:
+  "head  head"
+  "caixa-1  caixa-2"
+  "caixa-3  caixa-3";
+  grid-gap:3.5em;
+  max-width:600px;
+}
+ 
+[class^="box"] {
+ box-shadow:0 0 20px rgba(0,0,0,0.05);
+ background:white;
+ padding:2em;
+ width:100%;
+}
+[class^="box"] a{
+  text-decoration:none;
+  color:#444;
+  transition:all ease-in-out .5s;
+}
+[class^="box"] a:hover{
+  background:#ffd9b1;
+  color:#000;
+  border-radius:7px;
+}
+h1{
+  grid-area:head;
+  margin:0;
+font-weight:normal;
+font-family:'Roboto Condensed';
+text-align:center;
+}
+.box{
+  grid-area:caixa-1;
+}
+.box-2{
+  grid-area:caixa-2;
+}
+.box-3{
+  grid-area:caixa-3;
+}
+
+[class^="menu"] {
+ display:grid;
+ grid-template-columns: 1fr 1fr;
+ grid-gap:4px;
+ text-align:center;
+}
+[class^="menu"] a{
+   padding:.5em;
+}
+.menu a{
+ background:lavender;
+
+}
+.menu-2 a{
+  background:#facada;
+ 
+}
+.menu-3 a{
+  background:#e9e0eb;
+  
+}
+::-webkit-scrollbar{
+  width:6px;
+  height:0;
+  background:#f8f8f8;
+}
+::-webkit-scrollbar-thumb{
+  background:pink;
+  border-radius:10px;
+}
+@media(max-width:600px){
+ .content{
+   grid-template-areas:
+   "head"
+"caixa-1"
+"caixa-2"
+"caixa-3"
+ }
+:--webkit-scrollbar{
+  display:none;
+}
+}
+</style>
+<body>
+	<div class="content">
+    <h1>A Simple Grid Layout with grid menus</h1>
+		<div class="box">
+			<div class="menu">
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+			</div>
+		</div>
+
+		<div class="box-2">
+			<div class="menu-2">
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+			</div>
+		</div>
+
+		<div class="box-3">
+			<div class="menu-3">
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+				<a href="">Link</a>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
