@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sidebar Examples</title>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ *{
+ box-sizing:border-box;
+}
+body{
+margin:0;
+background:#f8f8f8;
+font:.9em/1.8 'Roboto';
+}
+.content{
+width:80%;
+margin:4em auto;
+max-width:600px;
+/* grid */
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ grid-gap:3em;
+ align-items:flex-start;
+}
+img{
+max-width:100%;
+display:block;
+}
+
+/* all sidebar styles */
+ [class^="sidebar"]{
+ background:white;
+ padding:1em;
+ }
+ /* all name and use styles */
+ .name{
+ font-size:1.8em;
+ font-family:'Roboto Condensed';
+ }
+ .user{
+ color:#777;
+ }
+  
+  /* all sidebar 'content' */
+  .box{
+  margin-top:.4em;
+  text-align:justify;
+  font-size:.9em;
+  }
+ /* sidebar one */
+ .sidebar-1{
+ border-radius:6px;
+ }
+ .sidebar-1 img{
+ max-width:none;
+ width:calc(100% + 2em);
+ margin-left:-1em;
+ margin-top:-1em;
+ margin-bottom:.3em;
+ border-top-left-radius:5px;
+  border-top-right-radius:6px;
+ }
+ .sidebar-1 .user{
+ margin-top:-.7em;
+ }
+ 
+ 
+ /* sidebar  two */
+ 
+  .mask{
+  -webkit-mask-image: url('https://i.imgur.com/JBQPfcF.png');
+    -webkit-mask-size: 100% 100%;
+     height:180px;
+ width:calc(100% + 2em);
+ margin-left:-1em;
+ margin-top:-1em;
+  
+   
+  }
+  .mask img{
+ width:100%;
+   height:180px;
+  object-fit:cover;
+  }
+  
+  .info{
+  display:grid;
+  grid-template-areas:
+  "icon name"
+  ". user";
+
+  justify-content:flex-start;
+  }
+   .icon{
+   width:50px;
+   height:50px;
+     margin-right:.5em;
+     grid-area:icon;
+ margin-top:.4em;
+     
+   }
+     .icon img{
+  width:50px;
+  height:50px;
+  object-fit:cover;
+  border-radius:100%;
+  
+  }
+   .sidebar-2 .name{
+   grid-area:name;
+    
+   }
+   .sidebar-2 .user{
+  grid-area:user;  
+  margin-top:-1.5em;
+   }
+   
+   /* sidebar three */
+
+.sidebar-3{
+ border:1px solid lavender;
+ }
+.sidebar-3 .name{
+text-align:center;
+}
+.sidebar-3 img{
+max-width:none;
+width:calc(100% + 2em);
+margin:.3em 0;
+margin-left:-1em;
+}
+.sidebar-3 .user{
+visibility:hidden;
+ transition:visibility .3s, opacity .7s; 
+opacity:0;
+}
+.sidebar-3:hover  .user{
+ visibility:visible;
+opacity:1
+}
+ .sidebar-3 .box{
+ margin-top:0;
+ }
+ 
+ 
+ /* sidebar four */
+ .sidebar-4{
+ background:transparent;
+ padding:0;
+ }
+ .sidebar-4 .name{
+ text-align:center;
+ background:white;
+ border:1px solid lavender;
+ padding:.5em;
+  margin-bottom:1em;
+ }
+ .sidebar-4 img,
+ .sidebar-4 .box{
+ border:1px solid lavender;
+ padding:1em;
+ background:white;
+  margin-bottom:1em;
+ }
+::-webkit-scrollbar{
+width:7px;
+height:0;
+background:#f8f8f8;
+}
+::-webkit-scrollbar-thumb{
+background:lavender;
+border-radius:5px;
+}
+
+/* responsive */
+
+@media(max-width:690px){
+.content{
+grid-template-columns:1fr;
+ 
+}
+.box{
+font-size:1.1em;
+}
+.name{
+font-size:1.9em;
+}
+::-webkit-scrollbar{
+display:none;
+}
+}
+</style>
+</head>
+<body>
+
+ <div class="content">
+ 
+ <div class="sidebar-1">
+ <img src="https://i.imgur.com/Mi977RE.gif"/>
+ <div class="name">
+ Bishonenlover
+ </div><!-- name -->
+ <div class="user">
+ @bishonenlover
+ </div><!-- username-->
+ <div class="box">
+ Cat ipsum dolor sit amet, leave hair on owner's clothes but use lap as chair. Meow meow mama pooping rainbow while flying in a toasted bread costume in space. Hunt anything that moves taco cat backwards spells taco cat. 
+ </div><!-- content-->
+ </div><!-- sidebar -->
+ 
+ 
+  <div class="sidebar-2">
+  <div class="mask">
+ <img src="https://i.imgur.com/ZB0hIk4.gif"/>
+ </div><!-- paper effect -->
+ <div class="info">
+ <div class="icon">
+ <img src="https://i.imgur.com/c2Sk1oC.gif"/>
+ </div><!-- little icon-->
+ <div class="name">
+ Todorokiscute
+ </div><!-- name -->
+ <div class="user">
+ @todorokiscute
+ </div><!-- username-->
+ </div><!-- info -->
+ <div class="box">
+ Cat ipsum dolor sit amet, leave hair on owner's clothes but use lap as chair. Meow meow mama pooping rainbow while flying in a toasted bread costume in space. Hunt anything that moves taco cat backwards spells taco cat. 
+ </div><!-- content-->
+ </div><!-- sidebar -->
+ 
+ 
+  <div class="sidebar-3">
+   <div class="name">
+ Bishonenlover's Reviews
+ </div><!-- name -->
+ <img src="https://i.imgur.com/QPQvMUZ.gif"/>
+ <div class="user">
+ @bishonenlover-reviews
+ </div><!-- username-->
+ <div class="box">
+ Cat ipsum dolor sit amet, leave hair on owner's clothes but use lap as chair. Meow meow mama pooping rainbow while flying in a toasted bread costume in space. Hunt anything that moves taco cat backwards spells taco cat. 
+ </div><!-- content-->
+ </div><!-- sidebar -->
+ 
+ 
+   <div class="sidebar-4">
+      <div class="name">
+ Bishonenlover
+ </div><!-- name -->
+ <img src="https://i.imgur.com/ySR4N7k.gif"/>
+ <div class="box">
+ Cat ipsum dolor sit amet, leave hair on owner's clothes but use lap as chair. Meow meow mama pooping rainbow while flying in a toasted bread costume in space. Hunt anything that moves taco cat backwards spells taco cat. 
+ </div><!-- content-->
+ </div><!-- sidebar -->
+ </div><!-- content -->
+
+</body>
+</html>
