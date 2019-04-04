@@ -46,4 +46,7 @@
  <hr/>
  
  ☆ <b>Cool Sidebar</b> <p> A simple responsive layout with a cool sidebar style. <a href="https://bishonenlover.github.io/todorokiscute/cool-sidebar.html" target="_blank">view</a>
+  <hr/>
+ 
+ ☆ <b>Grid Layout with Grid Menus</b> <p> A simple and responsive grid layout with some grid menus inside of the boxes. <a href="https://bishonenlover.github.io/todorokiscute/grid-layout-menus" target="_blank">view</a>
 
