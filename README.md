@@ -52,4 +52,8 @@
  <hr/>
  
  ☆ <b>Sticky sidebar in a Grid Layout</b> <p> A simple and responsive grid layout, and the sidebar sticks on top when scrolled, using position sticky. <a href="https://bishonenlover.github.io/todorokiscute/sticky-grid-layout.html" target="_blank">view</a>
+ 
+  <hr/>
+ 
+ ☆ <b>Sidebar Examples</b> <p> Some simple examples of sidebar (mostly the welcome gif/description). <a href="https://bishonenlover.github.io/todorokiscute/sidebar-examples.html" target="_blank">view</a>
 
