@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sticky Sidebar in a Grid Layout</title>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ *{
+ box-sizing:border-box;
+}
+body{
+margin:0;
+background:rgb(255, 250, 205,.6);
+font:.9em/1.8 'Roboto';
+}
+.content{
+width:80%;
+margin:4em auto;
+max-width:800px;
+display:grid;
+grid-template-columns:1fr 2fr;
+grid-gap:3em;
+}
+img{
+max-width:100%;
+display:block;
+}
+.post{
+background:white;
+padding:2em;
+margin-bottom:4em;
+ text-align:justify;
+ color:#555;
+}
+ 
+.box{
+position:sticky;
+top:20px;
+text-align:center;
+}
+.date{
+float:right;
+margin-right:-7.5em;
+font-size:.8em;
+position:sticky;
+top:10px;
+}
+.menu{
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-gap:4px;
+}
+.menu a{
+padding:.5em .7em;
+background:#dcecf5;
+text-decoration:none;
+color:#444;
+transition:all ease-in-out .4s;
+}
+.menu a:hover{
+background:#fdcbc9;
+border-radius:6px;
+}
+.caixa{
+margin-bottom:3em;
+}
+::-webkit-scrollbar{
+width:8px;
+height:0;
+background:rgb(255, 250, 205,.6);
+}
+::-webkit-scrollbar-thumb{
+background:#fdcbc9;
+border-radius:10px;
+}
+@media(max-width:766px){
+body{
+font-size:1em;
+}
+.content{
+grid-template-columns:1fr;
+ 
+}
+ 
+.sidebar img{
+ width:100%;
+ }
+ .date{
+ float:none;
+ position:static;
+ margin-bottom:2em;
+ width:100%;
+ text-align:right;
+}
+.menu{
+grid-template-columns:1fr;
+}
+
+::-webkit-scrollbar{
+display:none;
+}
+.box{
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-gap:2em;
+align-items:center;
+}
+}
+@media(max-width:520px){
+.box{
+grid-template-columns:1fr;
+}
+.menu a{
+padding:1em;
+ 
+}
+}
+</style>
+</head>
+<body>
+
+ <div class="content">
+ <div class="sidebar">
+ <div class="box">
+ <div class="caixa">
+ <img src="https://i.imgur.com/Fy90jud.gif"><br/>
+ This is the sidebar!!
+ </div>
+ <div class="caixa"> 
+<div class="menu">
+<a href="">link</a>
+<a href="">link</a>
+<a href="">link</a>
+<a href="">link</a>
+
+</div>
+ </div>
+ </div>
+  </div>
+ 
+ 
+ <div class="posts">
+ <div class="post">
+ <div class="date">04/04/19</div>
+ Check cat door for ambush 10 times before coming in spread kitty litter all over house, jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans. Leave fur on owners clothes hiss at vacuum cleaner. Ignore the human until she needs to get up, then climb on her lap and sprawl. Throwup on your pillow poop in litter box, scratch the walls. 
+ </div>
+ <div class="post">
+ <div class="date">04/04/19</div>
+ Check cat door for ambush 10 times before coming in spread kitty litter all over house, jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans. Leave fur on owners clothes hiss at vacuum cleaner. Ignore the human until she needs to get up, then climb on her lap and sprawl. Throwup on your pillow poop in litter box, scratch the walls. 
+ </div>
+ <div class="post">
+ <div class="date">04/04/19</div>
+ Check cat door for ambush 10 times before coming in spread kitty litter all over house, jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans. Leave fur on owners clothes hiss at vacuum cleaner. Ignore the human until she needs to get up, then climb on her lap and sprawl. Throwup on your pillow poop in litter box, scratch the walls. 
+ </div>
+ <div class="post">
+ <div class="date">04/04/19</div>
+ Check cat door for ambush 10 times before coming in spread kitty litter all over house, jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans. Leave fur on owners clothes hiss at vacuum cleaner. Ignore the human until she needs to get up, then climb on her lap and sprawl. Throwup on your pillow poop in litter box, scratch the walls. 
+ </div>
+ <div class="post">
+ <div class="date">04/04/19</div>
+ Check cat door for ambush 10 times before coming in spread kitty litter all over house, jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans. Leave fur on owners clothes hiss at vacuum cleaner. Ignore the human until she needs to get up, then climb on her lap and sprawl. Throwup on your pillow poop in litter box, scratch the walls. 
+ </div>
+ <div class="post">
+ <div class="date">04/04/19</div>
+ Check cat door for ambush 10 times before coming in spread kitty litter all over house, jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans. Leave fur on owners clothes hiss at vacuum cleaner. Ignore the human until she needs to get up, then climb on her lap and sprawl. Throwup on your pillow poop in litter box, scratch the walls. 
+ </div>
+ </div>
+ 
+ </div>
+
+</body>
+</html>
