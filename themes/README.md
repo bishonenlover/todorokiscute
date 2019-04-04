@@ -17,5 +17,9 @@ Actually not responsive at all. But I played a lot with jquery in this, <p>to ma
   
     <hr />
 ☆ <b>Black and Pink Final Ver</b><p>
- I jus tought I should change that theme, since I was using for ages LOL. <p> This is the final version of my Anime Reviews Blog. <a href="https://bishonenlover.github.io/todorokiscute/themes/black-and-pink-final.html">view</a>
+ I just tought I should change that theme, since I was using for ages LOL. <p> This is the final version of my Anime Reviews Blog. <a href="https://bishonenlover.github.io/todorokiscute/themes/black-and-pink-final.html">view</a>
+  
+  <hr />
+☆ <b>PurplePink Layout</b><p>
+ This would be the new layout of my anime reviews blog, but I ended up not using. It's not a theme per se, just a demo.<a href="https://bishonenlover.github.io/todorokiscute/themes/purplepink-layout.html">view</a>
   
