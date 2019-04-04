@@ -49,4 +49,7 @@
   <hr/>
  
  ☆ <b>Grid Layout with Grid Menus</b> <p> A simple and responsive grid layout with some grid menus inside of the boxes. <a href="https://bishonenlover.github.io/todorokiscute/grid-layout-menus.html" target="_blank">view</a>
+ <hr/>
+ 
+ ☆ <b>Sticky sidebar in a Grid Layout</b> <p> A simple and responsive grid layout, and the sidebar sticks on top when scrolled, using position sticky. <a href="https://bishonenlover.github.io/todorokiscute/sticky-grid-layout.html" target="_blank">view</a>
 
