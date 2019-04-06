@@ -47,6 +47,7 @@ opacity:0
 visibility:visible;
 opacity:1
 }
+
  
  .box{
  background:white;
@@ -109,7 +110,9 @@ p{
   margin-top:0;
   margin-bottom:.5em;
 }
- 
+ .fix{
+overflow-y:hidden;
+}
 </style>
 </head>
 <body>
@@ -135,17 +138,18 @@ Cat dog hate mouse eat string barf pillow no baths hate everything catch mouse a
 var open = document.querySelector('.popup-open')
   var close = document.querySelector('.close, .popup')
 var popup = document.querySelector('.popup')
-
+ 
 
 open.addEventListener('click', function(){
 	popup.classList.toggle('opened');
+document.body.classList.add("fix");
  
 })
  
  
 close.addEventListener('click', function(){
  popup.classList.toggle('opened');
- 
+ document.body.classList.remove("fix");
 })
  
  
