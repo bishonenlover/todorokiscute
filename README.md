@@ -56,4 +56,11 @@
   <hr/>
  
  ☆ <b>Sidebar Examples</b> <p> Some simple examples of sidebar (mostly the welcome gif/description). <a href="https://bishonenlover.github.io/todorokiscute/sidebar-examples.html" target="_blank">view</a>
+ 
+ 
+ 
+  <hr/>
+ 
+ ☆ <b>Display Grid with Javascript</b> <p> A simple two columns grid layout fixing height issues with javascript. <p>
+ This layout I did while following <a href="https://www.youtube.com/watch?v=DEXKAUrl2q0&list=WL&index=2&t=2109s" target="_blank">this youtube tutorial</a>. <a href="https://bishonenlover.github.io/todorokiscute/js-grid.html" target="_blank">view</a>
 
