@@ -21,4 +21,7 @@ Actually not responsive at all. But I played a lot with jquery in this, <p>to ma
   <hr />
 ☆ <b>PurplePink Layout</b><p>
  This would be the new layout of my anime reviews blog, but I ended up not using. It's not a theme per se, just a demo.<a href="https://bishonenlover.github.io/todorokiscute/themes/purplepink-layout.html">view</a>
+  <hr />
+☆ <b>BL Codes Pink ver</b><p>
+The second theme of a blog about coding that I've deleted a while ago. This is the cutest version. <a href="https://bishonenlover.github.io/todorokiscute/themes/blcodes-pink.html">view</a>
   
