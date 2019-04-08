@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grid Layout with Column-count</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+<link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<style>
+*, *::after, *::before{
+box-sizing: border-box;
+}
+
+body {
+margin:0;
+font:1em/1.8 'Roboto';
+cursor:default;
+background:rgba(233, 224, 235,.5);
+}
+a{
+color:lightcoral;
+text-decoration:none;
+position:relative;
+}
+a::after{
+content:' ';
+display:block;
+position:absolute;
+width:0;
+height:1px;
+left:0;
+background:currentcolor;
+transition:all ease-in-out .3s;
+}
+ a:hover::after{
+ width:100%;
+ }
+ 
+ img{
+width: 100%;
+display: block;
+
+}
+.video{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.video iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+h2{
+margin:0;
+}
+ .wrapper{
+ display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap:1.4rem;
+  width:80%;
+  max-width:700px;
+  margin:3em auto;
+ }
+ .item{
+ background:white;
+ padding:1em;
+ margin-bottom:4em;
+ }
+ .photoset{
+ display:grid;
+ grid-template-columns:repeat(2, 1fr);
+ grid-gap:2px;
+ }
+ .photoset img{
+width:100%;
+height:90px;
+object-fit:cover;
+ }
+ @media(max-width:600px){
+ .wrapper{
+ grid-template-columns: repeat(1, 1fr);
+ }
+ }
+</style>
+</head>
+<body>
+<div class="wrapper">
+	
+	 <div class="item">
+     <img src="https://i.imgur.com/1ajAGu8.gif"> 
+     </div>
+     
+		<div class="item">
+        <img src="https://i.imgur.com/ko6j9h0.gif" /> 
+        </div>
+        
+		<div class="item">
+        Text-only masonry block. 3
+        </div>
+        
+		<div class="item">
+			<img src="https://66.media.tumblr.com/67191c16e0bff5ec9b9ed7af11888844/tumblr_pp1h48hlaq1vlvhpho2_400.gif" />
+		</div>
+        
+		<div class="item">
+			<img src="https://i.imgur.com/66Jjegl.jpg" />
+		</div>
+		 
+		<div class="item">
+			<a href="https://twitter.com/bishonenlover">I tweet sometimes.</a>
+		</div>
+        
+		<div class="item">
+			<img src="https://i.imgur.com/yAQdpB4.jpg" />
+			<h2>A block with a headline.</h2>
+		</div>
+        
+		<div class="item">
+			<img src="https://i.imgur.com/vdpqx27.png" /><br />
+			Lorem ipsum dolor sit amet, dicta dolore adipisci hic ipsam velit deleniti possimus cumque accusantium rerum quibusdam.
+		</div>
+        <div class="item">
+        Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequa  quis.     Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequa  quis.     Cat ipsum dolor sit amet, adipisci enim so nostrud so ad. Vitae suscipit adipisicing consequatur. Iure. Sit nesciunt. Sit et but quisquam, architecto unde, nulla. Consequa  quis.
+        </div>
+        
+		<div class="item">
+			<img src="https://i.imgur.com/3SCjcyA.gif" />
+            <img src="https://i.imgur.com/stzebTC.gif"/>
+		</div>
+        
+		<div class="item">
+        <div class="video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/YKJf876thxw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+		</div>
+	 
+		<div class="item">
+			<img src="https://i.imgur.com/PMowz9B.png"/>
+		</div>
+        
+		<div class="item">
+			<img src="https://i.imgur.com/VHpW59H.jpg" />
+		</div>
+ 	<div class="item">
+    <div class="photoset">
+			<img src="https://i.imgur.com/3abUSri.gif" />
+            <img src="https://i.imgur.com/wxWREBZ.gif"/>
+            <img src="https://i.imgur.com/YmLLkb9.gif"/>
+            <img src="https://i.imgur.com/kcf9b15.gif"/>
+            </div>
+            
+		</div>
+</div>
+
+<script>
+
+const masonryLayout = (containerElem, itemsElems, columns) => {
+  containerElem.classList.add('masonry-layout', `columns-${columns}`)
+  let columnsElements = []
+  
+  for( let i = 1; i <= columns; i++){
+    let column = document.createElement('div')
+    column.classList.add('masonry-column', `column-${i}`)
+    containerElem.appendChild(column)
+    columnsElements.push(column)
+  }
+  
+  for(let m = 0; m < Math.ceil(itemsElems.length / columns); m++){
+    for(let n = 0; n < columns; n++){
+      let item = itemsElems[ m * columns + n]
+      columnsElements[n].appendChild(item)
+      item.classList.add('masonry-item')
+    }
+  }
+}
+
+masonryLayout(document.querySelector('.wrapper'),
+              document.querySelectorAll('.item'), 2)
+              
+              </script>
+
+</body>
+</html>
