@@ -67,5 +67,6 @@
  
   <hr/>
  
- ☆ <b>A story with css</b> <p> An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell.</a>. <a href="https://bishonenlover.github.io/todorokiscute/sticky-story.html" target="_blank">view</a>
+ ☆ <b>A story with css</b> <p> An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell.</a>. <p>
+I didn't know position sticky could as useful and cool as this. <a href="https://bishonenlover.github.io/todorokiscute/sticky-story.html" target="_blank">view</a>
 
