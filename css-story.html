@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Story with CSS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<style>
+ /* CSS reset */
+*, *::before, *::after{
+box-sizing: border-box;
+}
+body{
+margin:0;
+font-family:'Roboto';
+font-weight:300;
+background:linear-gradient(var(--clr-2), var(--clr-1));
+min-height:100vh;
+color:rgba(0,0,0,0.7);
+font-size:24px;
+}
+img{
+width:100%;
+ }
+p{
+margin-top:0;
+margin-bottom:.5em;
+}
+h1, h2{
+margin:0;
+font-weight:normal;
+}
+pre{
+white-space:pre-line;
+font-family:'Roboto';
+}
+
+:root{
+--clr-1: #e9e0eb;
+--clr-2: #e6e6fa;
+--clr-3: #eaa8a8;
+--clr-4: #bdc2e8;
+--clr-5: #888888;
+
+}
+p{
+margin:0;
+
+}
+.intro{
+display:grid;
+grid:
+"hello hello" 75vh
+"my-name-is fernanda" 125vh / max-content 1fr;
+grid-gap:15px;
+font-size:3.5rem;
+width:90%;
+margin:auto;
+margin-bottom:60vh;
+}
+.intro-1{
+grid-are:hello;
+align-self:center;
+position:sticky;
+top:.5em;
+margin-bottom:1.5em;
+}
+.intro-2{
+grid-area:my-name-is;
+font-weight:900;
+font-style:italic;
+position:sticky;
+top:3em;
+align-self:center;
+}
+.intro-3{
+grid-area: fernanda;
+align-self:end;
+font-weight:900;
+font-style:italic;
+}
+.css{
+text-align:center;
+margin-bottom:60vh;
+}
+.tumblr{
+width:80%;
+margin:0 auto;
+display:grid;
+grid: "text prints" 1fr / 1fr 1fr;
+ grid-gap:1em;
+ margin-bottom:50vh;
+}
+ 
+.prints{
+background:var(--clr-3); 
+padding:0.3em;
+margin-top:60vh;
+grid-area: prints;
+position:relative;
+}
+.tumblr p{
+ grid-area:text;
+ position:sticky;
+ top:10vh;
+ align-self:start;
+ 
+}
+.prints img{
+z-index:3;
+position:relative;
+}
+.prints::after{
+content:' ';
+position:absolute;
+background:linear-gradient(var(--clr-3) calc(100% - 7em), transparent );
+top:0;
+bottom:0;
+right:0;
+left:0;
+ z-index:2;
+}
+.surprise{
+ color:white;
+ position:sticky;
+ bottom:100px;
+ margin-top:3em;
+
+ }
+.a-bit-more{
+background: url(https://i.imgur.com/LRB3k4v.gif);
+background-size:cover;
+padding:2em;
+height:225vh;
+background-position:center;
+font-size:2rem;
+position:relative;
+
+}
+.a-bit-more::before{
+content:'';
+position:absolute;
+top:0;
+bottom:0;
+right:0;
+left:0;
+background:linear-gradient(var(--clr-4) 15%, transparent, white);
+
+}
+
+.a-bit-more p{
+position:relative;
+z-index:2;
+color:white;
+position:sticky;
+top:2em;
+}
+.the-end{
+background:white;
+text-align:center;
+padding:50vh 0;
+ font-size:3rem;
+}
+@media(max-width:590px){
+.intro{
+font-size:2rem;
+}
+.tumblr{
+width:80%;
+margin:0 auto;
+display:grid;
+grid: "text prints" 1fr / 1fr;
+ grid-gap:1em;
+ margin-bottom:50vh;
+}
+}
+@media(max-width:350px){
+.intro{
+font-size:1em;
+}
+}
+</style>
+</head>
+<body>
+<div class="intro">
+<p class="intro-1">Hello there!</p>
+<p class="intro-2">My name is</p>
+<p class="intro-3">Fernanda</p>
+</div>
+<div class="about-me">
+<p class="css">I think CSS is the best.</p>
+<div class="tumblr">
+<p>I like it to much, that I share what I learn in tumblr</p>
+<div class="prints">
+<img src="https://66.media.tumblr.com/8ab04cae1676d08c40588d677dc957e6/tumblr_ppnzmpFkz81wf0ti4o1_1280.jpg">
+<img src="https://66.media.tumblr.com/628cd2927fc37140cc8de7a28e633c49/tumblr_ppnxy0hOXv1wf0ti4o1_1280.jpg">
+<img src="https://66.media.tumblr.com/5ffc26adbba66b1b827f31d30ecb058f/tumblr_ppjgm57HwE1wf0ti4o1_500.gif">
+<img src="https://66.media.tumblr.com/79e6f9cda430d5e1389c50aa2e28c692/tumblr_ppfnqtR0R81wf0ti4o1_640.jpg">
+<img src="https://66.media.tumblr.com/ae39a79bc77a6792e7c17024a8c6b769/tumblr_inline_pp6rsdlj8v1vow54i_500.gif">
+<img src="https://66.media.tumblr.com/1657c315b4e7348739082eb76b489e7d/tumblr_pp2rjli4Y71wf0ti4o1_640.gif">
+<p class="surprise">I really enjoy coding</p>
+</div>
+</div>
+</div>
+
+<div class="a-bit-more">
+<p>I also like to make gifs and post on my other tumblr.</p>
+</div>
+
+<div class="the-end">
+The end
+</div>
+</body>
+</html>
