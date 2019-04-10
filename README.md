@@ -1,3 +1,4 @@
+
 <h1>My Codes </h1>
 <blockquote>This is a repository to host some layouts types I've <br/>learned and made while following tutorials.
 </blockquote><p>
@@ -63,4 +64,8 @@
  
  ☆ <b>Display Grid with Javascript</b> <p> A simple two columns grid layout fixing height issues with javascript. <p>
  This layout I did while following <a href="https://www.youtube.com/watch?v=DEXKAUrl2q0&list=WL&index=2&t=2109s" target="_blank">this youtube tutorial</a>. <a href="https://bishonenlover.github.io/todorokiscute/js-grid.html" target="_blank">view</a>
+ 
+  <hr/>
+ 
+ ☆ <b>A story with css</b> <p> An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell.</a>. <a href="https://bishonenlover.github.io/todorokiscute/sticky-story.html" target="_blank">view</a>
 
