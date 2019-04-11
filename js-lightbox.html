@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lightbox</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+<link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<style>
+*, *::after, *::before{
+box-sizing: border-box;
+}
+
+body {
+margin:0;
+font:1em/1.8 'Roboto';
+cursor:default;
+background:rgba(230, 230, 250,.5);
+}
+a{
+color:lightcoral;
+text-decoration:none;
+position:relative;
+}
+a::after{
+content:' ';
+display:block;
+position:absolute;
+width:0;
+height:1px;
+left:0;
+background:currentcolor;
+transition:all ease-in-out .3s;
+}
+ a:hover::after{
+ width:100%;
+ }
+ 
+ img{
+width: 100%;
+display: block;
+
+}
+.video{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.video iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+h2{
+margin:0;
+}
+ .wrapper{
+ display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap:1.4rem;
+  width:80%;
+  max-width:700px;
+  margin:3em auto;
+ }
+ .item{
+ background:white;
+ padding:.7em;
+ margin-bottom:4em;
+ box-shadow: 0 10px 10px -10px rgb(0,0,0,0.4);
+ }
+ .photoset{
+ display:grid;
+ grid-template-columns:repeat(2, 1fr);
+ grid-gap:2px;
+ }
+ .photoset img{
+width:100%;
+height:90px;
+object-fit:cover;
+ }
+ @media(max-width:600px){
+ .wrapper{
+ grid-template-columns: repeat(1, 1fr);
+ }
+ }
+ [class^="open"]{
+ cursor:pointer;
+ }
+ [class^="opened"]{
+ display:none;
+ }
+  
+.close{
+position:fixed;
+right:1em;
+top:1em;
+cursor:pointer;
+ width:30px;
+ height:30px;
+ background:pink;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+ .open{
+ display:block;
+ position:absolute;
+ top:0;
+ left:0;
+ right:0;
+ bottom:0;
+  width:80%;
+  margin:auto;
+  max-width:750px;
+  border:6px solid white;
+ box-shadow: 0 10px 10px -10px rgb(0,0,0,0.4);
+ }
+ .lightbox{
+ display:none;
+ background:rgb(250,250,250,0.60);
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ }
+ 
+ 
+</style>
+</head>
+<body>
+<div class="wrapper">
+	 	<div class="item">
+    <div class="photoset">
+			<img src="https://i.imgur.com/3abUSri.gif"  class="open-1" >
+            <img src="https://i.imgur.com/wxWREBZ.gif" class="open-2" />
+            <img src="https://i.imgur.com/YmLLkb9.gif" class="open-3" />
+            <img src="https://i.imgur.com/kcf9b15.gif" class="open-4" />
+            </div><p>
+            This is a photoset, click it to see the images full size!
+		</div>
+        
+	 <div class="item">
+     <img src="https://i.imgur.com/1ajAGu8.gif"> 
+     </div>
+     
+		<div class="item">
+        <img src="https://i.imgur.com/ko6j9h0.gif" /> 
+        </div>
+        
+		<div class="item">
+        Text-only masonry block. 
+        </div>
+        
+		<div class="item">
+			<img src="https://66.media.tumblr.com/67191c16e0bff5ec9b9ed7af11888844/tumblr_pp1h48hlaq1vlvhpho2_400.gif" />
+		</div>
+        
+		<div class="item">
+			<img src="https://i.imgur.com/66Jjegl.jpg" />
+		</div>
+		 
+		 
+       
+        
+		 </div>
+
+
+ <div  class="lightbox">
+ <div class="close">X</div>
+			<img src="https://i.imgur.com/3abUSri.gif"  class="opened-1"/>
+            <img src="https://i.imgur.com/wxWREBZ.gif" class="opened-2"/>
+            <img src="https://i.imgur.com/YmLLkb9.gif" class="opened-3"/>
+            <img src="https://i.imgur.com/kcf9b15.gif" class="opened-4"/>
+            </div>
+            
+
+<script>
+
+const masonryLayout = (containerElem, itemsElems, columns) => {
+  containerElem.classList.add('masonry-layout', `columns-${columns}`)
+  let columnsElements = []
+  
+  for( let i = 1; i <= columns; i++){
+    let column = document.createElement('div')
+    column.classList.add('masonry-column', `column-${i}`)
+    containerElem.appendChild(column)
+    columnsElements.push(column)
+  }
+  
+  for(let m = 0; m < Math.ceil(itemsElems.length / columns); m++){
+    for(let n = 0; n < columns; n++){
+      let item = itemsElems[ m * columns + n]
+      columnsElements[n].appendChild(item)
+      item.classList.add('masonry-item')
+    }
+  }
+}
+
+masonryLayout(document.querySelector('.wrapper'),
+              document.querySelectorAll('.item'), 2)
+              
+     
+           
+              </script>
+       <script src="https://dl.dropbox.com/s/bh15qtckdq1a91e/ligthbox.js"></script>
+
+</body>
+</html>
