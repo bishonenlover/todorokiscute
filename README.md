@@ -69,4 +69,8 @@
  
  ☆ <b>A story with css</b> <p> An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell.</a>. <p>
 I didn't know position sticky could as useful and cool as this. <a href="https://bishonenlover.github.io/todorokiscute/sticky-story.html" target="_blank">view</a>
+ 
+ <hr/>
+ 
+ ☆ <b>Javascript Lightbox</b> <p> This is really really really weird lightbox script I just wrote.<p> It's really funny and I don't know how I cannot get repetitive but, well, that worked! lol <a href="https://bishonenlover.github.io/todorokiscute/js-lightbox" target="_blank">view</a>
 
