@@ -1,0 +1,275 @@
+ <!DOCTYPE html> <!---
+
+
+
+☆ THEME BY BISHONENLOVER ☆
+
+
+
+---><html>
+<head>
+<link rel="shortcut icon" href="{PortraitUrl-128}"/>
+<title>{Title} {block:PostSummary}{PostSummary}{/block:PostSummary} {block:TagPage}Posts tagged with #{Tag}{/block:TagPage}</title>
+
+<script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+ <link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
+<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+ <style>
+
+ 
+ {CustomCSS}
+ 
+ *{
+ box-sizing:border-box;
+ 
+ }
+  
+ body{
+ margin:0;
+ padding:0;
+ font:1em/1.8 'Roboto';
+ background:#f5f5f5;
+ cursor:default;
+ }
+ /* basics */
+ a{
+ color:#eaa8a8;
+ text-decoration:none;
+ transition:.5s;
+ }
+  a:hover{
+ color:#ffb0bb;
+ text-decoration:none;
+ transition:.5s;
+ cursor:pointer;
+ }
+ i, em{
+ color:#888;
+ }
+ b, strong{
+ color:#eaa8a8;
+ }
+ u{
+  color:#ffb0bb;
+ }
+ s, strike{
+ color:#ece6e6;
+ }
+ small{
+  color:#ffb0bb;
+ text-transform:uppercase;
+ }
+ *::selection{
+ background:#ffb0bb;
+  color:black;
+ }
+ ::-webkit-scrollbar{
+ width:10px;
+ height:0;
+border:4px solid #f5f5f5;
+background: #ffb0bb;
+ }
+ ::-webkit-scrollbar-thumb{
+ background: #ffb0bb;
+ }
+ img{
+max-width:100%;
+height:auto;
+display:block;
+ }
+
+/* all */
+.content{
+width:80%;
+margin:2em auto;
+display:grid;
+ grid-template-areas:
+  "gif post post post "
+  "links desc desc desc";
+align-items:flex-start;
+grid-gap:1em;
+margin-top:6em;
+max-width:800px;
+}
+.item{
+background:white;
+border:1px solid #ece6e6;
+border-radius:4px;
+color:#888;
+font-family:'Roboto';
+padding:1em;
+margin-bottom:.5em;
+text-align:justify;
+}
+ .gif{
+ grid-area:gif;
+ 
+ max-width:250px;
+ }
+ .post{
+ grid-area:post;
+ }
+ .desc{
+ grid-area:desc;
+ }
+ .links{
+ grid-area:links;
+ max-width:250px;
+ }
+
+
+
+/* menu */
+.links{
+text-align:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-gap:.2em;
+}
+.links a{
+font-size:.9em;
+padding:.3em .5em;
+background:#f5f5f5;
+color:#888;
+font-family:'Roboto Condensed';
+}
+ 
+.links a:hover{
+background:#ffb0bb;
+}
+ 
+ .header{
+background:#ffb0bb;
+width:100%;
+position:fixed;
+top:0;
+left:0;
+height:10vh;
+}
+ 
+  
+.follow{
+position:fixed;
+top:5em;
+right:1em;
+font-size:.8em;
+z-index:2;
+ }
+ .follow a{
+ background:white;
+ border:1px solid #ece6e6;
+ border-radius:3px;
+ padding:.5em .6em;
+ }
+ 
+  @media(max-width:770px){
+  .content{
+   grid-template-areas:
+  "gif post post "
+  "links post post"
+  "desc desc desc";
+  }
+  .links{
+  grid-template-columns:1fr;
+  }
+  }
+ </style>
+<body>
+ <div class="follow"><a href="https://www.tumblr.com/follow/bishonenlover" target="_blank">Follow</a></div>
+<div class="header">
+
+</div>
+<!-- all -->
+<div class="content">
+
+
+ <div class="item gif">
+ <img src="https://i.imgur.com/XYOQnWD.gif">
+ </div>
+ 
+  
+<!-- post -->
+<div class="item post">       
+ My name is Fernanda. I love to watch anime and start to get addicted to make gifs. I love to gif bishonens (cute boys) or bl scenes and decided to create a blog as an archive, so I could tag the gifs by its anime name and find later. This blog just started to grow, without any form of divulgation. Thus, I started to take care of the blog, make it beautiful, have tags, be organized. Not post a lot times per day, and not reply anonymous ask to avoid spam.
+</div>
+ 
+<!-- sidebar box -->
+<div class="item links">
+ 
+ 
+<a href="https://bishonenlover.tumblr.com" target="_blank">Posts</a>
+<a href="https://bishonenlover.tumblr.com/about" target="_blank">About</a>
+<a href="https://bishonenlover.tumblr.com/list/tags" target="_blank">Tags</a>
+<a href="https://bishonenlover.tumblr.com/list/links" target="_blank">Links</a>
+<a href="http://www.anime-planet.com/users/bishonenlover" target="_blank">Anime Planet</a>
+<a href="https://myanimelist.net/profile/bishonenlover" target="_blank">MyAnimeList</a>
+ 
+ 
+</div>
+
+ 
+ 
+<!-- sidebar box -->
+<div class="item desc">
+ 
+ <i>Anime</i> and  <b>Bishonen</b> lover, <u>Gif</u> maker and <small>Boy's Love</small> enthusiast.   
+
+ </div>
+
+
+
+ 
+
+
+
+
+</div><!-- all end-->
+ 
+<!-- scripts -->
+ <script>
+
+initPhotosets();
+
+
+function noTumblr(){
+   var linkSet = document.querySelectorAll('a[href*="t.umblr.com/redirect"]');
+   Array.prototype.forEach.call(linkSet, function(el, i){
+       var currentLink = linkSet[i];
+       var originalURL = currentLink.getAttribute("href").split("?z=")[1].split("&t=")[0];
+       var replaceURL = decodeURIComponent(originalURL); 
+       currentLink.setAttribute("href",replaceURL); 
+  }); 
+} 
+noTumblr();
+
+ 
+const masonryLayout = (containerElem, itemsElems, columns) => {
+  containerElem.classList.add('masonry-layout', `columns-${columns}`)
+  let columnsElements = []
+  
+  for( let i = 1; i <= columns; i++){
+    let column = document.createElement('div')
+    column.classList.add('masonry-column', `column-${i}`)
+    containerElem.appendChild(column)
+    columnsElements.push(column)
+  }
+  
+  for(let m = 0; m < Math.ceil(itemsElems.length / columns); m++){
+    for(let n = 0; n < columns; n++){
+      let item = itemsElems[ m * columns + n]
+      columnsElements[n].appendChild(item)
+      item.classList.add('masonry-item')
+    }
+  }
+}
+masonryLayout(document.querySelector('.content'),
+              document.querySelectorAll('.item'), 2)
+              
+ 
+</script>
+ </body>
+</html>
