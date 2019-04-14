@@ -18,17 +18,15 @@ margin:0;
 font:1em/1.8 'Roboto';
 cursor:default;
 background:rgba(230, 230, 250,.3);
+color:#444;
 }
 blockquote{
 padding:.6em .8em;
 margin:auto;
-margin-bottom:4em;
 color:#444;
 font-style:italic;
-background: rgba(0,0,0,0.03);
-box-shadow: inset 0 1px 1px rgba(0,0,0,0.10),
-0 1px 1px rgba(255,255,255,0.80);
-max-width:500px;
+background: #faebd7;
+ font-size:.9em;
 }
 p{
 margin:.1em;
@@ -39,23 +37,11 @@ color:lightcoral;
 text-decoration:none;
 position:relative;
 }
-a::after{
-content:' ';
-display:block;
-position:absolute;
-width:0;
-height:1px;
-left:0;
-background:currentcolor;
-transition:all ease-in-out .3s;
-}
- a:hover::after{
- width:100%;
- }
+  
  .content{
  width:80%;
  margin:4em auto;
- max-width:600px;
+ max-width:500px;
  text-align:justify;
  }
  h1{
@@ -63,149 +49,181 @@ transition:all ease-in-out .3s;
  font-family:'Roboto Condensed';
  font-size:2.3em;
  text-align:center;
+ margin:0;
  }
- hr{
- border:none;
- background:linear-gradient(to right, transparent, rgba(0,0,0,0.06), rgba(0,0,0,0.06), transparent);
- margin:3em 0;
- height:1px;
- }
+ 
  b{
  font-weight:normal;
   font-family:'Roboto Condensed';
   font-size:1.3em;
   vertical-align:middle;
+  display:block;
  }
  .button{
  text-align:right;
  margin-top:1em;
   font-family:'Roboto Condensed';
-  margin-right:2em;
-  font-size:1.2em;
+ 
  }
+ .button a{
+ background:#faebd7;
+ padding:.5em .8em;
+ border-radius:4px;
+ color:#eaa8a8;
+ border:1px solid #faebd7;
+ transition:all ease-in-out .3s;
+ font-size:.9em;
+ }
+ .button a:hover{
+ background:white;
+ border:1px solid #eaa8a8;
+ }
+ .box{
+background:white;
+margin-bottom:6em;
+box-shadow: 0 0 15px rgba(0,0,0,0.06);
+padding:2em;
+text-align:justify;
+
+}
 </style>
 </head>
 <body>
  <div class="content">
- 
+ <div class="box">
 <h1>My Codes </h1>
 <blockquote>This is a repository to host some layouts types I've learned and made while following tutorials.
-</blockquote><p>
-
- ☆ <b>My First Jquery Code:</b> <p>This is the first code I write, basing with jquery basics <i>.click, .toggleClass(), .hide()    and .show().</i> I can't believe I just started the script with $(".btn-menu").click(function(){ and tried a few          things I've learned so far and actually wrote my own very first jquery code. </p>
+</blockquote> 
+</div><!-- box -->
+<div class="box">
+ <b> ☆ My First Jquery Code:</b> This is the first code I write, basing with jquery basics <i>.click, .toggleClass(), .hide()    and .show().</i> I can't believe I just started the script with $(".btn-menu").click(function(){ and tried a few          things I've learned so far and actually wrote my own very first jquery code.  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/jqcode.html" target="_blank">view</a>
  </div>
- <hr/>
+ </div><!-- box -->
+<div class="box">
    
- ☆ <b>A facebook inspired post style:</b> <p>This was really cool and funny to made.  
+ <b> ☆ A facebook inspired post style:</b>  This was really cool and funny to made.  
   And I was very impressed on how less time I used to code this little thing.
  
-  credits to flaticon.com for the svg icons. </p>
+  credits to flaticon.com for the svg icons.  
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/fb-post.html" target="_blank">view</a>
 </div>
-   <hr/>
+ </div><!-- box -->
+<div class="box">
 
- ☆ <b>My first pop up box written with Jquery:</b> <p>I wrote from scratch yeassssssssss </p>
- 
+ <b> ☆ My first pop up box written with Jquery:</b> I wrote from scratch yeassssssssss  
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/pop-up-box.html" target="_blank">view</a>
 </div>
- <hr/>
+</div><!-- box -->
+<div class="box">
 
- ☆ <b>Abeno's Porfolio:</b> <p>This is a site result of <a href="https://www.youtube.com/watch?v=dRuMoGNcJfw&list=PL4-IK0AVhVjNRKd4KBrXHpNtmMvR0qYz4" target="_blank">this tutorial</a> by Kevin Powell on how to make a portfolio with slide navigation and a modal gallery. 
-  The character on the 'Porfolio' is <i>Abeno Haruitsuki</i> from the anime <i>Fukigen na Mononokean</i> </p>
+<b> ☆ Abeno's Porfolio:</b>  This is a site result of <a href="https://www.youtube.com/watch?v=dRuMoGNcJfw&list=PL4-IK0AVhVjNRKd4KBrXHpNtmMvR0qYz4" target="_blank">this tutorial</a> by Kevin Powell on how to make a portfolio with slide navigation and a modal gallery. 
+  The character on the 'Porfolio' is <i>Abeno Haruitsuki</i> from the anime <i>Fukigen na Mononokean</i>  
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/abenos-portfolio.html" target="_blank">view</a>
 </div>
- <hr/>
+</div><!-- box -->
+<div class="box">
    
- ☆ <b>Image animation on scroll:</b><p> It was a tutorial I've learned with this <a href="https://www.youtube.com/user/origamidlabs" target="_blank">brazilian youtube channel</a>.  </p>
+ <b> ☆ Image animation on scroll:</b>  It was a tutorial I've learned with this <a href="https://www.youtube.com/user/origamidlabs" target="_blank">brazilian youtube channel</a>.  
  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/animation-scroll.html" target="_blank">view</a>
  </div>
- <hr/>
+</div><!-- box -->
+<div class="box">
 
- ☆ <b>CSS Grid Layout with Column-Count:</b> <p>Was a tutorial I've refreshed my memory with this <a href="https://w3bits.com/css-masonry/" target="_blank">site</a>. </p>
+ <b> ☆ CSS Grid Layout with Column-Count:</b>  Was a tutorial I've refreshed my memory with this <a href="https://w3bits.com/css-masonry/" target="_blank">site</a>.  
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/grid-layout.html" target="_blank">view</a>
 </div>
- <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>My first Sticky with Javascript:</b> <p>The first javascript code I wrote ever!!! I've tried some js things I've learned in the past week and came up alone, with a sticky sidebar on scroll effect!!! </p>
+ <b> ☆ My first Sticky with Javascript:</b> The first javascript code I wrote ever!!! I've tried some js things I've learned in the past week and came up alone, with a sticky sidebar on scroll effect!!!  
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/first-js-sticky.html" target="_blank">view</a>
 </div>
- <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>My first Pop Up Box with Javascript:</b> <p> After doing the sticky sidebar with javascript only, I tried a few things and could create a click show and hide box, a popup box with fade in and out effects!!</p>
+ <b> ☆ My first Pop Up Box with Javascript:</b>  After doing the sticky sidebar with javascript only, I tried a few things and could create a click show and hide box, a popup box with fade in and out effects!! 
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/first-js-popup.html"  target="_blank">view</a>
 </div>
  
-  <hr/>
+</div><!-- box -->
+<div class="box">
  
- ☆ <b>Posts changing content to a menu content</b> <p> It was inspired by those false iframe menu that was trend in tumblrs of tutorials, back in 2013.</p>
+ <b> ☆ Posts changing content to a menu content</b> It was inspired by those false iframe menu that was trend in tumblrs of tutorials, back in 2013. 
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/change-content.html"  target="_blank">view</a>
 </div>
-  <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>Menu Fake Iframe</b> <p> Since I wrote a post content that changes into a menu content, based on the <a href="https://www.google.com/search?q=menu+falso+iframe&oq=menu+falso+iframe&aqs=chrome..69i57j69i60.3155j1j7&sourceid=chrome&ie=UTF-8" target="_blank">fake iframe tutorial</a>, I decided to make the actual menu fake iframe following some of these tutorials. I created nothing here. 
- </p>
+ <b> ☆ Menu Fake Iframe</b>  Since I wrote a post content that changes into a menu content, based on the <a href="https://www.google.com/search?q=menu+falso+iframe&oq=menu+falso+iframe&aqs=chrome..69i57j69i60.3155j1j7&sourceid=chrome&ie=UTF-8" target="_blank">fake iframe tutorial</a>, I decided to make the actual menu fake iframe following some of these tutorials. I created nothing here. 
+ 
  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/fakeiframe.html" target="_blank">view</a>
  </div>
  
-  <hr/>
+  </div><!-- box -->
+<div class="box">
  
- ☆ <b>My Hamburger Menu with Pure Javascript</b> <p> I just made a hamburger menu with javascript only! <p>The horizontal menu changes to a full page and vertical menu on mobile. </p>
+ <b> ☆ My Hamburger Menu with Pure Javascript</b>  I just made a hamburger menu with javascript only! <p>The horizontal menu changes to a full page and vertical menu on mobile.  
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/js-hamburger.html" target="_blank">view</a>
  </div>
  
-  <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>Horizontal Layout with Display Grid</b> <p> A responsive horizontal layout using display grid.</p>
+ <b> ☆ Horizontal Layout with Display Grid</b>   A responsive horizontal layout using display grid. 
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/horizontal-grid.html" target="_blank">view</a>
 </div>
- <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>Cool Sidebar</b> <p> A simple responsive layout with a cool sidebar style. </p>
+ <b> ☆ Cool Sidebar</b>   A simple responsive layout with a cool sidebar style.  
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/cool-sidebar.html" target="_blank">view</a>
 </div>
-  <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>Grid Layout with Grid Menus</b> <p> A simple and responsive grid layout with some grid menus inside of the boxes.</p>
+ <b> ☆ Grid Layout with Grid Menus</b>   A simple and responsive grid layout with some grid menus inside of the boxes. 
  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/grid-layout-menus.html" target="_blank">view</a>
  </div>
- <hr/>
+</div><!-- box -->
+<div class="box">
  
- ☆ <b>Sticky sidebar in a Grid Layout</b> <p> A simple and responsive grid layout, and the sidebar sticks on top when scrolled, using position sticky. </p>
+ <b> ☆ Sticky sidebar in a Grid Layout</b> A simple and responsive grid layout, and the sidebar sticks on top when scrolled, using position sticky.  
  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/sticky-grid-layout.html" target="_blank">view</a> 
  </div>
  
-  <hr/>
+  </div><!-- box -->
+<div class="box">
  
- ☆ <b>Sidebar Examples</b> <p> Some simple examples of sidebar (mostly the welcome gif/description). </p> 
+ <b> ☆ Sidebar Examples</b>  Some simple examples of sidebar (mostly the welcome gif/description).  
 
 <div class="button">
 <a href="https://bishonenlover.github.io/todorokiscute/sidebar-examples.html" target="_blank">view</a>
@@ -214,30 +232,33 @@ transition:all ease-in-out .3s;
  
  
  
-  <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>Display Grid with Javascript</b> <p> A simple two columns grid layout fixing height issues with javascript. This layout I did while following <a href="https://www.youtube.com/watch?v=DEXKAUrl2q0&list=WL&index=2&t=2109s" target="_blank">this youtube tutorial</a>. </p>
+ <b> ☆ Display Grid with Javascript</b>   A simple two columns grid layout fixing height issues with javascript. This layout I did while following <a href="https://www.youtube.com/watch?v=DEXKAUrl2q0&list=WL&index=2&t=2109s" target="_blank">this youtube tutorial</a>. 
  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/js-grid.html" target="_blank">view</a>
  </div>
  
-  <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>A story with css</b> <p> An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell. I didn't know position sticky could as useful and cool as this. </p>
+ <b> ☆ A story with css</b>  An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell. I didn't know position sticky could as useful and cool as this.  
  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/sticky-story.html" target="_blank">view</a>
  </div>
- <hr/>
+ </div><!-- box -->
+<div class="box">
  
- ☆ <b>Javascript Lightbox</b> <p> This is really really really weird lightbox script I just wrote. It's really funny and I don't know how I cannot get repetitive but, well, that worked! lol </p>
+ <b> ☆ Javascript Lightbox</b>  This is really really really weird lightbox script I just wrote. It's really funny and I don't know how I cannot get repetitive but, well, that worked! lol  
  
  <div class="button">
  <a href="https://bishonenlover.github.io/todorokiscute/js-lightbox" target="_blank">view</a>
  </div>
 
-
+ </div><!-- box -->
  </div>
             
  
