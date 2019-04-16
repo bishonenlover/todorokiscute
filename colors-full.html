@@ -1,0 +1,1726 @@
+
+<!DOCTYPE html><!--
+
+
+by bishonenlover
+
+
+--><html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Fave Colors</title>
+<link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<style>
+
+ 
+*{
+  box-sizing:border-box;
+ 
+}
+ 
+body{
+  margin:0;
+  padding:0;
+  font:1em/1.8 'Roboto';
+  background-color:rgb(230, 230, 250,.7);
+cursor:default;
+ 
+}
+.container{
+  width:80%;
+  margin:3em auto;
+  display:grid;
+ grid-gap:1.5em;
+  grid-template-columns:repeat(auto-fit, 125px);
+   align-items:center;
+justify-content:center;
+    
+}
+.box{
+  width:125px;
+  height:125px;
+  position:relative;
+  padding:.3em;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+ 
+}
+.box::before{
+content:' ';
+position:absolute;
+width:135px;
+height:135px;
+background:white;
+z-index:-1;
+border:1px solid #dbe4eb;
+}
+.name{
+ font-size:1em;
+ z-index:1;
+}
+.rgba{
+  font-size:.7em;
+  padding:2%;
+cursor:pointer;
+     -webkit-user-select:all;
+user-select:all;
+ z-index:1;
+}
+.hex{
+  text-align:center;
+  padding:2%;
+  font-size:.9em;
+cursor:pointer;
+     -webkit-user-select:all;
+user-select:all;
+ z-index:1;
+}
+
+ 
+::selection {
+    background: #c2d6f0;
+    color: #ffffff;
+}
+::-webkit-scrollbar{
+  width:10px;
+  height:0;
+border:4px solid #ededfb;
+background:#fdb8c0;
+}
+::-webkit-scrollbar-thumb{
+ background:#fdb8c0;
+}
+
+.info{
+  position:fixed;
+  top:1em;
+  right:1em;
+ transition:all ease-in-out .3s;
+z-index:4;
+}
+.info a{
+  text-decoration:none;
+  color:#444;
+ padding:1em;
+  font-size:.9em;
+ font-family:'Roboto Condensed';
+}
+.info:hover{
+background:lavender;
+box-shadow:0 1px 1px 0 rgba(250,250,250,0.7), inset 0 1px 1px 0 rgba(0,0,0,0.08);
+}
+
+ .all{
+position:fixed;
+top:0;
+left:0;
+background:rgba(230, 230, 250,0.5);
+width:100%;
+height:100%;
+  z-index:8; 
+justify-content:center;
+align-items:center;
+ display:none;
+}
+.copied{
+padding:2em;
+width:80%;
+ max-width:300px;
+max-height: 130px;
+text-align:center;
+font-size:1.5em;
+background:white;
+box-shadow:0 0 20px rgba(0,0,0,0.09);
+display:flex;
+ justify-content:space-evenly;
+align-items:center;
+}
+.copied span{
+ width:40px;
+height:40px;
+display:flex;
+ justify-content:center;
+align-items:center;
+background:pink;
+cursor:pointer;
+margin:0 .3em;
+ 
+}
+
+ .opened.all{
+ display:flex;
+ }
+.fix{
+overflow:hidden;
+}
+ 
+@media(max-width:320px){
+ .copied{
+  max-height:170px;
+}
+}
+
+
+</style>
+<body>
+<div class="info">
+  <a href="https://todorokiscute.tumblr.com" target="_blank">Go Back!</a>
+  
+</div>
+
+<div class="container">
+<div class="all">
+	<div class="copied">
+Copied! <span>x</span>
+</div>
+</div>
+  <!-- color content -->
+  <div class="box" style="background:#e6e6fa">
+    <span class="name">Lavender</span>
+<span class="hex" onclick="copy(this)">#e6e6fa</span>
+        <span class="rgba" onclick="copy(this)">(230, 230, 250)</span>
+  </div>
+  
+
+  
+  <!-- color content -->
+  <div class="box" style="background:#f5ecf9">
+    <span class="name">Lilac</span>
+<span class="hex"  onclick="copy(this)">#f5ecf9</span>
+        <span class="rgba"  onclick="copy(this)">(245, 236, 249)</span>
+  </div>
+  
+  <!-- color content -->
+  <div class="box" style="background:#fee9f4">
+    <span class="name">Soft Pink</span>
+<span class="hex"  onclick="copy(this)" >#fee9f4</span>
+        <span class="rgba"  onclick="copy(this)">(254, 233, 244)</span>
+  </div>
+  
+    <!-- color content -->
+  <div class="box" style="background:#edfad1">
+    <span class="name">Soft Green</span>
+<span class="hex"  onclick="copy(this)" >#edfad1</span>
+        <span class="rgba"  onclick="copy(this)">(237, 250, 209)</span>
+  </div>
+  
+    
+  <!-- color content -->
+  <div class="box" style="background: #fbe6d0">
+    <span class="name">Soft Orange</span>
+<span class="hex"  onclick="copy(this)" >#fbe6d0</span>
+        <span class="rgba"  onclick="copy(this)">(251, 230, 208)</span>
+  </div>
+  
+  <!-- color content -->
+  <div class="box" style="background: #fcddda">
+    <span class="name">Cute Peach</span>
+<span class="hex"  onclick="copy(this)" >#fcddda</span>
+        <span class="rgba"  onclick="copy(this)">(252, 221, 218)</span>
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:pink">
+    <span class="name">Pink</span>
+<span class="hex"  onclick="copy(this)" >#ffc0cb</span>
+        <span class="rgba"  onclick="copy(this)">(255, 192, 203)</span>
+  </div>
+  
+  <!-- color content -->
+  <div class="box" style="background: lightcoral">
+    <span class="name">Light Coral</span>
+<span class="hex"  onclick="copy(this)" >#f08080</span>
+        <span class="rgba"  onclick="copy(this)">(240, 128, 128)</span>
+  </div>
+
+  <!-- color content -->
+  <div class="box" style="background:#facada">
+    <span class="name">Facada</span>
+<span class="hex"  onclick="copy(this)" >#facada</span>
+        <span class="rgba"  onclick="copy(this)">(250, 202, 218)</span>
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:thistle">
+    <span class="name">Thistle</span>
+<span class="hex"  onclick="copy(this)" >#d8bfd8</span>
+        <span class="rgba"  onclick="copy(this)">(216, 191, 216)</span>
+  </div>
+  
+  <!-- color content -->
+  <div class="box" style="background:bisque">
+    <span class="name">Bisque</span>
+<span class="hex"  onclick="copy(this)" >#ffe4c4</span>
+        <span class="rgba"  onclick="copy(this)">(255, 228, 196)</span>
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:#e9e0eb">
+    <span class="name">Soft Thistle</span>
+<span class="hex"  onclick="copy(this)" >#e9e0eb</span>
+        <span class="rgba"  onclick="copy(this)">(233, 224, 235)</span>
+  </div>
+  
+  
+  <!-- color content -->
+  <div class="box" style="background:AliceBlue">
+    <span class="name">AliceBlue </span>
+<span class="hex"  onclick="copy(this)" >#f0f8ff</span>
+        <span class="rgba"  onclick="copy(this)">(	240,248,255)</span>
+  </div>
+  
+  
+  <!-- color content -->
+  <div class="box" style="background:AntiqueWhite">
+    <span class="name">Antique White </span>
+<span class="hex"  onclick="copy(this)" >#faebd7</span>
+        <span class="rgba"  onclick="copy(this)">(250,235,215)</span>
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:floralwhite">
+    <span class="name">Floral White </span>
+<span class="hex"  onclick="copy(this)" >#fffaf0</span>
+        <span class="rgba"  onclick="copy(this)">(255, 250, 240)</span>
+  </div>
+  
+    <!-- color content -->
+  <div class="box" style="background:ghostwhite">
+    <span class="name">Ghost White </span>
+<span class="hex"  onclick="copy(this)" >#f8f8ff</span>
+        <span class="rgba"  onclick="copy(this)">(248, 248, 255)</span>
+  </div>
+  
+  
+      <!-- color content -->
+  <div class="box" style="background:lavenderblush">
+    <span class="name">Ghost White </span>
+<span class="hex"  onclick="copy(this)" >#fff0f5</span>
+        <span class="rgba"  onclick="copy(this)">(255, 240, 245)</span>
+  </div>
+  
+  
+    <!-- color content -->
+  <div class="box" style="background:lemonchiffon">
+    <span class="name">Lemon Chiffon</span>
+<span class="hex"  onclick="copy(this)" >#fffacd</span>
+        <span class="rgba"  onclick="copy(this)">(255, 250, 205)</span>
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:lightpink">
+    <span class="name">Light Pink</span>
+<span class="hex"  onclick="copy(this)" >#ffb6c1</span>
+        <span class="rgba"  onclick="copy(this)">(255, 182, 193)</span>
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:lightsalmon">
+    <span class="name">Light Salmon</span>
+<span class="hex"  onclick="copy(this)" >#ffa07a</span>
+        <span class="rgba"  onclick="copy(this)">(255, 160, 122)</span>
+  </div>
+  
+  <!-- color content -->
+  <div class="box" style="background:palegreen">
+    <span class="name">Pale Green</span>
+<span class="hex"  onclick="copy(this)" >#98fb98</span>
+        <span class="rgba"  onclick="copy(this)">(152, 251, 152)</span>
+  </div>
+
+  
+    <!-- color content -->
+  <div class="box" style="background:lightblue">
+    <span class="name">Light Blue</span>
+<span class="hex"  onclick="copy(this)" >#add8e6</span>
+        <span class="rgba"  onclick="copy(this)">(173, 216, 230)</span>
+  </div>
+
+  
+    <!-- color content -->
+  <div class="box" style="background:linen">
+    <span class="name">Linen</span>
+<span class="hex"  onclick="copy(this)" >
+#faf0e6
+</span>
+        <span class="rgba"  onclick="copy(this)">(250, 240, 230)</span>
+  </div>
+
+  <!-- color content -->
+  <div class="box" style="background:mintcream">
+    <span class="name">Mint Cream</span>
+<span class="hex"  onclick="copy(this)" >#f5fffa</span>
+        <span class="rgba"  onclick="copy(this)">(245, 255, 250)</span>
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:oldlace">
+    <span class="name">Oldlace</span>
+<span class="hex"  onclick="copy(this)" >#fdf5e6</span>
+        <span class="rgba"  onclick="copy(this)">(253, 245, 230)</span>
+  </div>
+  
+     <!-- color content -->
+  <div class="box" style="background:snow">
+    <span class="name">Snow</span>
+<span class="hex"  onclick="copy(this)" >#fffafa</span>
+        <span class="rgba"  onclick="copy(this)">(255, 250, 250)</span>
+  </div>
+  
+  
+   
+   <!-- color content -->
+  <div class="box" style="background:whitesmoke">
+    <span class="name">White Smoke</span>
+<span class="hex"  onclick="copy(this)" >#f5f5f5</span>
+        <span class="rgba"  onclick="copy(this)">(245, 245, 245)</span>
+  </div>
+  
+     <!-- color content -->
+  <div class="box" style="background:plum">
+    <span class="name">Plum</span>
+<span class="hex"  onclick="copy(this)" >#dda0dd</span>
+        <span class="rgba"  onclick="copy(this)">(221, 160, 221)</span>
+  </div>
+
+    <!-- color content -->
+  <div class="box" style="background:mistyrose">
+    <span class="name">Misty Rose</span>
+<span class="hex"  onclick="copy(this)">#ffe4e1</span>
+        <span class="rgba"  onclick="copy(this)">(255, 228, 225)</span>
+   </div>
+
+   <!-- color content -->
+  <div class="box" style="background:honeydew">
+    <span class="name">Honey Dew</span>
+<span class="hex"  onclick="copy(this)">#f0fff0</span>
+        <span class="rgba"  onclick="copy(this)">(240, 255, 240)</span>
+
+  </div>
+  
+  
+  
+  
+   <!-- color content -->
+  <div class="box" style="background:#eaa8a8">
+    <span class="name">Some Pink</span>
+<span class="hex"  onclick="copy(this)">#eaa8a8</span>
+        <span class="rgba"  onclick="copy(this)">(234, 168, 168)</span>
+
+  </div>
+  
+   <!-- color content -->
+  <div class="box" style="background:#f0d9d0">
+    <span class="name">Light Brown</span>
+<span class="hex"  onclick="copy(this)">#f0d9d0</span>
+        <span class="rgba"  onclick="copy(this)">(240, 217, 208)</span>
+
+  </div>
+  
+  
+     <!-- color content -->
+  <div class="box" style="background:#fbf2f2">
+    <span class="name">Light Beige</span>
+<span class="hex"  onclick="copy(this)">#fbf2f2</span>
+        <span class="rgba"  onclick="copy(this)">(251, 242, 242)</span>
+
+  </div>
+  
+  
+  
+     <!-- color content -->
+  <div class="box" style="background:#ffddb0">
+    <span class="name">Light orange</span>
+<span class="hex"  onclick="copy(this)">#ffddb0</span>
+        <span class="rgba"  onclick="copy(this)">(255, 221, 176)</span>
+
+  </div>
+  
+     <!-- color content -->
+  <div class="box" style="background:#d1ebfa">
+    <span class="name">Soft Blue</span>
+<span class="hex"  onclick="copy(this)">#d1ebfa</span>
+        <span class="rgba"  onclick="copy(this)">(209, 235, 250)</span>
+
+  </div>
+  
+
+     <!-- color content -->
+  <div class="box" style="background:#e2ffb5">
+    <span class="name">Soft Green</span>
+<span class="hex"  onclick="copy(this)">#e2ffb5</span>
+        <span class="rgba"  onclick="copy(this)">(226, 255, 181)</span>
+
+  </div>
+
+    <!-- color content -->
+  <div class="box" style="background:#fcc9d8">
+    <span class="name">Strawberry Pink</span>
+<span class="hex"  onclick="copy(this)">#fcc9d8</span>
+        <span class="rgba"  onclick="copy(this)">(252, 201, 216)</span>
+
+  </div>
+
+    <!-- color content -->
+  <div class="box" style="background:#eed4fc">
+    <span class="name">Light Lilac</span>
+<span class="hex"  onclick="copy(this)">#eed4fc</span>
+        <span class="rgba"  onclick="copy(this)">(238, 212, 252)</span>
+
+  </div>
+
+    <!-- color content -->
+  <div class="box" style="background:#fcebd5">
+    <span class="name"> Softer Orange</span>
+<span class="hex"  onclick="copy(this)">#fcebd5</span>
+        <span class="rgba"  onclick="copy(this)">(252, 235, 213)</span>
+
+  </div>
+
+
+    <!-- color content -->
+  <div class="box" style="background:#bbe4d0">
+    <span class="name">Turquoise</span>
+<span class="hex"  onclick="copy(this)">#bbe4d0</span>
+        <span class="rgba"  onclick="copy(this)">(187, 228, 208)</span>
+
+  </div>
+
+
+   <!-- color content -->
+  <div class="box" style="background:#ffebf2">
+    <span class="name">Lighter Pink</span>
+<span class="hex"  onclick="copy(this)">#ffebf2</span>
+        <span class="rgba"  onclick="copy(this)">(255, 235, 242)</span>
+
+  </div>
+
+
+  <!-- color content -->
+  <div class="box" style="background:#ffb1cc">
+    <span class="name">Darker Pink</span>
+<span class="hex"  onclick="copy(this)">#ffb1cc</span>
+        <span class="rgba"  onclick="copy(this)">(255, 177, 204)</span>
+
+  </div>
+
+
+  <!-- color content -->
+  <div class="box" style="background:#c1a6c1">
+    <span class="name">Dark Lilac</span>
+<span class="hex"  onclick="copy(this)">#c1a6c1</span>
+        <span class="rgba"  onclick="copy(this)">(193, 166, 193)</span>
+
+  </div>
+
+
+  <!-- color content -->
+  <div class="box" style="background:#ffddb0">
+    <span class="name">Other Orange</span>
+<span class="hex"  onclick="copy(this)">#ffddb0</span>
+        <span class="rgba"  onclick="copy(this)">(255, 221, 176)</span>
+
+  </div>
+
+
+
+
+  <!-- color content -->
+  <div class="box" style="background:#e4ffcd">
+    <span class="name">Light Green</span>
+<span class="hex"  onclick="copy(this)">#e4ffcd</span>
+        <span class="rgba"  onclick="copy(this)">(228, 255, 205)</span>
+
+  </div>
+
+
+ <!-- color content -->
+  <div class="box" style="background:#d79b96">
+    <span class="name">Brownish</span>
+<span class="hex"  onclick="copy(this)">#d79b96</span>
+        <span class="rgba"  onclick="copy(this)">(215, 155, 150)</span>
+
+  </div>
+
+
+ <!-- color content -->
+  <div class="box" style="background:#96ca87">
+    <span class="name">Dark Green</span>
+<span class="hex"  onclick="copy(this)">#96ca87</span>
+        <span class="rgba"  onclick="copy(this)">(150, 202, 135)</span>
+
+  </div>
+
+ <!-- color content -->
+  <div class="box" style="background:#f4e997">
+    <span class="name">Dark Yellow</span>
+<span class="hex"  onclick="copy(this)">#f4e997</span>
+        <span class="rgba"  onclick="copy(this)">(244, 233, 151)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#eed2d5">
+    <span class="name">Brownish Pink</span>
+<span class="hex"  onclick="copy(this)">#eed2d5</span>
+        <span class="rgba"  onclick="copy(this)">(238, 210, 213)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#fbecec">
+    <span class="name">Ligher Red</span>
+<span class="hex"  onclick="copy(this)">#fbecec</span>
+        <span class="rgba"  onclick="copy(this)">(251, 236, 236)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#d1e0fb">
+    <span class="name">Ligher Blue</span>
+<span class="hex"  onclick="copy(this)">#d1e0fb</span>
+        <span class="rgba"  onclick="copy(this)">(209, 224, 251)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#dbc5f0">
+    <span class="name">Another Lilac</span>
+<span class="hex"  onclick="copy(this)">#dbc5f0</span>
+        <span class="rgba"  onclick="copy(this)">(219, 197, 240)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffd9b1">
+    <span class="name">Another Orange</span>
+<span class="hex"  onclick="copy(this)">#ffd9b1</span>
+        <span class="rgba"  onclick="copy(this)">(219, 197, 240)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#d1e1fc">
+    <span class="name">Another Blue</span>
+<span class="hex"  onclick="copy(this)">#d1e1fc</span>
+        <span class="rgba"  onclick="copy(this)">(209, 225, 252)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#ccb1b8">
+    <span class="name">Another Lilac</span>
+<span class="hex"  onclick="copy(this)">#ccb1b8</span>
+        <span class="rgba"  onclick="copy(this)">(204, 177, 184)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#e2d1d7">
+    <span class="name">  Lilac Light</span>
+<span class="hex"  onclick="copy(this)">#e2d1d7</span>
+        <span class="rgba"  onclick="copy(this)">(226, 209, 215)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#e3e7ff">
+    <span class="name">Blue Light</span>
+<span class="hex"  onclick="copy(this)">#e3e7ff</span>
+        <span class="rgba"  onclick="copy(this)">(227, 231, 255)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#fce3ec">
+    <span class="name">Pink Light</span>
+<span class="hex"  onclick="copy(this)">#fce3ec</span>
+        <span class="rgba"  onclick="copy(this)">(252, 227, 236)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#d9cacc">
+    <span class="name">Awesome Lilac</span>
+<span class="hex"  onclick="copy(this)">#d9cacc</span>
+        <span class="rgba"  onclick="copy(this)">(217, 202, 204)</span>
+
+  </div>
+
+ 
+
+
+<!-- color content -->
+  <div class="box" style="background:#eed2db">
+    <span class="name">Brownish Pink 2</span>
+<span class="hex"  onclick="copy(this)">#eed2db</span>
+        <span class="rgba"  onclick="copy(this)">(238, 210, 219)</span>
+
+  </div>
+
+
+
+<!-- color content -->
+  <div class="box" style="background:#ffe6ee">
+    <span class="name">Light pink 2</span>
+<span class="hex"  onclick="copy(this)">#ffe6ee</span>
+        <span class="rgba"  onclick="copy(this)">(255, 230, 238)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#f6d3d5">
+    <span class="name">Brown Pink</span>
+<span class="hex"  onclick="copy(this)">#f6d3d5</span>
+        <span class="rgba"  onclick="copy(this)">(246, 211, 213)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ece6e6">
+    <span class="name">Another grey</span>
+<span class="hex"  onclick="copy(this)">#ece6e6</span>
+        <span class="rgba"  onclick="copy(this)">(236, 230, 230)</span>
+
+  </div>
+  
+
+<!-- color content -->
+  <div class="box" style="background:#f9878f">
+    <span class="name">Pinkish Red</span>
+<span class="hex"  onclick="copy(this)">#f9878f</span>
+        <span class="rgba"  onclick="copy(this)">(249, 135, 143)</span>
+
+  </div>
+  
+
+<!-- color content -->
+  <div class="box" style="background:#feaeba">
+    <span class="name">Pinkish Red 2</span>
+<span class="hex"  onclick="copy(this)">#feaeba</span>
+        <span class="rgba"  onclick="copy(this)">(254, 174, 186)</span>
+
+  </div>
+
+
+
+<!-- color content -->
+  <div class="box" style="background:#f3e6e6">
+    <span class="name">Another Grey 2</span>
+<span class="hex"  onclick="copy(this)">#f3e6e6</span>
+        <span class="rgba"  onclick="copy(this)">(243, 230, 230)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#f6dddd">
+    <span class="name">Brown Orange</span>
+<span class="hex"  onclick="copy(this)">#f6dddd</span>
+        <span class="rgba"  onclick="copy(this)">(246, 221, 221)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#f5cbbf">
+    <span class="name">Brown Orange 2</span>
+<span class="hex"  onclick="copy(this)">#f5cbbf</span>
+        <span class="rgba"  onclick="copy(this)">(245, 203, 191)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#f9a3be">
+    <span class="name">Strong Pink</span>
+<span class="hex"  onclick="copy(this)">#f9a3be</span>
+        <span class="rgba"  onclick="copy(this)">(249, 163, 190)</span>
+
+  </div>
+
+
+
+
+<!-- color content -->
+  <div class="box" style="background:#fef3f7">
+    <span class="name">Light light Pink</span>
+<span class="hex"  onclick="copy(this)">#fef3f7</span>
+        <span class="rgba"  onclick="copy(this)">(254, 243, 247)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#c2d6f0">
+    <span class="name">Cute blue</span>
+<span class="hex"  onclick="copy(this)">#c2d6f0</span>
+        <span class="rgba"  onclick="copy(this)">(194, 214, 240)</span>
+
+  </div>
+
+
+
+<!-- color content -->
+  <div class="box" style="background:#d4cbed">
+    <span class="name">Cute Purple</span>
+<span class="hex"  onclick="copy(this)">#d4cbed</span>
+        <span class="rgba"  onclick="copy(this)">(212, 203, 237)</span>
+
+  </div>
+
+
+
+<!-- color content -->
+  <div class="box" style="background:#d9afd9">
+    <span class="name">Another Purple</span>
+<span class="hex"  onclick="copy(this)">#d9afd9</span>
+        <span class="rgba"  onclick="copy(this)">(217, 175, 217)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#fca9a2">
+    <span class="name">Orange Peach</span>
+<span class="hex"  onclick="copy(this)">#fca9a2</span>
+        <span class="rgba"  onclick="copy(this)">(252, 169, 162)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffcba6">
+    <span class="name">Orange second</span>
+<span class="hex"  onclick="copy(this)">#ffcba6</span>
+        <span class="rgba"  onclick="copy(this)">(255, 203, 166)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#f8a096">
+    <span class="name">Salmon</span>
+<span class="hex"  onclick="copy(this)">#f8a096</span>
+        <span class="rgba"  onclick="copy(this)">(248, 160, 150)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#f6e3e3">
+    <span class="name">Light Salmon</span>
+<span class="hex"  onclick="copy(this)">#f6e3e3</span>
+        <span class="rgba"  onclick="copy(this)">(246, 227, 227)</span>
+
+  </div>
+
+ <!-- color content -->
+  <div class="box" style="background:#ffbbd6">
+    <span class="name">Strong Pink</span>
+<span class="hex"  onclick="copy(this)">#ffbbd6</span>
+        <span class="rgba"  onclick="copy(this)">(255, 187, 214)</span>
+
+  </div>
+
+ 
+<!-- color content -->
+  <div class="box" style="background:#ffcce7">
+    <span class="name">Ice Cream Pink</span>
+<span class="hex"  onclick="copy(this)">#ffcce7</span>
+        <span class="rgba"  onclick="copy(this)">(255, 204, 231)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#f5dffb">
+    <span class="name">Light light lilac</span>
+<span class="hex"  onclick="copy(this)">#f5dffb</span>
+        <span class="rgba"  onclick="copy(this)">(245, 223, 251)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#b2deff ">
+    <span class="name">Popsicle Blue</span>
+<span class="hex"  onclick="copy(this)">#b2deff</span>
+        <span class="rgba"  onclick="copy(this)">(178, 222, 255)</span>
+
+  </div>
+
+ 
+<!-- color content -->
+  <div class="box" style="background:#ff8a97">
+    <span class="name">Red-ish Pink</span>
+<span class="hex"  onclick="copy(this)">#ff8a97</span>
+        <span class="rgba"  onclick="copy(this)">(255, 138, 151)</span>
+
+  </div>
+ 
+
+<!-- color content -->
+  <div class="box" style="background:#aab3ff">
+    <span class="name">Strong Blue</span>
+<span class="hex"  onclick="copy(this)">#aab3ff</span>
+        <span class="rgba"  onclick="copy(this)">(170, 179, 255)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#f5dae4">
+    <span class="name">Other Pink Light</span>
+<span class="hex"  onclick="copy(this)">#f5dae4</span>
+        <span class="rgba"  onclick="copy(this)">(245, 218, 228)</span>
+
+  </div>
+
+ <!-- color content -->
+  <div class="box" style="background:#fca16c">
+    <span class="name">Papaya</span>
+<span class="hex"  onclick="copy(this)">#fca16c</span>
+        <span class="rgba"  onclick="copy(this)">(252, 161, 108)</span>
+
+  </div>
+
+ 
+<!-- color content -->
+  <div class="box" style="background:#fa909c">
+    <span class="name">Conch Shell</span>
+<span class="hex"  onclick="copy(this)">#fa909c</span>
+        <span class="rgba"  onclick="copy(this)">(250, 144, 156)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffb0bb">
+    <span class="name">C. Shell Light</span>
+<span class="hex"  onclick="copy(this)">#ffb0bb</span>
+        <span class="rgba"  onclick="copy(this)">(255, 176, 187)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffc2a2">
+    <span class="name">Other Orange</span>
+<span class="hex"  onclick="copy(this)">#ffc2a2</span>
+        <span class="rgba"  onclick="copy(this)">(255, 194, 162)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ededfb">
+    <span class="name">Light Lavender</span>
+<span class="hex"  onclick="copy(this)">#ededfb</span>
+        <span class="rgba"  onclick="copy(this)">(237, 237, 251)</span>
+
+  </div>
+
+ 
+<!-- color content -->
+  <div class="box" style="background:#f3f0f3">
+    <span class="name">Light Thistle</span>
+<span class="hex"  onclick="copy(this)">#f3f0f3</span>
+        <span class="rgba"  onclick="copy(this)">(243, 240, 243)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#fef3f7">
+    <span class="name">Lighter Pink</span>
+<span class="hex"  onclick="copy(this)">#fef3f7</span>
+        <span class="rgba"  onclick="copy(this)">(254, 243, 247)</span>
+
+  </div>
+<!-- color content -->
+  <div class="box" style="background:#f3f3fe">
+    <span class="name">Lighter Blue</span>
+<span class="hex"  onclick="copy(this)">#f3f3fe</span>
+        <span class="rgba"  onclick="copy(this)">(243, 243, 254)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#e7f7bd">
+    <span class="name">Light Green</span>
+<span class="hex"  onclick="copy(this)">#e7f7bd</span>
+        <span class="rgba"  onclick="copy(this)">(231, 247, 189)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffb0cb">
+    <span class="name">Ice Cream Pink</span>
+<span class="hex"  onclick="copy(this)">#ffb0cb</span>
+        <span class="rgba"  onclick="copy(this)">(255, 176, 203)</span>
+
+  </div>
+<!-- color content -->
+  <div class="box" style="background:#e7fad3">
+    <span class="name">Light Green 2</span>
+<span class="hex"  onclick="copy(this)">#e7fad3</span>
+        <span class="rgba"  onclick="copy(this)">(231, 250, 211)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#c0eaff">
+    <span class="name">Popsicle Blue 2</span>
+<span class="hex"  onclick="copy(this)">#c0eaff</span>
+        <span class="rgba"  onclick="copy(this)">(192, 234, 255)</span>
+
+  </div>
+<!-- color content -->
+  <div class="box" style="background:#fecad4">
+    <span class="name">Other Pink</span>
+<span class="hex"  onclick="copy(this)">#fecad4</span>
+        <span class="rgba"  onclick="copy(this)">(254, 202, 212)</span>
+
+  </div>
+<!-- color content -->
+  <div class="box" style="background:#ffeaea">
+    <span class="name">Red-ish Pink 2</span>
+<span class="hex"  onclick="copy(this)">#ffeaea</span>
+        <span class="rgba"  onclick="copy(this)">(255, 234, 234)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#e7a3a4">
+    <span class="name">Light Brownish</span>
+<span class="hex"  onclick="copy(this)">#e7a3a4</span>
+        <span class="rgba"  onclick="copy(this)">(231, 163, 164)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ea9aa8">
+    <span class="name">Some Pink 2</span>
+<span class="hex"  onclick="copy(this)">#ea9aa8</span>
+        <span class="rgba"  onclick="copy(this)">(234, 154, 168)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffb0bb">
+    <span class="name">Some Pink 3</span>
+<span class="hex"  onclick="copy(this)">#ffb0bb</span>
+        <span class="rgba"  onclick="copy(this)">(255, 176, 187)</span>
+
+  </div>
+<!-- color content -->
+  <div class="box" style="background:#ced2ef">
+    <span class="name">A Cute Blue</span>
+<span class="hex"  onclick="copy(this)">#ced2ef</span>
+        <span class="rgba"  onclick="copy(this)">(206, 210, 239)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#c7b6d6">
+    <span class="name">Strong Thistle</span>
+<span class="hex"  onclick="copy(this)">#c7b6d6</span>
+        <span class="rgba"  onclick="copy(this)">(199, 182, 214)</span>
+
+  </div>
+<!-- color content -->
+  <div class="box" style="background:#fdf1f0">
+    <span class="name">Very L. Peach</span>
+<span class="hex"  onclick="copy(this)">#fdf1f0</span>
+        <span class="rgba"  onclick="copy(this)">(253, 241, 240)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#dfd5e8">
+    <span class="name">Soft Thistle 2</span>
+<span class="hex"  onclick="copy(this)">#dfd5e8</span>
+        <span class="rgba"  onclick="copy(this)">(223, 213, 232)</span>
+
+  </div>
+<!-- color content -->
+  <div class="box" style="background:#fff5f5">
+    <span class="name">So light Pink</span>
+<span class="hex"  onclick="copy(this)">#fff5f5</span>
+        <span class="rgba"  onclick="copy(this)">(255, 245, 245)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#f3f3fe">
+    <span class="name">So light Blue</span>
+<span class="hex"  onclick="copy(this)">#f3f3fe</span>
+        <span class="rgba"  onclick="copy(this)">(243, 243, 254)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#decce5">
+    <span class="name">Middle Thistle</span>
+<span class="hex"  onclick="copy(this)">#decce5</span>
+        <span class="rgba"  onclick="copy(this)">(222, 204, 229)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#fcbad6">
+    <span class="name">Clean Pink</span>
+<span class="hex"  onclick="copy(this)">#fcbad6</span>
+        <span class="rgba"  onclick="copy(this)">(252, 186, 214)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#bdc2e8">
+    <span class="name">Strong Blue</span>
+<span class="hex"  onclick="copy(this)">#bdc2e8</span>
+        <span class="rgba"  onclick="copy(this)">(189, 194, 232)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#e6dee9">
+    <span class="name">Clean Thistle</span>
+<span class="hex"  onclick="copy(this)">#e6dee9</span>
+        <span class="rgba"  onclick="copy(this)">(230, 222, 233)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#feeaf2">
+    <span class="name">Light Pink 3</span>
+<span class="hex"  onclick="copy(this)">#feeaf2</span>
+        <span class="rgba"  onclick="copy(this)">(254, 234, 242)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#f5eff7">
+    <span class="name">Light Light lilac</span>
+<span class="hex"  onclick="copy(this)">#f5eff7</span>
+        <span class="rgba"  onclick="copy(this)">(245, 239, 247)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ece6e6">
+    <span class="name">A cute grey</span>
+<span class="hex"  onclick="copy(this)">#ece6e6</span>
+        <span class="rgba"  onclick="copy(this)">(236, 230, 230)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#f9a1ba">
+    <span class="name">Some Pink 4</span>
+<span class="hex"  onclick="copy(this)">#f9a1ba</span>
+        <span class="rgba"  onclick="copy(this)">(249, 161, 186)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffddbb">
+    <span class="name">Light Orange</span>
+<span class="hex"  onclick="copy(this)">#ffddbb</span>
+        <span class="rgba"  onclick="copy(this)">(255, 221, 187)</span>
+
+  </div>
+
+  
+
+
+<!-- color content -->
+  <div class="box" style="background:#dbe4eb">
+    <span class="name">A Cute Blue</span>
+<span class="hex"  onclick="copy(this)">#dbe4eb</span>
+        <span class="rgba"  onclick="copy(this)">(219, 228, 235)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#ebdbea">
+    <span class="name">A Cute Purple</span>
+<span class="hex"  onclick="copy(this)">#ebdbea</span>
+        <span class="rgba"  onclick="copy(this)">(235, 219, 234)</span>
+
+  </div>
+
+ <!-- color content -->
+  <div class="box" style="background:#e0c3b8">
+    <span class="name">A Cute Brown</span>
+<span class="hex"  onclick="copy(this)">#e0c3b8
+</span>
+        <span class="rgba"  onclick="copy(this)">(224, 195, 184)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#fed0d1">
+    <span class="name">Cute Peach 2</span>
+<span class="hex"  onclick="copy(this)">#fed0d1</span>
+        <span class="rgba"  onclick="copy(this)">(254,208,209)</span>
+
+  </div>
+
+
+ <!-- color content -->
+  <div class="box" style="background:#98bdf7">
+    <span class="name">Strong Blue 2</span>
+<span class="hex"  onclick="copy(this)">#98bdf7</span>
+        <span class="rgba"  onclick="copy(this)">(152, 189, 247)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#fdcbc9">
+    <span class="name">Cute Peach 3</span>
+<span class="hex"  onclick="copy(this)">#fdcbc9</span>
+        <span class="rgba"  onclick="copy(this)">(253, 203, 201)</span>
+
+  </div>
+
+ 
+
+<!-- color content -->
+  <div class="box" style="background:#f0889b">
+    <span class="name">Strong Peach</span>
+<span class="hex"  onclick="copy(this)">#f0889b</span>
+        <span class="rgba"  onclick="copy(this)">(240, 136, 155)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#f2d2dd">
+    <span class="name">Clean Pink 2</span>
+<span class="hex"  onclick="copy(this)">#f2d2dd</span>
+        <span class="rgba"  onclick="copy(this)">(242, 210, 221)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background: #afdcd5">
+    <span class="name">Popsicle Green</span>
+<span class="hex"  onclick="copy(this)"> #afdcd5</span>
+        <span class="rgba"  onclick="copy(this)">(175, 220, 213)</span>
+
+  </div>
+
+
+
+
+<!-- color content -->
+  <div class="box" style="background: #ffdfcd">
+    <span class="name">Light Orange 2</span>
+<span class="hex"  onclick="copy(this)">#ffdfcd</span>
+        <span class="rgba"  onclick="copy(this)">(255, 223, 205)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background: #fdedbd">
+    <span class="name">Light Orange 3</span>
+<span class="hex"  onclick="copy(this)">#fdedbd</span>
+        <span class="rgba"  onclick="copy(this)">(253, 237, 189)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background: #ffc1af">
+    <span class="name">Some Orange</span>
+<span class="hex"  onclick="copy(this)">#ffc1af</span>
+        <span class="rgba"  onclick="copy(this)">(255, 193, 175)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background: #ff9da6">
+    <span class="name">Strong Pearch 2</span>
+<span class="hex"  onclick="copy(this)">#ff9da6</span>
+        <span class="rgba"  onclick="copy(this)">(255, 157, 166)</span>
+
+  </div>
+ 
+
+<!-- color content -->
+  <div class="box" style="background: #ffd198">
+    <span class="name">Light Orange 4</span>
+<span class="hex"  onclick="copy(this)">#ffd198</span>
+        <span class="rgba"  onclick="copy(this)">(255, 209, 152)</span>
+
+  </div>
+
+ 
+
+<!-- color content -->
+  <div class="box" style="background: #ffb3a0">
+    <span class="name">Peach Orange</span>
+<span class="hex"  onclick="copy(this)">#ffb3a0</span>
+        <span class="rgba"  onclick="copy(this)">(255, 179, 160)</span>
+
+  </div>
+ 
+ 
+ 
+<!-- color content -->
+  <div class="box" style="background: #ffc7c7">
+    <span class="name">Peach Orange 2</span>
+<span class="hex"  onclick="copy(this)">#ffc7c7</span>
+        <span class="rgba"  onclick="copy(this)">(255, 199, 199)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background: #ff7373">
+    <span class="name">Strong Red</span>
+<span class="hex"  onclick="copy(this)">#ff7373</span>
+        <span class="rgba"  onclick="copy(this)">(255, 115, 115)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background: #e1dbf1">
+    <span class="name">Purpleish Blue</span>
+<span class="hex"  onclick="copy(this)">#e1dbf1</span>
+        <span class="rgba"  onclick="copy(this)">(225, 219, 241)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background: #fee3ec">
+    <span class="name">Cute Pink</span>
+<span class="hex"  onclick="copy(this)">#fee3ec</span>
+        <span class="rgba"  onclick="copy(this)">(254, 227, 236)</span>
+
+  </div>
+ 
+ 
+ 
+ <!-- color content -->
+  <div class="box" style="background: #ffb7b7">
+    <span class="name">Peach Pink</span>
+<span class="hex"  onclick="copy(this)">#ffb7b7</span>
+        <span class="rgba"  onclick="copy(this)">(255, 183, 183)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background: #f8f8f8">
+    <span class="name">Light Grey</span>
+<span class="hex"  onclick="copy(this)">#f8f8f8</span>
+        <span class="rgba"  onclick="copy(this)">(248, 248, 248)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background: #dcecf5">
+    <span class="name">Cute Blue 2</span>
+<span class="hex"  onclick="copy(this)">#dcecf5</span>
+        <span class="rgba"  onclick="copy(this)">(220, 236, 245)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#f9e7dc">
+    <span class="name">Light Orange 5</span>
+<span class="hex"  onclick="copy(this)">#f9e7dc</span>
+        <span class="rgba"  onclick="copy(this)">(249, 231, 220)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffe8eb">
+    <span class="name">So Light Pink 3</span>
+<span class="hex"  onclick="copy(this)">#ffe8eb</span>
+        <span class="rgba"  onclick="copy(this)">(255, 232, 235)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffe1e1">
+    <span class="name">Light Pink 4</span>
+<span class="hex"  onclick="copy(this)">#ffe1e1</span>
+        <span class="rgba"  onclick="copy(this)">(255, 225, 225)</span>
+
+  </div>
+
+
+<!-- color content -->
+  <div class="box" style="background:#edd6e6">
+    <span class="name">A Cute Purple 2</span>
+<span class="hex"  onclick="copy(this)">#edd6e6</span>
+        <span class="rgba"  onclick="copy(this)">(237, 214, 230)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffe9f1">
+    <span class="name">Light Pink 5</span>
+<span class="hex"  onclick="copy(this)">#ffe9f1</span>
+        <span class="rgba"  onclick="copy(this)">(255, 233, 241)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#ffb6cf">
+    <span class="name">Popsicle Pink</span>
+<span class="hex"  onclick="copy(this)">#ffb6cf</span>
+        <span class="rgba"  onclick="copy(this)">(255, 182, 207)</span>
+
+  </div>
+
+ <!-- color content -->
+  <div class="box" style="background:#ffefff">
+    <span class="name">Light Light Pink</span>
+<span class="hex"  onclick="copy(this)">#ffefff</span>
+        <span class="rgba"  onclick="copy(this)">(255, 239, 255)</span>
+
+  </div>
+ 
+ <!-- color content -->
+  <div class="box" style="background:#ffefeb">
+    <span class="name">Light Peach</span>
+<span class="hex"  onclick="copy(this)">#ffefeb</span>
+        <span class="rgba"  onclick="copy(this)">(255, 239, 235)</span>
+
+  </div>
+
+
+ <!-- color content -->
+  <div class="box" style="background:#f6f6f6">
+    <span class="name">Light Grey</span>
+<span class="hex"  onclick="copy(this)">#f6f6f6</span>
+        <span class="rgba"  onclick="copy(this)">(246, 246, 246)</span>
+
+  </div>
+
+
+ <!-- color content -->
+  <div class="box" style="background:#f5c6b6">
+    <span class="name">Brown Orange</span>
+<span class="hex"  onclick="copy(this)">#f5c6b6</span>
+        <span class="rgba"  onclick="copy(this)">(245, 198, 182)</span>
+
+  </div>
+
+ <!-- color content -->
+  <div class="box" style="background:#e8f0fe">
+    <span class="name">Light Blue Other</span>
+<span class="hex"  onclick="copy(this)">#e8f0fe</span>
+        <span class="rgba"  onclick="copy(this)">(232, 240, 254)</span>
+
+  </div>
+
+<!-- color content -->
+  <div class="box" style="background:#fce4ed">
+    <span class="name">Light Other Pink</span>
+<span class="hex"  onclick="copy(this)">#fce4ed</span>
+        <span class="rgba"  onclick="copy(this)">(252, 228, 237)</span>
+
+  </div> 
+ 
+ 
+ <!-- color content -->
+  <div class="box" style="background:#fbc1d5">
+    <span class="name">Icecream Pink 2</span>
+<span class="hex"  onclick="copy(this)">#fbc1d5</span>
+        <span class="rgba"  onclick="copy(this)">(251, 193, 213)</span>
+
+  </div> 
+
+<!-- color content -->
+  <div class="box" style="background:#faa2c1">
+    <span class="name">Dark Pink</span>
+<span class="hex"  onclick="copy(this)">#faa2c1</span>
+        <span class="rgba"  onclick="copy(this)">(250, 162, 193)</span>
+
+  </div> 
+
+
+<!-- color content -->
+  <div class="box" style="background:#f783ac">
+    <span class="name">Darker Pink</span>
+<span class="hex"  onclick="copy(this)">#f783ac</span>
+        <span class="rgba"  onclick="copy(this)">(247, 131, 172)</span>
+
+  </div> 
+
+
+ <!-- color content -->
+<div class="box" style="background:#e7c7c4">
+	<span class="name">Brown Pink</span>
+<span class="hex"  onclick="copy(this)">#e7c7c4</span>
+        <span class="rgba"  onclick="copy(this)">(231, 199, 196)</span>
+
+  </div>
+
+<!-- color content -->
+<div class="box" style="background:#f5aab9">
+	<span class="name">Strong Pink</span>
+<span class="hex"  onclick="copy(this)">#f5aab9</span>
+        <span class="rgba"  onclick="copy(this)">(245, 170, 185)</span>
+
+  </div>
+
+  
+	
+	<!-- color content -->
+<div class="box" style="background:#feeaeb">
+	<span class="name">Light Pink</span>
+<span class="hex"  onclick="copy(this)">#feeaeb</span>
+        <span class="rgba"  onclick="copy(this)">(254, 234, 235)</span>
+
+  </div>
+
+<!-- color content -->
+<div class="box" style="background:#f1f5f6">
+	<span class="name">Light Blue</span>
+<span class="hex"  onclick="copy(this)">#f1f5f6</span>
+        <span class="rgba"  onclick="copy(this)">(241, 245, 246)</span>
+
+  </div>
+ 
+ <!-- color content -->
+<div class="box" style="background:#f8eeee">
+	<span class="name">Light Pink</span>
+<span class="hex"  onclick="copy(this)">#f8eeee</span>
+        <span class="rgba"  onclick="copy(this)">(248, 238, 238)</span>
+
+  </div>
+
+<!-- color content -->
+<div class="box" style="background:#ffcc9d">
+	<span class="name">Other Orange</span>
+<span class="hex"  onclick="copy(this)">#ffcc9d</span>
+        <span class="rgba"  onclick="copy(this)">(255, 204, 157)</span>
+
+  </div>
+
+
+<!-- color content -->
+<div class="box" style="background:#f0718c">
+	<span class="name">Strong Pink</span>
+<span class="hex"  onclick="copy(this)">#f0718c</span>
+        <span class="rgba"  onclick="copy(this)">(240, 113, 140)</span>
+
+  </div>
+	
+	<!-- color content -->
+<div class="box" style="background:#f7b9ce">
+	<span class="name">Popsicle Pink</span>
+<span class="hex"  onclick="copy(this)">#f7b9ce</span>
+        <span class="rgba"  onclick="copy(this)">(247, 185, 206)</span>
+
+  </div>
+	
+		<!-- color content -->
+<div class="box" style="background:#ed95ad">
+	<span class="name">Strong Pink</span>
+<span class="hex"  onclick="copy(this)">#ed95ad</span>
+        <span class="rgba"  onclick="copy(this)">(237, 149, 173)</span>
+
+  </div>
+
+
+	<!-- color content -->
+<div class="box" style="background:#ebdbef">
+	<span class="name">Cute Lilac</span>
+<span class="hex"  onclick="copy(this)">#ebdbef</span>
+        <span class="rgba"  onclick="copy(this)">(235, 219, 239)</span>
+
+  </div>
+	  
+	  	<!-- color content -->
+<div class="box" style="background:#e4f0fb">
+	<span class="name">Cute Blue</span>
+<span class="hex"  onclick="copy(this)">#e4f0fb</span>
+        <span class="rgba"  onclick="copy(this)">(228, 240, 251)</span>
+
+  </div>
+	
+
+
+	  	<!-- color content -->
+<div class="box" style="background:#ffa0a0">
+	<span class="name">Some Pink</span>
+<span class="hex"  onclick="copy(this)">#ffa0a0</span>
+        <span class="rgba"  onclick="copy(this)">(255, 160, 160)</span>
+
+  </div>
+
+
+	  	<!-- color content -->
+<div class="box" style="background:#ccbec1">
+	<span class="name">Some Lilac</span>
+<span class="hex"  onclick="copy(this)">#ccbec1</span>
+        <span class="rgba"  onclick="copy(this)">(204, 190, 193)</span>
+
+  </div>
+	
+		  	<!-- color content -->
+<div class="box" style="background:#d0d0e8">
+	<span class="name">Dark Lavender</span>
+<span class="hex"  onclick="copy(this)">#ccbec1</span>
+        <span class="rgba"  onclick="copy(this)">(208, 208, 232)</span>
+
+  </div>
+	
+			  	<!-- color content -->
+<div class="box" style="background:#fff796">
+	<span class="name">Cute Yellow</span>
+<span class="hex"  onclick="copy(this)">#fff796</span>
+        <span class="rgba"  onclick="copy(this)">(255, 247, 150)</span>
+
+  </div>
+	
+	
+		  	<!-- color content -->
+<div class="box" style="background:#ff8484">
+	<span class="name">Cute Red</span>
+<span class="hex"  onclick="copy(this)">#ff8484</span>
+        <span class="rgba"  onclick="copy(this)">(255, 132, 132)</span>
+
+  </div>
+
+	  	<!-- color content -->
+<div class="box" style="background:#b994af">
+	<span class="name">Cute Purple</span>
+<span class="hex"  onclick="copy(this)">#b994af</span>
+        <span class="rgba"  onclick="copy(this)">(185, 148, 175)</span>
+
+  </div>
+
+	  	<!-- color content -->
+<div class="box" style="background:#ffb6c1">
+	<span class="name">Cute Pink~</span>
+<span class="hex"  onclick="copy(this)">#ffb6c1</span>
+        <span class="rgba"  onclick="copy(this)">(255, 182, 193)</span>
+
+  </div>
+
+	
+		  	<!-- color content -->
+<div class="box" style="background:#edcdc7">
+	<span class="name">Brown Pink</span>
+<span class="hex"  onclick="copy(this)">#edcdc7</span>
+        <span class="rgba"  onclick="copy(this)">(237, 205, 199)</span>
+
+  </div>
+
+	  	<!-- color content -->
+<div class="box" style="background:#cfd3da">
+	<span class="name">Grey Blue</span>
+<span class="hex"  onclick="copy(this)">#cfd3da</span>
+        <span class="rgba"  onclick="copy(this)">(207, 211, 218)</span>
+
+  </div>
+	
+	  	<!-- color content -->
+<div class="box" style="background:#eeb4b4">
+	<span class="name">Pale Pink</span>
+<span class="hex"  onclick="copy(this)">#eeb4b4</span>
+        <span class="rgba"  onclick="copy(this)">(238, 180, 180)</span>
+
+  </div>
+	
+		<!-- color content -->
+<div class="box" style="background:#ffd4d2">
+	<span class="name">Other Pink</span>
+<span class="hex"  onclick="copy(this)">#ffd4d2</span>
+        <span class="rgba"  onclick="copy(this)">(255, 212, 210)</span>
+
+  </div>
+
+		<!-- color content -->
+<div class="box" style="background:#fdb8c0">
+	<span class="name">Other Pink~</span>
+<span class="hex"  onclick="copy(this)">#fdb8c0</span>
+        <span class="rgba"  onclick="copy(this)">(253, 184, 192)</span>
+
+  </div>
+
+
+		<!-- color content -->
+<div class="box" style="background:#ffeef0">
+	<span class="name">Light Pink~</span>
+<span class="hex"  onclick="copy(this)">#ffeef0</span>
+        <span class="rgba"  onclick="copy(this)">(255, 238, 240)</span>
+
+  </div>
+
+		<!-- color content -->
+<div class="box" style="background:#ffdddd">
+	<span class="name">New Pink~</span>
+<span class="hex"  onclick="copy(this)">#ffdddd</span>
+        <span class="rgba"  onclick="copy(this)">(255, 221, 221)</span>
+
+  </div>
+	
+		<!-- color content -->
+<div class="box" style="background:#ddddff">
+	<span class="name">New Blue~</span>
+<span class="hex"  onclick="copy(this)">#ddddff</span>
+        <span class="rgba"  onclick="copy(this)">(221, 221, 255)</span>
+
+  </div>
+
+		<!-- color content -->
+<div class="box" style="background:#f6b7a9">
+	<span class="name">Strong Peach</span>
+<span class="hex"  onclick="copy(this)">#f6b7a9</span>
+        <span class="rgba"  onclick="copy(this)">(246, 183, 169)</span>
+
+  </div>
+
+ 		 		<!-- color content -->
+<div class="box" style="background:#bdb2c4">
+	<span class="name">Sunako's Eyes</span>
+<span class="hex"  onclick="copy(this)">#bdb2c4</span>
+        <span class="rgba"  onclick="copy(this)">(189, 178, 196)</span>
+
+  </div>
+
+
+<!-- colors end -->
+</div>
+<script>
+	function copy(that){
+var inp = document.createElement('input');
+var pop = document.querySelector('.all');
+document.body.appendChild(inp)
+inp.value = that.textContent
+inp.select();
+document.execCommand('copy');
+inp.remove();
+pop.classList.add('opened');
+document.body.classList.add('fix');
+}
+
+var popClose = document.querySelector('.all');
+var close = document.querySelector('.close, .all');
+close.onclick = function() {
+popClose.classList.remove('opened');
+document.body.classList.remove('fix');
+}
+	</script>
+
+   
+   </body>
+
+</html>
