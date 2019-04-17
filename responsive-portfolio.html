@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bishonenlover</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+<style type="text/css">
+/* basics */
+ html{
+ scroll-behavior:smooth;
+ }
+ body{
+font-family:'Roboto Condensed', sans-serif;
+margin:0;
+background:#eee;
+height:auto;
+}
+h1{
+font-weight:400;
+font-size:2.5rem;
+text-transform:uppercase;
+margin:0;
+}
+h2{
+font-weight:400px;
+font-size:1.2rem;
+text-transform:captalize;
+margin:0;
+}
+img{
+display:block;
+width:100%;
+}
+
+/* main */
+main{
+max-width:900px;
+margin:auto;
+box-shadow:30px 0px 40px rgba(0,0,0,0.1), -30px 0px 40px rgba(0,0,0,0.1);
+}
+
+/* landing */
+#landing{
+background:#fff;
+}
+#landing-text{
+display:flex;
+flex: 0 1 40vw;
+height:50vh;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-right:1rem;
+padding-left:1rem;
+}
+#landing-text h2{
+color:#888;
+}
+#landing-image{
+background:url(https://source.unsplash.com/915UJQaxtrk);
+background-position:right;
+background-size:cover;
+background-repeat:no-repeat;
+height:50vh;
+flex:0 1 60vw;
+margin:0;
+}
+.btn{
+padding:0.5rem 2rem;
+border:1px #ccc solid;
+display:inline-block;
+margin:2rem 0 0;
+border-radius:50px;
+text-decoration:none;
+color:#333;
+transition:background 500ms ease;
+}
+.btn:hover{
+background:#f4f4f4;
+}
+/* header */
+
+#header{
+padding:1.5rem;
+text-align:center;
+background:#333;
+color:#fff;
+/* if menu to be fixed on top
+position:sticky;
+top:0;
+*/
+}
+#header h2{
+border-left:dotted 1px #fff;
+border-right:dotted 1px #fff;
+display:inline-block;
+padding-right:1rem;
+padding-left:1rem;
+}
+/* captions */
+.caption{
+padding:0.8rem;
+text-align:center;
+}
+/* footer */
+
+footer{
+text-align:center;
+padding:2rem 1rem;
+margin:auto;
+color:#333;
+}
+footer h3{
+font-size:3rem;
+margin-bottom:0;
+}
+
+/* responsive */
+
+@media (min-width:500px){
+#landing{
+display:flex;
+height:100%;
+}
+#landing-text, 
+#landing-image{
+height:100vh;
+}
+}
+
+@media (min-width:700px){
+.btn{
+ padding:1rem 3rem;
+}
+
+}
+</style>
+</head>
+<body>
+ <main>
+ <!-- Landing Area -->
+<div id="landing">
+<div id="landing-text">
+<div id="landing-inner">
+<h1> Bishonenlover </h1>
+<h2>Beatiful gifs of anime</h2>
+<a href="#images" class="btn" id="view-work">View Posts</a>
+</div>
+</div>
+<div id="landing-image"></div>
+</div>
+
+<div id="images">
+<div id="header">
+<h2>My Work</h2>
+</div>
+<img src="https://source.unsplash.com/1605x900/?dogs" alt="">
+<div class="caption">
+<h3>Photo One</h3>
+<p>Cat ipsum dolor sit amet, i like cats because they are fat and fluffy and make muffins.</p>
+</div>
+
+<img src="https://source.unsplash.com/1604x900/?dogs" alt="">
+<div class="caption">
+<h3>Photo Two</h3>
+<p>Cat ipsum dolor sit amet, i like cats because they are fat and fluffy and make muffins.</p>
+</div>
+
+
+
+<img src="https://source.unsplash.com/1601x900/?dogs" alt="">
+<div class="caption">
+<h3>Photo Three</h3>
+<p>Cat ipsum dolor sit amet, i like cats because they are fat and fluffy and make muffins.</p>
+</div>
+
+
+<img src="https://source.unsplash.com/1602x900/?dogs" alt="">
+<div class="caption">
+<h3>Photo Four</h3>
+<p>Cat ipsum dolor sit amet, i like cats because they are fat and fluffy and make muffins.</p>
+</div>
+
+
+
+<img src="https://source.unsplash.com/1603x900/?dogs" alt="">
+<div class="caption">
+<h3>Photo Five</h3>
+<p>Cat ipsum dolor sit amet, i like cats because they are fat and fluffy and make muffins.</p>
+</div>
+
+
+</div>
+
+</main>
+<footer>
+<h3>Get in Touch</h3>
+<p>Ask or Message</p>
+<p>Bishonenlover: <strong>bishonenlover.tumblr.com/ask</strong></p>
+<p>Roymustangiscute: <strong>roymustangiscute.tumblr.com/ask</strong></p>
+ 
+</footer>
+ 
+</body>
+</html>
