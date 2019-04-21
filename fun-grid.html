@@ -1,0 +1,167 @@
+<!DOCTYPE html><!--
+
+
+
+by todorokiscute.tumblr.com
+
+
+
+
+--><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> A grid example </title>
+<!-- scripts -->
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+
+</head>
+<style type="text/css">
+
+/* CSS reset */
+*{
+box-sizing: border-box;
+}
+ 
+body{
+margin:0;
+font:.9em/1.6 'Roboto';
+cursor:default;
+background:#f5f5f5;
+color:#444;
+}
+a{
+color:#ffb0bb;
+text-decoration:none;
+transition:all ease-in-out .3s;
+}
+img{
+display:block;
+max-width:100%;
+object-fit:cover;
+}
+p{
+margin-top:0;
+margin-bottom:.4em;
+}
+h1, h2{
+margin:0;
+font-weight:normal;
+line-height:1;
+font-family:'Roboto Condensed';
+}
+pre{
+white-space:pre-line;
+font-family:'Roboto';
+font-size:.9em;
+}
+blockquote{
+margin:0;
+}
+.wrapper{
+	margin:2em auto;
+    width:80%;
+    max-width:800px;
+	display:grid;
+  	grid-gap:2em;
+  	grid-template-columns:repeat(6, 1fr);
+    }
+    
+[class^="item"]{
+    background:white;
+    border:1px solid #ddd;
+    overflow:hidden;
+    padding:2em;
+    display:flex; 
+    align-items:center;
+	text-align:justify;
+   
+}
+.item1{
+grid-column:span 4;
+ grid-row:span 2;
+}
+ 
+ .item2{
+ grid-column:span 2;
+ grid-row:span 1;
+ }
+.item3{
+grid-column:span 2;
+ grid-row:span 1;
+}
+.item4{
+grid-column:span 6;
+ grid-row:span 3;
+}
+.item5{
+grid-column:span 4;
+ grid-row:span 3;
+}
+.item6{
+grid-column:span 2;
+ grid-row:span w;
+}
+.item7{
+grid-column:span 2;
+ grid-row:span 2;
+}
+
+ .subaru{
+ width:100%;
+ }
+ .sarazanmai{
+ height:300px;
+ width:100%;
+ object-fit:cover;
+ }
+ @media(max-width:700px){
+ body{
+ font-size:1em;
+ }
+ .wrapper{
+ display:block;
+ }
+ [class^="item"]{
+ margin-bottom:3em;
+ }
+ }
+</style>
+
+<body>
+ <div class="wrapper">
+	
+	 <div class="item1">
+     <img src="https://i.imgur.com/1ajAGu8.gif">
+     </div>
+     
+		<div class="item2">
+        <img src="https://i.imgur.com/ko6j9h0.gif" />
+        </div>
+        
+		<div class="item3">
+        Text-only masonry block.
+        </div>
+        
+		<div class="item4 ">
+			<img class="subaru"  src="https://66.media.tumblr.com/67191c16e0bff5ec9b9ed7af11888844/tumblr_pp1h48hlaq1vlvhpho2_400.gif" />
+		</div>
+        
+		<div class="item5">
+			<img class="sarazanmai" src="https://i.imgur.com/66Jjegl.jpg" />
+		</div>
+		 
+		<div class="item6">
+			<a href="https://twitter.com/bishonenlover">I tweet sometimes.</a>
+		</div>
+     	<div class="item7">
+			Cat ipsum dolor sit amet, jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed.
+		</div>
+ 
+</div>
+
+
+</body>
+</html>
