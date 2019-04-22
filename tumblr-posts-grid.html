@@ -1,0 +1,1722 @@
+<!DOCTYPE html><!--
+
+
+
+by todorokiscute.tumblr.com
+
+
+
+
+--><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> A grid example with some tumblr posts</title>
+<!-- scripts -->
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+
+</head>
+<style type="text/css">
+
+/* CSS reset */
+*{
+box-sizing: border-box;
+}
+ 
+body{
+margin:0;
+font:.8em/1.6 'Roboto';
+cursor:default;
+background:#f5f5f5;
+color:#444;
+}
+a{
+color:#ffb0bb;
+text-decoration:none;
+transition:all ease-in-out .3s;
+}
+img{
+display:block;
+max-width:100%;
+object-fit:cover;
+}
+p{
+margin-top:0;
+margin-bottom:.4em;
+}
+h1, h2{
+margin:0;
+font-weight:normal;
+line-height:1;
+font-family:'Roboto Condensed';
+}
+pre{
+white-space:pre-line;
+font-family:'Roboto';
+font-size:.9em;
+}
+blockquote{
+margin:0;
+}
+svg{
+height:20px;
+}
+.reblog{
+display:flex;
+align-items:center;
+margin-top:.6em;
+}
+.reblog img, .aquestion img{
+width:35px;
+margin-right:.3em;
+}
+.caption{
+padding:.2em 0;
+position:relative;
+}
+.captions .caption + .caption::before{
+content:' ';
+width:calc(100% + 4em);
+margin-left:-2em;
+height:1px;
+background:#f6f6f6;
+position:absolute;
+}
+.comment{
+padding:.3em 0;
+}
+ .posts{
+ width:80%;
+ max-width:800px;
+ margin:3em auto;
+ display:grid;
+  	grid-gap:2em;
+  	grid-template-columns:repeat(6, 1fr);
+    align-items:flex-start;
+    grid-auto-flow:dense;
+	grid-auto-rows:auto;
+
+ }
+ .post{
+ background:white;
+padding:1em;
+  overflow:hidden;
+    padding:2em;
+ 
+ }
+ 
+ .photoset{
+ grid-column:span 3;
+ grid-row:span 2;
+ }
+ 
+ .aquestion{
+ grid-column:span 3;
+ grid-row:span 1;
+ }
+ .atext{
+  grid-column:span 3;
+ grid-row:span 3;
+ }
+ .aphoto{
+  grid-column:span 3;
+ grid-row:span 1;
+ }
+ .aquote{
+   grid-column:span 3;
+ grid-row:span 1;
+ }
+  .alink{
+   grid-column:span 3;
+ grid-row:span 1;
+ }
+ .achat{
+ grid-column:span 3;
+ grid-row:span 1;
+ }
+ .aaudio{
+ grid-column:span 3;
+ grid-row:span 1;
+
+ }
+ .avideo{
+ grid-column:span 6;
+ grid-row:span 1;
+ }
+ .more{
+ text-align:right;
+ }
+ pre{
+ background:#f9f9f9;
+ padding:.2em;
+ }
+ .tags{
+ margin-top:.6em;
+ }
+ .question{
+ background:#f5ecf9;
+ border-radius:4px;
+ padding:.4em;
+ width:calc(100% - 50px);
+ margin-left:50px;
+ position:relative;
+ }
+ .question::before{
+ content:' ';
+ position:absolute;
+ border:8px solid transparent;
+ border-right-color:#f5ecf9;
+ top:1em;
+ right:100%;
+ }
+ .ask img, .reply img{
+ float:left;
+ }
+ .answer{
+ background:#f5f5f5;
+ padding:.4em;
+ border-radius:4px;
+ width:calc(100% - 50px);
+ margin-top:1em;
+ margin-left:50px;
+ position:relative;
+ 
+ }
+
+.answer::before{
+ content:' ';
+ position:absolute;
+ border:8px solid transparent;
+ border-right-color:#f5f5f5;
+ top:1em;
+ right:100%;
+ }
+ /* tumblr default buttons */
+
+.iframe-controls--phone-mobile,
+.iframe-controls--desktop,
+.tmblr-iframe--app-cta-button, 
+.tmblr-iframe-pushdown {
+display:none!important;
+} 
+ 
+
+.buttons{
+display:flex;
+ margin-top:.6em;
+align-items:center;
+    justify-content:flex-end;
+}
+ 
+.buttons svg {
+box-sizing:content-box;
+fill:pink;
+ --size:14px;
+  width:var(--size);
+   height:var(--size);
+padding:.2em .3em;
+ display:block;
+   overflow:visible;
+ }
+ 
+svg.reblog-button{
+    --size:18px;
+  width:var(--size);
+   height:var(--size); 
+padding:.2em .3em;
+    
+} 
+
+.buttons .like .liked + svg path {
+   fill:thistle;
+
+}
+.buttons .like .liked + svg {
+   opacity:1;
+
+}
+.buttons .like .like_button {
+   position:relative;
+
+}
+.buttons .like .like_button iframe {
+   position:absolute;
+   top:0;
+   left:0;
+   bottom:0;
+   right:0;
+   z-index:2;
+   opacity:0;
+}
+.video{
+ position: relative;
+ width: 100%;
+ padding-bottom: 56.25%; 
+ height: 0;
+}
+.video iframe{
+ position: absolute;
+ top:0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+[photoset-layout] {
+    grid-gap:1px;
+}
+
+
+@media(max-width:600px){
+ .posts{
+ display:block;
+ }
+ .post{
+ margin-bottom:4em;
+ }
+ }
+</style>
+
+<body>
+ 
+ <div class="posts">
+ 
+ 
+ <div class="post photoset" id="184178641902">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+<div class="photoset-grid" photoset-layout="11"><div data-width="471" data-height="327" data-lowres="https://66.media.tumblr.com/95d5cefdf3c35e28257cf9089377e464/tumblr_ppyf3fyMih1y83ckoo1_500.gif" data-highres="https://66.media.tumblr.com/95d5cefdf3c35e28257cf9089377e464/tumblr_ppyf3fyMih1y83ckoo1_500.gif" onclick="lightbox(this)"><img src="https://66.media.tumblr.com/95d5cefdf3c35e28257cf9089377e464/tumblr_ppyf3fyMih1y83ckoo1_500.gif" /></div><div data-width="473" data-height="324" data-lowres="https://66.media.tumblr.com/94f4f0ce32f6a7e148f56b271e9f3cfe/tumblr_ppyf3fyMih1y83ckoo2_500.gif" data-highres="https://66.media.tumblr.com/94f4f0ce32f6a7e148f56b271e9f3cfe/tumblr_ppyf3fyMih1y83ckoo2_500.gif" onclick="lightbox(this)"><img src="https://66.media.tumblr.com/94f4f0ce32f6a7e148f56b271e9f3cfe/tumblr_ppyf3fyMih1y83ckoo2_500.gif" /></div></div>
+ 
+
+<div class="captions">
+
+
+ 
+
+<div class="caption">
+<div class="reblog">
+
+<a href="http://hijikataiscute.tumblr.com/post/184178636707" target="_blank">
+<img src="https://66.media.tumblr.com/avatar_142790e7bb18_64.pnj"/></a>
+<a href="http://hijikataiscute.tumblr.com/post/184178636707" target="_blank">hijikataiscute</a>
+
+
+
+</div><!-- reblog user -->
+                                
+<div class="comment">
+<p>Gintoki and Okita.<b> Gintama.</b></p>
+</div><!-- comment -->
+                    
+ </div><!-- reblog caption-->
+
+
+<div class="caption">
+<div class="reblog">
+
+<a href="https://hijikataiscute.tumblr.com/post/184178641902/hijikataiscute-gintoki-and-okita-gintama-a" target="_blank">
+<img src="https://66.media.tumblr.com/avatar_142790e7bb18_64.pnj"/></a>
+<a href="https://hijikataiscute.tumblr.com/post/184178641902/hijikataiscute-gintoki-and-okita-gintama-a" target="_blank">hijikataiscute</a>
+
+
+
+</div><!-- reblog user -->
+                                
+<div class="comment">
+<p>A reblogged photoset with a comment on it.</p>
+</div><!-- comment -->
+                    
+ </div><!-- reblog caption-->
+
+
+
+
+</div><!-- captions -->
+
+
+
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/reblog">#reblog</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/184178641902/hijikataiscute-gintoki-and-okita-gintama-a" target="_blank">14.04.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="184178641902" data-blog-name="hijikataiscute" id="like_button_184178641902"><iframe id="like_iframe_184178641902" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=184178641902&amp;color=black&amp;rk=L1OckZTE&amp;root_id=184178636707" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_184178641902"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/184178641902/L1OckZTE" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post aquestion" id="183335049127">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<div class="ask">
+<img src="https://assets.tumblr.com/images/anonymous_avatar_64.gif"/>
+<div class="question">
+<b>Anonymous:</b> Hi! I&#39;m using your tutorial on the captions but the theme is a big buggy. There are two text posts omg what have I done wrong?
+</div><!-- question -->
+</div><!-- ask -->
+
+<div class="captions">
+
+
+
+
+<div class="reply">
+<img src="https://66.media.tumblr.com/avatar_f4edbedd712e_64.pnj" />
+<div class="answer">
+<b><a href="https://todorokiscute.tumblr.com/post/183318036998/hi-im-using-your-tutorial-on-the-captions-but" class="answerer">todorokiscute</a>:</b> <p>Hello!&nbsp;</p><p>Have you tried save and see the theme on the blog first? When I was editing the caption codes and testing in others blogs it was very buggy as well. Exactly how you said, so please save and check the blog. If the issue insists, let me know, si I can check the code<b> again</b>.&nbsp;</p>
+</div><!-- answer -->
+</div><!-- reply -->
+
+
+ 
+
+<div class="caption">
+<div class="reblog">
+
+<a href="https://hijikataiscute.tumblr.com/post/183335049127/hi-im-using-your-tutorial-on-the-captions-but" target="_blank">
+<img src="https://66.media.tumblr.com/avatar_142790e7bb18_64.pnj"/></a>
+<a href="https://hijikataiscute.tumblr.com/post/183335049127/hi-im-using-your-tutorial-on-the-captions-but" target="_blank">hijikataiscute</a>
+
+
+
+
+
+</div><!-- reblog user -->
+                                
+<div class="comment">
+<p>a reblogged ask test,&nbsp;
+
+ If human is on laptop sit on the keyboard. More napping, more napping all the napping is exhausting head nudges but eat the rubberband yet refuse to leave cardboard box destroy the blinds.
+
+</p>
+</div><!-- comment -->
+                    
+ </div><!-- reblog caption-->
+
+
+
+
+
+</div><!-- captions -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/tag">#tag</a>   
+
+
+  <a href="https://hijikataiscute.tumblr.com/tagged/ask">#ask</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183335049127/hi-im-using-your-tutorial-on-the-captions-but" target="_blank">09.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183335049127" data-blog-name="hijikataiscute" id="like_button_183335049127"><iframe id="like_iframe_183335049127" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183335049127&amp;color=black&amp;rk=ZLL0Nd13&amp;root_id=183318036998" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183335049127"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183335049127/ZLL0Nd13" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post atext" id="183245420247">
+ 
+ <!-- text -->
+
+
+<h1>Title</h1>
+
+ 
+<div class="captions">
+
+ <div class="caption">
+<h2>Headline</h2><figure data-orig-width="509" data-orig-height="216" class="tmblr-full"><img src="https://66.media.tumblr.com/abe7d948ed96eec1cbb735b2e9612008/tumblr_inline_pnwpqphfOZ1vow54i_500.gif" alt="image" data-orig-width="509" data-orig-height="216" width="500" height="212" /></figure><p>paragraph one, Love try to jump onto window and fall while scratching at wall poop on grasses eat from dog&rsquo;s food. If human is on laptop sit on the keyboard. More napping, more napping all the napping is exhausting head nudges but eat the rubberband yet refuse to leave cardboard box destroy the blinds. Furrier and even more furrier hairball play riveting piece on synthesizer keyboard but be superior lick butt. 
+
+<br /></p><p><b>bold</b>, <i>italic</i>, <strike>strikethrough</strike>, <small>small, </small><a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fhtmledit.squarefree.com%2F&amp;t=NmY5YWM1N2ZjMDk4ODM4OGRkNjZiYmQ2ZDcxMGIwYmU2NjY2NmIzMyxqYkVCM2xHVA%3D%3D&amp;b=t%3ATMzPzfeuzdiCQxIxruwQcg&amp;p=https%3A%2F%2Fhijikataiscute.tumblr.com%2Fpost%2F183245420247%2Ftitle&amp;m=1" title="meow">link</a> with tooltip.&nbsp;</p><blockquote><p>blockquote, Cat ipsum dolor sit amet, russian blue licks paws. Lies down sniff all the things lick arm hair. Find a way to fit in tiny box. Have secret plans stares at human while pushing stuff off a table. Intently sniff hand meow meow mama or eats owners hair then claws head.&nbsp;</p></blockquote><p>a code:&nbsp;</p><pre>// some cool script
+&nbsp; window.addEventListener('scroll', function(){
+ &nbsp;var side = document.querySelector('.demo');
+ var y = window.scrollY;
+ if(y &gt; 100){
+ side.classList.add('fun'); // do something
+ }
+ else{
+ &nbsp;side.classList.remove('fun'); // stop doing something
+ }
+});</pre><p>cutting.</p>
+</div><!-- not reblog caption -->
+ 
+
+ 
+
+</div><!-- captions -->
+ 
+
+<div class="more">
+    <a href="{Permalink" target="_blank">Read More</a>
+</div>
+
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/text">#text</a>   
+
+
+  <a href="https://hijikataiscute.tumblr.com/tagged/basics-css">#basics css</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245420247/title" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245420247" data-blog-name="hijikataiscute" id="like_button_183245420247"><iframe id="like_iframe_183245420247" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245420247&amp;color=black&amp;rk=jbEB3lGT" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245420247"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245420247/jbEB3lGT" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post aphoto" id="183245296832">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+<a href="#!" onclick="Tumblr.Lightbox.init([{ width: 504, height: 299, low_res: 'https://66.media.tumblr.com/9baae8b80b092f21e15de21baa069708/tumblr_pnwpgo99nA1y83ckoo1_500.gif', high_res: 'https://66.media.tumblr.com/9baae8b80b092f21e15de21baa069708/tumblr_pnwpgo99nA1y83ckoo1_540.gif' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+ <img class="light" src="https://66.media.tumblr.com/9baae8b80b092f21e15de21baa069708/tumblr_pnwpgo99nA1y83ckoo1_540.gif"></a>
+
+<!-- tumblr's dashboard style captions -->
+
+
+<div class="captions">
+
+ <div class="caption">
+<p>A single Photo</p>
+</div><!-- not reblog caption -->
+ 
+
+ 
+
+</div><!-- captions -->
+
+ 
+
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/photo">#photo</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245296832/a-single-photo" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245296832" data-blog-name="hijikataiscute" id="like_button_183245296832"><iframe id="like_iframe_183245296832" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245296832&amp;color=black&amp;rk=7zfDRBic" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245296832"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245296832/7zfDRBic" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post aquote" id="183245249332">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<div class="quote">
+<div class="quote-title">
+"Be simpler, and you&rsquo;re much cuter."
+</div>
+</div>
+
+<div class="source">
+— Wei Wuxian, Mo Dao Zu Shi
+</div>
+
+
+
+ 
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/quote">#quote</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245249332/be-simpler-and-youre-much-cuter" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245249332" data-blog-name="hijikataiscute" id="like_button_183245249332"><iframe id="like_iframe_183245249332" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245249332&amp;color=black&amp;rk=2TWokmEI" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245249332"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245249332/2TWokmEI" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post aquestion" id="183245196732">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<div class="ask">
+<img src="https://66.media.tumblr.com/avatar_f4edbedd712e_64.pnj"/>
+<div class="question">
+<b><a href="https://todorokiscute.tumblr.com/" class="asker">todorokiscute</a>:</b> Are those your $250 dollar sandals?
+</div><!-- question -->
+</div><!-- ask -->
+
+<div class="captions">
+
+
+ <div class="caption">
+<p> lemme use that as my litter box yet pet right here, no not there, here, no fool, right here that other cat smells funny you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. Fall asleep on the washing machine peer out window</p>
+</div><!-- not reblog caption -->
+ 
+
+
+
+ 
+
+
+</div><!-- captions -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/ask">#ask</a>   
+
+
+  <a href="https://hijikataiscute.tumblr.com/tagged/question">#question</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245196732/are-those-your-250-dollar-sandals" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245196732" data-blog-name="hijikataiscute" id="like_button_183245196732"><iframe id="like_iframe_183245196732" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245196732&amp;color=black&amp;rk=CA88PgMn" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245196732"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245196732/CA88PgMn" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post alink" id="183245168187">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+
+<div class="post-link">
+<a href="https://t.umblr.com/redirect?z=https%3A%2F%2Fbishonenlover.github.io%2Fcolors%2F&amp;t=Zjc3ZjE0Zjc0ZmQzZjVkNjQyYjJiNzk2YTQ0ZTFlOGY5YjQwMTc5Mix4VlFqMFB0Rw%3D%3D&amp;b=t%3ATMzPzfeuzdiCQxIxruwQcg&amp;p=https%3A%2F%2Fhijikataiscute.tumblr.com%2Fpost%2F183245168187%2Fcolors-page&amp;m=1" class="link" >
+<div class="link-url">
+ bishonenlover.github.io
+</div>
+
+<div class="link-title">
+Colors Page
+</div>
+<div class="link-desc">
+ 
+A simple css only grid page with copyable colors!
+
+</div>
+</a> 
+</div>
+
+ 
+<div class="captions">
+
+ <div class="caption">
+<p>My Colors Page on Github. I made a page using display grid and lots of fun javascript codes to make it possible to click on the color&rsquo;s codes and copy them. It also shows a pop up box / alert box saying the code was successfully copied.</p>
+</div><!-- not reblog caption -->
+ 
+
+ 
+
+</div><!-- captions -->
+ 
+
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/colors">#colors</a>   
+
+
+  <a href="https://hijikataiscute.tumblr.com/tagged/link-post">#link post</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245168187/colors-page" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245168187" data-blog-name="hijikataiscute" id="like_button_183245168187"><iframe id="like_iframe_183245168187" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245168187&amp;color=black&amp;rk=xVQj0PtG" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245168187"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245168187/xVQj0PtG" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post achat" id="183245153217">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- all chat box -->
+<div class="chat">
+
+<!-- title -->
+<h1>Chat</h1>
+
+<ul class="chat">
+
+<li class="odd user_1">
+
+<span class="label">one:</span>
+hello!
+</li>
+
+<li class="even user_2">
+
+<span class="label">two:</span>
+hello!
+</li>
+
+<li class="odd user_1">
+
+<span class="label">one:</span>
+bye!
+</li>
+
+<li class="even user_2">
+
+<span class="label">two:</span>
+bye!
+</li>
+
+</ul>
+</div><!-- all chat box -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/chat">#chat</a>   
+
+
+  <a href="https://hijikataiscute.tumblr.com/tagged/hello">#hello</a>   
+
+
+  <a href="https://hijikataiscute.tumblr.com/tagged/bye">#bye</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245153217/chat" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245153217" data-blog-name="hijikataiscute" id="like_button_183245153217"><iframe id="like_iframe_183245153217" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245153217&amp;color=black&amp;rk=0lnbRYlw" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245153217"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245153217/0lnbRYlw" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post aaudio" id="183245125367">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+ 
+<!-- player -->
+<iframe class="tumblr_audio_player tumblr_audio_player_183245125367" src="https://hijikataiscute.tumblr.com/post/183245125367/audio_player_iframe/hijikataiscute/tumblr_plpe4iq4ba1w45c3z?audio_file=https%3A%2F%2Fod.lk%2Fd%2FMjRfMTc3MzE4NDFf%2F01%2520-%2520%25E7%2581%25AB%25E7%2582%258E.mp3&color=white" frameborder="0" allowtransparency="true" scrolling="no" width="500" height="85"></iframe>
+
+
+
+<div class="captions">
+
+
+ 
+
+<div class="caption">
+<div class="reblog">
+
+
+
+
+
+<span><img src="https://66.media.tumblr.com/avatar_8369f48ac3ed_64.pnj"></span>
+<span class="inactive deactivated">animelistenmusic</span>
+
+</div><!-- reblog user -->
+                                
+<div class="comment">
+<p>Dororo TV Series<br />OP Song - 
+Kaen
+
+<br />
+Ziyoou-vachi
+
+<br /></p>
+</div><!-- comment -->
+                    
+ </div><!-- reblog caption-->
+
+
+<div class="caption">
+<div class="reblog">
+
+<a href="https://hijikataiscute.tumblr.com/post/183245125367/animelistenmusic-dororo-tv-series-op-song" target="_blank">
+<img src="https://66.media.tumblr.com/avatar_142790e7bb18_64.pnj"/></a>
+<a href="https://hijikataiscute.tumblr.com/post/183245125367/animelistenmusic-dororo-tv-series-op-song" target="_blank">hijikataiscute</a>
+
+
+
+
+
+</div><!-- reblog user -->
+                                
+<div class="comment">
+<p>Reblogged audio and a deactivated original user.</p>
+</div><!-- comment -->
+                    
+ </div><!-- reblog caption-->
+
+
+
+
+</div><!-- captions -->
+
+ 
+
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/uploaded-audio">#uploaded audio</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245125367/animelistenmusic-dororo-tv-series-op-song" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245125367" data-blog-name="hijikataiscute" id="like_button_183245125367"><iframe id="like_iframe_183245125367" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245125367&amp;color=black&amp;rk=EjMMsqyf&amp;root_id=182201514285" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245125367"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245125367/EjMMsqyf" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+ <div class="post avideo" id="183245108397">
+ 
+ <!-- text -->
+
+<!-- text end here -->
+ 
+ 
+ 
+ <!-- photo  with lightbox -->
+
+
+ <!-- photo end here -->
+ 
+ <!-- photoset -->
+
+
+<!-- photoset end here-->
+ 
+ 
+ <!-- quote -->
+
+<!-- quote end here -->
+ 
+ 
+ 
+ 
+ <!-- link -->
+
+<!-- link end here -->
+ 
+ 
+ <!-- chat -->
+
+<!-- chat end here -->
+ 
+ 
+ 
+ 
+ <!-- audio -->
+
+<!-- audio end here -->
+ 
+ 
+ <!-- video -->
+ 
+<div class="video">
+    <iframe width="700" height="394"  id="youtube_iframe" src="https://www.youtube.com/embed/phB1oQnkBRc?feature=oembed&amp;enablejsapi=1&amp;origin=https://safe.txmblr.com&amp;wmode=opaque" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="captions">
+
+ <div class="caption">
+<p>Youtube Video</p>
+</div><!-- not reblog caption -->
+ 
+
+ 
+
+</div><!-- captions -->
+
+
+
+
+<!-- video end here -->
+
+ 
+ 
+ 
+ 
+ <!-- question -->
+
+<!-- question end here -->
+
+
+
+
+
+<!-- tags -->
+
+<div class="tags">
+ 
+  <a href="https://hijikataiscute.tumblr.com/tagged/youtube">#youtube</a>   
+
+
+  <a href="https://hijikataiscute.tumblr.com/tagged/video">#video</a>   
+
+   
+
+</div>
+
+<!-- post info -->
+<div class="info">
+ 
+
+<!-- date -->
+<div class="date">
+<!-- index date with permalink -->
+<a href="https://hijikataiscute.tumblr.com/post/183245108397/youtube-video" target="_blank">05.03.19</a>
+
+
+</div>
+
+<!-- like and reblog  -->
+<div class="buttons">
+<a href="#" class="like"><div class="like_button" data-post-id="183245108397" data-blog-name="hijikataiscute" id="like_button_183245108397"><iframe id="like_iframe_183245108397" src="https://assets.tumblr.com/assets/html/like_iframe.html?_v=66c22ab5319d742bca5762b8d18f9d06#name=hijikataiscute&amp;post_id=183245108397&amp;color=black&amp;rk=bayqqbKv" scrolling="no" width="20" height="20" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_183245108397"></iframe></div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 442.403 442.403" style="enable-background:new 0 0 442.403 442.403;" xml:space="preserve"><g><g><path d="M213.05,422.652c2.833,1.7,5.95,2.833,9.35,2.833c3.117,0,6.517-0.85,9.35-2.833c7.65-5.1,187.283-123.533,207.683-243.95    c10.483-62.333-8.783-100.867-26.633-122.117c-20.967-24.933-52.133-39.667-83.017-39.667c-10.2,0-20.117,1.7-28.9,5.1    c-43.067,16.15-72.25,44.767-88.117,64.317c-15.583-19.267-42.217-47.033-74.517-58.083c-9.917-3.4-20.683-5.1-32.017-5.1    c-28.9,0-56.383,11.9-75.367,32.867c-16.717,18.417-35.7,53.55-29.75,114.75C13.016,291.185,204.833,417.268,213.05,422.652z     M56.083,78.685c17.283-18.983,38.817-21.817,50.15-21.817c7.367,0,14.45,1.133,20.967,3.4    c39.383,13.317,70.833,63.467,71.4,63.75c3.117,5.1,8.783,8.217,14.733,7.933c5.95,0,11.333-3.4,14.45-8.5    c0.283-0.567,28.617-48.733,85.283-69.983c4.817-1.7,10.767-2.833,16.717-2.833c20.967,0,42.217,10.483,56.95,27.767    c19.267,22.667,25.783,55.533,18.983,94.633c-7.367,43.067-42.5,94.633-101.717,149.317c-33.433,30.883-66.3,54.683-81.6,65.45    c-16.15-11.05-51-36.55-86.417-68.85C74.216,262.285,39.366,209.868,35.116,167.368C31.433,128.552,38.516,97.952,56.083,78.685z"/></g></g></svg>
+</a>
+<a href="https://www.tumblr.com/reblog/183245108397/bayqqbKv" target="_blank">
+<svg class="reblog-button"  width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+  <g>
+ 
+      <path d="m15.486,25.515c0.398,0.454 0.952,0.687 1.507,0.687 0.478,0 0.958-0.172 1.345-0.518 0.832-0.75 0.906-2.043 0.165-2.887l-7.488-8.528c-0.014-0.015-0.032-0.021-0.046-0.034-0.029-0.031-0.057-0.06-0.088-0.088-0.016-0.015-0.02-0.033-0.035-0.047-0.073-0.066-0.163-0.09-0.241-0.144-0.093-0.062-0.177-0.142-0.275-0.187-0.037-0.018-0.075-0.027-0.112-0.041-0.108-0.041-0.219-0.052-0.331-0.074-0.108-0.021-0.211-0.057-0.323-0.06-0.021-0.001-0.038-0.012-0.058-0.012s-0.037,0.011-0.058,0.012c-0.112,0.003-0.217,0.038-0.327,0.06-0.112,0.022-0.221,0.033-0.327,0.074-0.037,0.014-0.074,0.023-0.11,0.041-0.101,0.045-0.184,0.124-0.278,0.187-0.08,0.054-0.171,0.078-0.244,0.144-0.016,0.015-0.02,0.034-0.035,0.049-0.03,0.027-0.058,0.056-0.085,0.086-0.014,0.014-0.031,0.02-0.046,0.034l-7.486,8.528c-0.741,0.844-0.666,2.137 0.168,2.887 0.385,0.346 0.863,0.518 1.34,0.518 0.557,0 1.11-0.232 1.509-0.687l3.96-4.511v23.445c0,3.383 2.717,6.134 6.058,6.134h29.14c1.115,0 2.019-0.915 2.019-2.044 0-1.13-0.903-2.045-2.019-2.045h-29.14c-1.115,0-2.02-0.918-2.02-2.045v-23.445l3.961,4.511z"/>
+      <path d="m60.473,38.652l-3.959,4.51v-23.445c0-3.383-2.718-6.134-6.058-6.134h-28.415c-1.117,0-2.02,0.915-2.02,2.044 0,1.13 0.902,2.045 2.02,2.045h28.415c1.115,0 2.02,0.918 2.02,2.045v23.445l-3.962-4.51c-0.742-0.844-2.016-0.92-2.852-0.168-0.832,0.75-0.906,2.043-0.166,2.886l7.489,8.527c0.012,0.015 0.032,0.019 0.044,0.032 0.029,0.032 0.059,0.062 0.09,0.092 0.014,0.013 0.02,0.031 0.035,0.045 0.095,0.084 0.206,0.125 0.309,0.189 0.033,0.021 0.062,0.048 0.1,0.066 0.047,0.025 0.085,0.07 0.134,0.092 0.018,0.008 0.037,0.01 0.055,0.018 0.241,0.096 0.49,0.151 0.744,0.151 0.251,0 0.504-0.055 0.743-0.151 0.018-0.008 0.037-0.01 0.056-0.018 0.049-0.021 0.086-0.065 0.131-0.09 0.033-0.019 0.059-0.044 0.091-0.062 0.109-0.064 0.226-0.109 0.321-0.195 0.016-0.015 0.02-0.034 0.035-0.049 0.03-0.028 0.058-0.058 0.087-0.088 0.012-0.014 0.031-0.018 0.043-0.032l7.488-8.527c0.74-0.843 0.665-2.136-0.169-2.886-0.835-0.752-2.11-0.675-2.849,0.168z"/>
+ 
+  </g>
+</svg>
+
+</a>
+</div>    
+</div>
+<!-- like and reblog buttons end here -->
+
+
+
+
+ </div><!-- post box end -->
+ 
+
+
+ <!-- pagination-->
+  
+
+<!-- permalink pagination-->
+
+ 
+
+  </div><!-- post wrapper -->
+
+
+    
+
+
+</body>
+</html>
