@@ -1,0 +1,853 @@
+<!DOCTYPE html><!--
+
+
+
+by todorokiscute.tumblr.com
+
+
+
+
+--><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> 10 Count Site Inspired Layout </title>
+<!-- scripts -->
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+<script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+
+</head>
+<style type="text/css">
+
+/* CSS reset */
+*{
+box-sizing: border-box;
+}
+ 
+body{
+margin:0;
+font:1em/1.6 'Roboto';
+cursor:default;
+background:#FAFAFA;
+}
+ 
+ 
+h1{
+margin:0;
+font-weight:normal;
+line-height:1;
+font-family:'Roboto Condensed';
+}
+ svg{
+max-width:20px;
+box-sizing:content-box;
+}
+a{
+text-decoration:none;
+}
+/*  start  */
+.content{
+width:90%;
+max-width:960px;
+margin:auto;
+margin-top:-1px;
+}
+
+/* nav */
+.nav{
+width:100%;
+height:60px;
+border-bottom:1px solid #eee;
+padding:1em;
+background:white;
+
+}
+.menu{
+display:flex;
+justify-content:space-evenly;
+align-items:center;
+}
+
+.menu a{
+color:#444;
+font-size:.9em;
+font-weight:600;
+}
+ 
+
+.cart{
+fill:#444;
+ --size:20px;
+ width:var(--size);
+ height:var(--size);
+}
+a.follow, .logo{
+background:#FF5C67;
+color:white;
+padding:.2em .6em;
+font-weight:normal;
+}
+ .logo{
+ margin-right:1em;
+ }
+/* header */
+.header-wrapper{
+border:1px solid #eee;
+border-radius:8px;
+margin-bottom:2em;
+background:white;
+}
+.header{
+width:100%;
+height:390px;
+background:url(https://i.imgur.com/3PEL1zI.png);
+background-size:cover;
+background-position:center;
+position:relative;
+margin-bottom:3em;
+ 
+}
+
+.header::after{
+content:' ';
+width:100%;
+height:1px;
+background:#eee;
+position:absolute;
+bottom:-2.5em;
+}
+
+.icon{
+background:url(https://i.imgur.com/3PEL1zI.png);
+ --size:80px;
+ width:var(--size);
+ height:var(--size);
+ background-size:cover;
+background-position:center;
+border:4px solid white;
+ position:absolute;
+bottom:-30px;
+left:20px;
+box-shadow:0 0 0 1px  #eee;
+}
+
+.title{
+font-size:1.8em;
+position:absolute;
+bottom:0;
+left:120px;
+font-family:'Roboto Condensed';
+ 
+}
+.two{
+position:absolute;
+bottom:-1.8em;
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:calc(100% - 140px);
+left:120px;
+ line-height:0;
+ font-size:.9em;
+}
+
+.two svg{
+ --size:16px;
+ width:var(--size);
+ height:var(--size);
+ }
+ 
+ .icons svg + svg{
+ margin-left:.4em;
+ 
+ }
+ .description{
+color:#555;
+font-size:.9em;
+padding:1em;
+ width:calc(100% - 20px);
+ margin:auto;
+}
+ 
+ /* grid */
+ 
+.samples{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+margin:auto;
+grid-gap:1em;
+}
+.box-image img{
+width:calc(100% + 2em);
+margin-left:-1em;
+margin-top:-1em;
+height:260px;
+object-fit:cover;
+}
+.box{
+border:1px solid #eee;
+border-radius:6px;
+padding:1em;
+overflow:hidden;
+transition:all ease-in-out .3s;
+cursor:pointer;
+background:white;
+}
+.box:hover{
+border-color:black;
+}
+
+.little{
+font-size:.7em;
+color:#888;
+}
+.big{
+font-weight:600;
+font-family:'Roboto Condensed';
+}
+.box-footer{
+display:flex;
+justify-content:space-between;
+font-size:.9em;
+}
+.like{
+display:flex;
+ align-items:center;
+ color:#999;
+}
+.like svg{
+--size:16px;
+ width:var(--size);
+ height:var(--size);
+ margin-right:.2em;
+ fill:#999;
+ }
+ .number{
+ color:#BF2932;
+ }
+ 
+ .pagination{
+ width:80%;
+ max-width:900px;
+ margin:2em auto;
+ text-align:center;
+ 
+ }
+ 
+ .pagination a + a{
+ margin-left:2em;
+ }
+ 
+ .pagination a{
+ background:white;
+ padding:.6em .9em;
+ border-radius:100%;
+ color:#444;
+ }
+ a.current{
+opacity:.5;
+ }
+ 
+ .tou{
+ width:100%;
+ background:white;
+ border:1px solid #eee;
+ padding:1em;
+ font-size:.9em;
+ margin:2em auto;
+
+ }
+ .tou a{
+ color:#444;
+ }
+ .buttons{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ line-height:0;
+ }
+ .buttons div + div{
+ margin-left:.8em;
+ }
+ .twitter-button, .facebook-button{
+ background:dodgerblue;
+ cursor:pointer;
+ color:white;
+ padding:.2em .4em;
+ display:flex;
+ align-items:center;
+ border-radius:5px;
+ font-size:.9em;
+ }
+ .facebook-button{
+ background:#2e61a9;
+ }
+ svg.twitter-b, svg.facebook{
+ fill:white;
+ --size:16px;
+ width:var(--size);
+ height:var(--size);
+ margin-right:.2em;
+ }
+ .help-title{
+ font-weight:800;
+ font-size:1.1em;
+padding:.5em 0;
+
+ }
+
+ .help a{
+ color:#555;
+ line-height:3;
+ }
+ .help-title-two{
+ display:flex;
+ justify-content:space-between;
+  position:relative;
+  align-items:center;
+   margin-bottom:1em;
+ }
+
+
+.all{
+width:100%;
+background:white;
+border-top:1px solid #eee;
+padding:2em 1em;
+
+}
+.wrapper{
+width:80%;
+margin:auto;
+ display:grid;
+grid-template-columns:repeat(6, 1fr);
+align-items:flex-start;
+}
+.help{
+grid-column:span 4;
+}
+.links{
+grid-column:span 2;
+}
+  .chevron svg{
+display:none;
+ }
+
+.footer{
+width:100%;
+background:white;
+border-top:1px solid #eee;
+padding:2em;
+font-size:.8em;
+color:#999;
+
+}
+.container{
+width:80%;
+margin:auto;
+display:flex;
+align-items:center;
+}
+.link-1,
+.link-2{
+display:flex;
+align-items:center;
+justify-content:space-between;
+font-weight:600;
+font-size:.9em;
+}
+.links div{
+padding:.5em .1em;
+}
+.link-2{
+border-top:2px dotted #eee;
+}
+.links svg{
+ --size:18px;
+ width:var(--size);
+ height:var(--size);
+ fill:dodgerblue;
+ }
+
+select{
+margin:2em 0;
+padding:.5em;
+border:1px solid black;
+outline:none;
+color:#444;
+}
+ 
+
+
+
+
+
+@media(max-width:650px){
+.all{
+padding:1em;
+}
+.samples{
+grid-template-columns:1fr 1fr;
+}
+ .help-title-two::before{
+ content:' ';
+ width:calc(100% + 2em);
+ margin-left:-1em;
+ height:1px;
+ background:#eee;
+ position:absolute;
+ bottom:-.8em;
+ }
+  .chevron svg{
+  display:block;
+ --size:12px;
+ width:var(--size);
+ height:var(--size);
+ fill:#4ec2cb;
+ }
+.wrapper{
+display:block;
+}
+.links{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ grid-gap:2em;
+position:relative;
+margin-top:1em;
+padding:1em;
+ line-height:0;
+ border-top:1px solid #eee;
+ border-bottom:1px solid #eee;
+ width:calc(100% + 2em);
+ margin-left:-1em;
+ position:relative;
+}
+.links::after{
+content:' ';
+width:1px;
+height:100%;
+background:#eee;
+left:0;
+right:0;
+margin:auto;
+position:absolute;
+top:0;
+}
+.link-1, .link-2{
+display:flex;
+justify-content:space-between;
+ 
+}
+ 
+.link-2{
+border:none;
+}
+.wrapper, .container{
+width:100%;
+}
+
+ 
+ 
+}
+@media(max-width:450px){
+.samples, .links{
+grid-template-columns:1fr;
+}
+.links::after{
+display:none;
+}
+.links{
+grid-gap:.5em;
+}
+.nav{
+font-size:.9em;
+}
+.title{
+font-size:1.2em;
+}
+body{
+overflow:hidden;
+}
+}
+</style>
+
+<body>
+ 
+ <div class="nav">
+<div class="menu">
+<a class="follow" href="">+ Follow</a>
+<a href="">Sign In</a>
+<a href="">Shopping Guide</a>
+<a href="">Create Shop</a>
+ 
+<svg class="cart" viewBox="0 0 511.999 511.999">
+
+		<path d="M214.685,402.828c-24.829,0-45.029,20.2-45.029,45.029c0,24.829,20.2,45.029,45.029,45.029s45.029-20.2,45.029-45.029
+			C259.713,423.028,239.513,402.828,214.685,402.828z M214.685,467.742c-10.966,0-19.887-8.922-19.887-19.887
+			c0-10.966,8.922-19.887,19.887-19.887s19.887,8.922,19.887,19.887C234.572,458.822,225.65,467.742,214.685,467.742z"/>
+
+		<path d="M372.63,402.828c-24.829,0-45.029,20.2-45.029,45.029c0,24.829,20.2,45.029,45.029,45.029s45.029-20.2,45.029-45.029
+			C417.658,423.028,397.458,402.828,372.63,402.828z M372.63,467.742c-10.966,0-19.887-8.922-19.887-19.887
+			c0-10.966,8.922-19.887,19.887-19.887c10.966,0,19.887,8.922,19.887,19.887C392.517,458.822,383.595,467.742,372.63,467.742z"/>
+
+		<path d="M383.716,165.755H203.567c-6.943,0-12.571,5.628-12.571,12.571c0,6.943,5.629,12.571,12.571,12.571h180.149
+			c6.943,0,12.571-5.628,12.571-12.571C396.287,171.382,390.659,165.755,383.716,165.755z"/>
+
+		<path d="M373.911,231.035H213.373c-6.943,0-12.571,5.628-12.571,12.571s5.628,12.571,12.571,12.571h160.537
+			c6.943,0,12.571-5.628,12.571-12.571C386.481,236.664,380.853,231.035,373.911,231.035z"/>
+	
+		<path d="M506.341,109.744c-4.794-5.884-11.898-9.258-19.489-9.258H95.278L87.37,62.097c-1.651-8.008-7.113-14.732-14.614-17.989
+			l-55.177-23.95c-6.37-2.767-13.773,0.156-16.536,6.524c-2.766,6.37,0.157,13.774,6.524,16.537L62.745,67.17l60.826,295.261
+			c2.396,11.628,12.752,20.068,24.625,20.068h301.166c6.943,0,12.571-5.628,12.571-12.571c0-6.943-5.628-12.571-12.571-12.571
+			H148.197l-7.399-35.916H451.69c11.872,0,22.229-8.44,24.624-20.068l35.163-170.675
+			C513.008,123.266,511.136,115.627,506.341,109.744z M451.69,296.301H135.619l-35.161-170.674l386.393,0.001L451.69,296.301z"/>
+
+</svg>
+
+ 
+</div><!-- menu -->
+</div><!-- nav -->
+<div class="content">
+
+<div class="header-wrapper">
+<div class="header">
+<div class="icon"></div><!-- icon -->
+<div class="title">
+Bishonenlover
+</div><!-- title -->
+<div class="two">
+<div class="title-2">
+Some title 
+</div><!-- title-2-->
+<div class="icons">
+<svg  class="globe" height="480pt" viewBox="0 0 480 480" width="480pt" xmlns="http://www.w3.org/2000/svg"><path d="m240 0c-132.546875 0-240 107.453125-240 240s107.453125 240 240 240 240-107.453125 240-240c-.148438-132.484375-107.515625-239.851562-240-240zm207.566406 324.078125-68.253906 11.777344c7.8125-28.652344 12.03125-58.164063 12.558594-87.855469h71.929687c-.902343 26.117188-6.398437 51.871094-16.234375 76.078125zm-431.367187-76.078125h71.929687c.527344 29.691406 4.746094 59.203125 12.558594 87.855469l-68.253906-11.777344c-9.835938-24.207031-15.332032-49.960937-16.234375-76.078125zm16.234375-92.078125 68.253906-11.777344c-7.8125 28.652344-12.03125 58.164063-12.558594 87.855469h-71.929687c.902343-26.117188 6.398437-51.871094 16.234375-76.078125zm215.566406-27.472656c28.746094.367187 57.421875 2.984375 85.761719 7.832031l28.238281 4.871094c8.675781 29.523437 13.34375 60.078125 13.878906 90.847656h-127.878906zm88.488281-7.9375c-29.238281-4.996094-58.828125-7.695313-88.488281-8.0625v-96c45.863281 4.40625 85.703125 46.398437 108.28125 107.511719zm-104.488281-8.0625c-29.660156.367187-59.242188 3.066406-88.480469 8.0625l-19.800781 3.425781c22.578125-61.128906 62.417969-103.136719 108.28125-107.523438zm-85.753906 23.832031c28.335937-4.847656 57.007812-7.464844 85.753906-7.832031v103.550781h-127.878906c.535156-30.769531 5.203125-61.324219 13.878906-90.847656zm-42.125 111.71875h127.878906v103.550781c-28.746094-.367187-57.421875-2.984375-85.761719-7.832031l-28.238281-4.871094c-8.675781-29.523437-13.34375-60.078125-13.878906-90.847656zm39.390625 111.488281c29.238281 5.003907 58.824219 7.714844 88.488281 8.105469v96c-45.863281-4.410156-85.703125-46.402344-108.28125-107.515625zm104.488281 8.105469c29.660156-.390625 59.242188-3.101562 88.480469-8.105469l19.800781-3.425781c-22.578125 61.128906-62.417969 103.136719-108.28125 107.523438zm85.753906-23.875c-28.335937 4.847656-57.007812 7.464844-85.753906 7.832031v-103.550781h127.878906c-.535156 30.769531-5.203125 61.324219-13.878906 90.847656zm58.117188-111.71875c-.527344-29.691406-4.746094-59.203125-12.558594-87.855469l68.253906 11.777344c9.835938 24.207031 15.332032 49.960937 16.234375 76.078125zm47.601562-93.710938-65.425781-11.289062c-11.761719-38.371094-33.765625-72.808594-63.648437-99.601562 55.878906 18.648437 102.21875 58.457031 129.074218 110.890624zm-269.871094-110.890624c-29.882812 26.792968-51.886718 61.230468-63.648437 99.601562l-65.425781 11.289062c26.855468-52.433593 73.195312-92.242187 129.074218-110.890624zm-129.074218 314.3125 65.425781 11.289062c11.761719 38.371094 33.765625 72.808594 63.648437 99.601562-55.878906-18.648437-102.21875-58.457031-129.074218-110.890624zm269.871094 110.890624c29.882812-26.792968 51.886718-61.230468 63.648437-99.601562l65.425781-11.289062c-26.855468 52.433593-73.195312 92.242187-129.074218 110.890624zm0 0"/></svg>
+<svg class="twitter" viewBox="0 0 612 612">
+ 
+		<path style="fill:#010002;" d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+			c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+			c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+			c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+			c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+			c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+			c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"/>
+ 
+</svg>
+
+
+<svg class="message" viewBox="0 0 370.88 370.88">
+
+		<path d="M355.6,66.16H15.28C6.841,66.16,0,73.001,0,81.44v208c0,8.439,6.841,15.28,15.28,15.28H355.6
+			c8.439,0,15.28-6.841,15.28-15.28v-208C370.88,73.001,364.039,66.16,355.6,66.16z M15.28,78.16H355.6
+			c1.436,0.007,2.7,0.947,3.12,2.32L185.44,188.72L12.16,80.48C12.58,79.107,13.844,78.167,15.28,78.16z M12,94.16L136.64,172
+			L12,270.88V94.16z M358.88,289.36c0,1.812-1.469,3.28-3.28,3.28H15.28c-1.811,0-3.28-1.469-3.28-3.28v-3.2l135.44-107.04
+			l34.8,21.76c1.955,1.233,4.445,1.233,6.4,0l34.8-21.76l135.44,107.04V289.36z M358.88,270.88l-124.96-98.56l124.96-77.44V270.88z"
+			/>
+
+</svg>
+
+
+</div><!-- icons -->
+</div><!-- title-2 and icons-->
+</div><!-- header -->
+
+<div class="description">
+Quae. Ullam eius. Sequi adipisci aliquam minima. Consequuntur quasi so aliqua for anim <br>and sequi. Amet sunt magni numquam aut, so accusantium. Adipisicing modi adipisci magni. Culpa laboris for ea but<br> voluptas. Quasi ipsam and esse, but velit pariatur for veritatis magni. 
+</div><!-- description-->
+</div><!-- wrapper -->
+
+<div class="samples">
+
+<div class="box">
+<div class="box-image">
+<img src="https://i.imgur.com/f33ytfn.jpg"/>
+</div><!-- image -->
+<div class="little">
+Available 
+</div><!-- little -->
+<div class="big">
+Item Name
+</div><!-- big -->
+<div class="box-footer">
+<div class="number">1, 444</div><!-- number -->
+<div class="like">
+<svg class="heart" viewBox="0 0 51.997 51.997">
+<path d="M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014
+	C52.216,18.553,51.97,16.611,51.911,16.242z"/>
+
+</svg> 200
+</div><!-- like -->
+</div><!-- footer -->
+</div><!-- box -->
+
+
+
+<div class="box">
+<div class="box-image">
+<img src="https://i.imgur.com/TZzywPF.png"/>
+</div><!-- image -->
+<div class="little">
+Available 
+</div><!-- little -->
+<div class="big">
+Item Name
+</div><!-- big -->
+<div class="box-footer">
+<div class="number">6, 444</div><!-- number -->
+<div class="like">
+<svg class="heart" viewBox="0 0 51.997 51.997">
+<path d="M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014
+	C52.216,18.553,51.97,16.611,51.911,16.242z"/>
+
+</svg> 600
+</div><!-- like -->
+</div><!-- footer -->
+</div><!-- box -->
+
+
+<div class="box">
+<div class="box-image">
+<img src="https://i.imgur.com/66Jjegl.jpg"/>
+</div><!-- image -->
+<div class="little">
+Out of Stock
+</div><!-- little -->
+<div class="big">
+Item Name
+</div><!-- big -->
+<div class="box-footer">
+<div class="number">1, 500</div><!-- number -->
+<div class="like">
+<svg class="heart" viewBox="0 0 51.997 51.997">
+<path d="M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014
+	C52.216,18.553,51.97,16.611,51.911,16.242z"/>
+
+</svg> 390
+</div><!-- like -->
+</div><!-- footer -->
+</div><!-- box -->
+
+<div class="box">
+<div class="box-image">
+<img src="https://i.imgur.com/yAQdpB4.jpg"/>
+</div><!-- image -->
+<div class="little">
+Available 
+</div><!-- little -->
+<div class="big">
+Item Name
+</div><!-- big -->
+<div class="box-footer">
+<div class="number">604</div><!-- number -->
+<div class="like">
+<svg class="heart" viewBox="0 0 51.997 51.997">
+<path d="M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014
+	C52.216,18.553,51.97,16.611,51.911,16.242z"/>
+
+</svg> 500
+</div><!-- like -->
+</div><!-- footer -->
+</div><!-- box -->
+
+<div class="box">
+<div class="box-image">
+<img src="https://i.imgur.com/z96xVTD.png"/>
+</div><!-- image -->
+<div class="little">
+Out of Stock
+</div><!-- little -->
+<div class="big">
+Item Name
+</div><!-- big -->
+<div class="box-footer">
+<div class="number">1, 050</div><!-- number -->
+<div class="like">
+<svg class="heart" viewBox="0 0 51.997 51.997">
+<path d="M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014
+	C52.216,18.553,51.97,16.611,51.911,16.242z"/>
+
+</svg> 1010
+</div><!-- like -->
+</div><!-- footer -->
+</div><!-- box -->
+
+<div class="box">
+<div class="box-image">
+<img src="https://i.imgur.com/G6oBvmD.jpg"/>
+</div><!-- image -->
+<div class="little">
+Available 
+</div><!-- little -->
+<div class="big">
+Item Name
+</div><!-- big -->
+<div class="box-footer">
+<div class="number">560</div><!-- number -->
+<div class="like">
+<svg class="heart" viewBox="0 0 51.997 51.997">
+<path d="M51.911,16.242C51.152,7.888,45.239,1.827,37.839,1.827c-4.93,0-9.444,2.653-11.984,6.905
+	c-2.517-4.307-6.846-6.906-11.697-6.906c-7.399,0-13.313,6.061-14.071,14.415c-0.06,0.369-0.306,2.311,0.442,5.478
+	c1.078,4.568,3.568,8.723,7.199,12.013l18.115,16.439l18.426-16.438c3.631-3.291,6.121-7.445,7.199-12.014
+	C52.216,18.553,51.97,16.611,51.911,16.242z"/>
+
+</svg> 200
+</div><!-- like -->
+</div><!-- footer -->
+</div><!-- box -->
+</div><!-- samples -->
+
+
+<div class="pagination">
+<a class="current">1</a> <a href="">2</a> <a href="">❯</a>
+</div><!-- pagination -->
+
+<div class="tou">
+<a href="">Terms</a><br>
+<a href="">Contact</a>
+
+<div class="buttons">
+<div class="twitter-button">
+<svg class="twitter-b" viewBox="0 0 612 612">
+ 
+		<path  d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+			c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+			c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+			c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+			c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+			c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+			c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"/>
+ 
+</svg> Tweet
+
+</div><!-- twitter-->
+<div class="facebook-button">
+
+<svg class="facebook" viewBox="0 0 456.814 456.814" >
+
+		<path d="M441.11,252.677c10.468-11.99,15.704-26.169,15.704-42.54c0-14.846-5.432-27.692-16.259-38.547
+			c-10.849-10.854-23.695-16.278-38.541-16.278h-79.082c0.76-2.664,1.522-4.948,2.282-6.851c0.753-1.903,1.811-3.999,3.138-6.283
+			c1.328-2.285,2.283-3.999,2.852-5.139c3.425-6.468,6.047-11.801,7.857-15.985c1.807-4.192,3.606-9.9,5.42-17.133
+			c1.811-7.229,2.711-14.465,2.711-21.698c0-4.566-0.055-8.281-0.145-11.134c-0.089-2.855-0.574-7.139-1.423-12.85
+			c-0.862-5.708-2.006-10.467-3.43-14.272c-1.43-3.806-3.716-8.092-6.851-12.847c-3.142-4.764-6.947-8.613-11.424-11.565
+			c-4.476-2.95-10.184-5.424-17.131-7.421c-6.954-1.999-14.801-2.998-23.562-2.998c-4.948,0-9.227,1.809-12.847,5.426
+			c-3.806,3.806-7.047,8.564-9.709,14.272c-2.666,5.711-4.523,10.66-5.571,14.849c-1.047,4.187-2.238,9.994-3.565,17.415
+			c-1.719,7.998-2.998,13.752-3.86,17.273c-0.855,3.521-2.525,8.136-4.997,13.845c-2.477,5.713-5.424,10.278-8.851,13.706
+			c-6.28,6.28-15.891,17.701-28.837,34.259c-9.329,12.18-18.94,23.695-28.837,34.545c-9.899,10.852-17.131,16.466-21.698,16.847
+			c-4.755,0.38-8.848,2.331-12.275,5.854c-3.427,3.521-5.14,7.662-5.14,12.419v183.01c0,4.949,1.807,9.182,5.424,12.703
+			c3.615,3.525,7.898,5.38,12.847,5.571c6.661,0.191,21.698,4.374,45.111,12.566c14.654,4.941,26.12,8.706,34.4,11.272
+			c8.278,2.566,19.849,5.328,34.684,8.282c14.849,2.949,28.551,4.428,41.11,4.428h4.855h21.7h10.276
+			c25.321-0.38,44.061-7.806,56.247-22.268c11.036-13.135,15.697-30.361,13.99-51.679c7.422-7.042,12.565-15.984,15.416-26.836
+			c3.231-11.604,3.231-22.74,0-33.397c8.754-11.611,12.847-24.649,12.272-39.115C445.395,268.286,443.971,261.055,441.11,252.677z"
+			/>
+		<path d="M100.5,191.864H18.276c-4.952,0-9.235,1.809-12.851,5.426C1.809,200.905,0,205.188,0,210.137v182.732
+			c0,4.942,1.809,9.227,5.426,12.847c3.619,3.611,7.902,5.421,12.851,5.421H100.5c4.948,0,9.229-1.81,12.847-5.421
+			c3.616-3.62,5.424-7.904,5.424-12.847V210.137c0-4.949-1.809-9.231-5.424-12.847C109.73,193.672,105.449,191.864,100.5,191.864z
+			 M67.665,369.308c-3.616,3.521-7.898,5.281-12.847,5.281c-5.14,0-9.471-1.76-12.99-5.281c-3.521-3.521-5.281-7.85-5.281-12.99
+			c0-4.948,1.759-9.232,5.281-12.847c3.52-3.617,7.85-5.428,12.99-5.428c4.949,0,9.231,1.811,12.847,5.428
+			c3.617,3.614,5.426,7.898,5.426,12.847C73.091,361.458,71.286,365.786,67.665,369.308z"/>
+
+</svg> Share
+
+</div><!-- facebook -->
+</div><!-- buttons -->
+</div><!-- tou -->
+</div><!-- content  -->
+<div class="all">
+
+<div class="wrapper">
+<div class="help">
+<div class="help-title-two">
+
+<div class="help-title">
+Help & Contact
+</div>
+<div class="chevron">
+
+<svg  viewBox="0 0 129 129" >
+
+    <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+</svg>
+
+</div>
+</div><!-- help title -->
+ <a href="">Annoucement</a><br>
+  <a href="">Frequently Asked Questions</a><br>
+   <a href="">Contact Us</a><br>
+</div><!-- help -->
+
+
+ 
+<div class="links">
+<div class="link-1">
+<div class="link-name">Twitter(@bishonenlover) </div>
+<div class="link-icon">
+
+<svg class="twitter-link" viewBox="0 0 49.652 49.652">
+
+		<path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+			C49.652,11.137,38.516,0,24.826,0z M35.901,19.144c0.011,0.246,0.017,0.494,0.017,0.742c0,7.551-5.746,16.255-16.259,16.255
+			c-3.227,0-6.231-0.943-8.759-2.565c0.447,0.053,0.902,0.08,1.363,0.08c2.678,0,5.141-0.914,7.097-2.446
+			c-2.5-0.046-4.611-1.698-5.338-3.969c0.348,0.066,0.707,0.103,1.074,0.103c0.521,0,1.027-0.068,1.506-0.199
+			c-2.614-0.524-4.583-2.833-4.583-5.603c0-0.024,0-0.049,0.001-0.072c0.77,0.427,1.651,0.685,2.587,0.714
+			c-1.532-1.023-2.541-2.773-2.541-4.755c0-1.048,0.281-2.03,0.773-2.874c2.817,3.458,7.029,5.732,11.777,5.972
+			c-0.098-0.419-0.147-0.854-0.147-1.303c0-3.155,2.558-5.714,5.713-5.714c1.644,0,3.127,0.694,4.171,1.804
+			c1.303-0.256,2.523-0.73,3.63-1.387c-0.43,1.335-1.333,2.454-2.516,3.162c1.157-0.138,2.261-0.444,3.282-0.899
+			C37.987,17.334,37.018,18.341,35.901,19.144z"/>
+
+</svg>
+
+</div>
+</div><!-- link 1-->
+<div class="link-2">
+<div class="link-name">tumblr </div>
+<div class="link-icon">
+
+<svg class="tumblr-link" viewBox="0 0 49.652 49.652" >
+
+		<path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+			C49.652,11.137,38.516,0,24.826,0z M33.219,36.659c-1.15,0.542-2.196,0.926-3.134,1.144c-0.936,0.217-1.944,0.328-3.032,0.328
+			c-1.233,0-1.963-0.156-2.91-0.467c-0.949-0.313-1.758-0.76-2.427-1.333c-0.672-0.577-1.134-1.19-1.393-1.839
+			c-0.259-0.65-0.389-1.593-0.389-2.828v-9.466h-3.668v-3.824c1.06-0.344,2.289-0.837,3.044-1.48
+			c0.758-0.645,1.365-1.416,1.82-2.318c0.461-0.899,0.775-2.048,0.948-3.438h3.839v6.241h6.241v4.82h-6.241v6.92
+			c0,1.565-0.021,2.471,0.146,2.914c0.166,0.44,0.578,0.899,1.027,1.164c0.601,0.358,1.28,0.538,2.049,0.538
+			c1.367,0,2.728-0.443,4.078-1.332v4.256H33.219L33.219,36.659z"/>
+
+</svg>
+
+</div>
+
+</div><!-- link -2-->
+</div><!-- links -->
+
+<div class="idiom">
+ <select>
+    <option value="0">English:</option>
+    <option value="1">Portuguese</option>
+    <option value="2">Japanese</option>
+     
+  </select>
+</div><!--idiom-->
+</div><!-- wrapper -->
+</div><!-- all -->
+<div class="footer">
+<div class="container">
+<div class="logo">
+Bishonenlover
+</div>
+© bishonenlover
+</div>
+</div><!-- footer -->
+
+
+</body>
+</html>
