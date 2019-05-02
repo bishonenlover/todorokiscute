@@ -1,0 +1,508 @@
+<!DOCTYPE html><!--
+
+
+
+by todorokiscute.tumblr.com
+
+
+
+
+--><html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Hoozuki no Reitetsu ver 2 </title>
+    <!-- scripts -->
+     <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+    <script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+
+</head>
+<style type="text/css">
+
+  /* CSS reset */
+  *, *::before, *::after{
+  box-sizing: border-box;
+  }
+
+  body{
+  margin:0;
+  cursor:default;
+  font-family:var(--ff-serif);
+  color:var(--clr-text);
+  font-size:1.125rem;
+  text-align:center;
+  }
+  img{
+  display:block;
+  max-width:100%;
+  }
+h1, h2, p{
+margin:0;
+font-weight:normal;
+}
+
+section{
+padding:3em 1em;
+}
+/* variables */
+
+:root{
+--clr-text: #3d3d3d;
+--clr-primary:#067e0a;
+--clr-primary-dark:#125814;
+--clr-accent: #764981;
+--clr-accent-dark: #44264d;
+
+--ff-title:'Roboto Condensed';
+--ff-serif:'Roboto';
+ 
+}
+
+/* typografy */
+
+
+h2, h3{
+font-family:var(--ff-title);
+line-height:1;
+
+
+}
+h2{
+font-size:3rem;
+}
+
+p{
+margin-bottom:0.85em;
+}
+
+
+.logo{
+font-family:var(--ff-title);
+font-weight:normal;
+}
+.logo a{
+color:black;
+text-decoration:none;
+}
+.section-title-small{
+font-size:3rem;
+}
+.section-title-small small{
+font-size:.7em;
+display:block;
+}
+.text-primary{
+color:var(--clr-primary);
+}
+
+/* navigation */
+header{
+padding:1em 0 2em;
+}
+nav{
+margin-top:1em;
+}
+nav ul{
+display:flex;
+list-style:none;
+margin:0;
+padding:0;
+justify-content:space-around;
+}
+nav a{
+display:inline-block;
+padding:.5em;
+color:var(--clr-primary);
+text-decoration:none;
+}
+nav a:hover,
+nav a:focus{
+color:var(--clr-accent);
+text-decoration:underline;
+}
+
+
+/* buttons */
+
+
+/* homepage style */
+
+.hero{
+background-color:#444;
+background-image:url(https://i.imgur.com/hdf3yWu.jpg);
+background-blend-mode:multiply;
+text-align:center;
+color:white;
+padding:15vh 0;
+background-attachment:fixed;
+background-size:cover;
+}
+
+ 
+.about-us{
+background:var(--clr-accent);
+display:flex;
+flex-direction:column;
+color:white;
+padding:0;
+}
+.about-us__intro{
+position:relative;
+padding:3em 1em;
+ 
+}
+.about-us__intro h2{
+z-index:1;
+position:relative;
+}
+.about-us__intro::before{
+content:' ';
+	position:absolute;
+background:url(https://66.media.tumblr.com/a83051d5d436d9444be107ad838c7cb8/tumblr_oyczi8Lgjr1vlvhpho2_540.gif);
+	top:0;
+	bottom:0;
+	margin:auto;
+	left:0;
+	right:0;
+	opacity:.2;
+	background-position:center;
+	background-size:cover;
+ 
+}
+
+.about-us__body{
+padding:1.5em 1em 3em;
+}
+.btn-group{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+flex-direction:column;
+}
+.btn{
+padding:.75em 2.5em;
+color:white;
+text-decoration:none;
+display:block;
+margin:0.5em 0;
+border-radius:0.35em;
+}
+.btn-primary{
+background:var(--clr-primary);
+}
+.btn-primary:hover,
+.btn-primary:focus{
+background:var(--clr-primary-dark);
+}
+ .btn-accent{
+ background:var(--clr-accent);
+ }
+ .btn-accent:hover,
+  .btn-accent:focus{
+background:var(--clr-accent-dark);
+}
+ .order-online{
+ background:#f0f0f0;
+ }
+ .product-showcase{
+ background:white;
+ }
+ .products{
+ display:flex;
+ flex-direction:column;
+ max-width:30rem;
+ margin:0 auto;
+ }
+ .product{ 
+ border-radius:1em;
+ overflow:hidden;
+ box-shadow:0 0 1em rgba(0,0,0,0.2);
+ margin-bottom:2em;
+ }
+.product__content{
+padding:1.5em;
+}
+ 
+ 
+ .product-title{
+ color:var(--clr-primary);
+ font-size:1.5rem;
+ margin-bottom:1em;
+ }
+ .fine-print{
+ font-size:0.75em;
+ color:rgba(0,0,0,0.55);
+ }
+ 
+ 
+ .two{
+ magin-top:5em;
+ }
+ 
+ .mob{
+ margin-top:.5em;
+margin-bottom:0;
+ }
+ 
+ footer{
+ background:var(--clr-accent-dark);
+ padding:3em 1em;
+ color:white;
+ display:flex;
+margin-top:2em;
+ justify-content:space-evenly;
+ 
+ }
+footer a{
+color:inherit;
+}
+ .footer-nav,  .footer-social{
+ list-style:none;
+  margin:0;
+padding:0;
+
+ }
+ .footer-nav a{
+ padding:0.75em;
+ text-decoration:none;
+ }
+  .footer-nav a:hover{
+  text-decoration:underline;
+  }
+  
+
+ 
+.social-icon{
+width:30px;
+height:30px;
+margin:5px;
+}
+
+@media only screen and (min-width:750px){
+section{
+padding:6em 1em;
+}
+.about-us{
+flex-direction:row;
+ 
+}
+.about-us__intro,
+.about-us__body{
+flex: 0 1 50%;
+ display:flex;
+flex-direction:column;
+padding:4em 1em;
+justify-content:center;
+}
+.about-us__intro{
+display:flex;
+text-align:right;
+
+}
+
+.about-us__intro > *{
+max-width:27rem;
+margin-left:auto;
+}
+
+
+.about-us__body{
+display:flex;
+text-align:left;
+
+}
+
+.about-us__body > *{
+max-width:27rem;
+margin-right:auto;
+}
+
+p:last-child{
+margin-bottom:0;
+}
+ 
+ .order-online > *{
+ max-width:70ch;
+ margin:0 auto;
+ }
+ 
+ 
+ .order-online h2{
+ margin-bottom:1em;
+ }
+ 
+ .btn-group{
+ flex-direction:row;
+ margin-top:2em;
+ }
+ .btn + .btn{
+ margin-left:0.5em;
+ }
+ .products{
+ flex-direction:row;
+  max-width:1200px;
+   padding:0 5em;
+ }
+ .product{
+ margin:0;
+ flex: 0 1 33%;
+
+
+ }
+ .product + .product{
+ margin-left: 1em;
+ }
+ 
+ .product__img{
+ width:100%;
+ height:130px;
+ object-fit:cover;
+ }
+ .product:last-of-type{
+ margin-bottom:0;
+ }
+}
+
+
+</style>
+<body>
+   <header>
+       <h1 class="logo"><a href="">Hoozuki no Reitetsu</a></h1>
+           <nav>
+           <ul>
+              <li><a href="">Home</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="">Connect</a></li>
+               <li><a href="">Products</a></li>
+           </ul>
+       </nav>
+   </header>
+   
+<main>
+<section class="hero">
+<h2 class="section-title">
+Anime. Bishonen. Boys Love. Gifs.
+</h2>
+</section>
+
+<section class="intro">
+<h2 class="section-title">Cat ipsum dolor sit amet, <span class="text-primary">aspernatur</span> but ullamco for <span class="text-primary">aliquip</span>, commodo. </h2>
+</section>
+
+<section class="about-us">
+<header class="about-us__intro">
+<h2 class="section-title-small">
+<small>Quo aute numquam deserunt velitesse modi</small> for magna. Aut ipsum, ullamco dolor. </h2>
+</header>
+<div class="about-us__body">
+<p>Commodo laudantium. In dolore commodi or accusantium. Veniam nemo. Aliqua cupidatat but explicabo vitae laboriosam but architecto. Tempora nesciunt mollit. Exercitationem dolor so ratione, yet aut architecto illo. </p>
+<p>Et aliquam yet eaque yet eu doloremque aut excepteur. Nequeporro explicabo but nequeporro omnis, and vel and ab. Sed commodi or qui but amet but deserunt but aute, so enim.</p>
+</div>
+</section>
+
+<section class="order-online">
+<header>
+<h2 class="section-title text-primary">Meows when owner fills food dish </h2>
+<p>You call this cat food proudly present butt to human push your water glass on the floor for lick master's hand at first then bite because im moody or lies down attack feet. Human give me attention meow jumps off balcony gives owner dead mouse at present then poops in litter box.</p>
+<div class="btn-group">
+<a href="" class="btn btn-primary">Email</a>
+<a href="" class="btn btn-primary">Facebook</a>
+<a href="" class="btn btn-primary">Instagram</a>
+</div>
+</header>
+</section>
+
+<section class="product-showcase">
+<header>
+<h2 class="section-title text-primary">Cat ipsum dolor sit amet</h2>
+</header>
+<div class="products">
+<div class="product">
+
+<img src="https://66.media.tumblr.com/28da928149042c6a066bbf523ee2b4e8/tumblr_oyeo86Bdhw1vlvhpho2_500.gif" class="product__img">
+<div class="product__content">
+<h3 class="product-title">Cat ipsum dolor </h3>
+<p>Dolor officia for veniam yet sit nostrum. Corporis elit lorem or incidunt or eius so nemo minim. Reprehenderit suscipit and cillum laboris. Corporis quis, for elit or aspernatur for magnam. Cillum. </p>
+<p><strong>Veritatis</strong> eaque enim explicabo anim but eaque. Do aliquip so mollit or culpa. Velitesse ab dolore for mollit. Est do.</p>
+<p class="fine-print">Cat ipsum dolor </p>
+</div>
+</div>
+
+<div class="product">
+
+<img src="https://66.media.tumblr.com/6e3aca8c856bf26797660d3aeb4c7d47/tumblr_oyeo86Bdhw1vlvhpho5_540.gif" class="product__img">
+<div class="product__content">
+<h3 class="product-title">Cat ipsum dolor </h3>
+<p>Modi lorem voluptas but ullamco culpa. Cillum corporis. Perspiciatis aliquid so ratione or fugiat. Est commodo nequeporro but consectetur suscipit quisquam. </p>
+<p><strong>Non veniam.</strong> Ipsum consectetur. Commodi iure. Sed reprehenderit so aliquid and molestiae so eiusmod. Dolor modi. </p>
+<p class="fine-print">Cat ipsum dolor </p>
+</div>
+</div>
+
+<div class="product">
+
+<img src="https://66.media.tumblr.com/d3ebeacc650e74b208f35f5cd024a992/tumblr_oyeo86Bdhw1vlvhpho4_540.gif" class="product__img">
+<div class="product__content">
+<h3 class="product-title">Cat ipsum dolor </h3>
+<p>Excepteur voluptate. Cillum. Adipisicing quae et. Id ullam ab sed. Mollit eius minim molestiae et but doloremque or autem. Nostrum perspiciatis sit in for totam.</p>
+<p><strong>Tempora consectetur.</strong> Accusantium accusantium for excepteur or sint, for anim. Elit non and veniam mollit, excepteur id so iure. </p>
+<p class="fine-print">Cat ipsum dolor </p>
+</div>
+</div>
+</div>
+
+<div class="btn-group">
+<a href="" class="btn btn-accent">Cat ipsum dolor</a>
+</div>
+
+<p class="mob">Cat ipsum dolor</p>
+<div class="btn-group">
+
+<a href="" class="btn btn-primary">Cat ipsum dolorEmail</a>
+<a href="" class="btn btn-primary">Cat ipsum dolorFacebook</a>
+<a href="" class="btn btn-primary">Cat ipsum dolorInstagram</a>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+           <ul class="footer-nav">
+               <li><a href="">Home</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="">Connect</a></li>
+               <li><a href="">Products</a></li>
+           </ul>
+           
+           <ul class="footer-social">
+<li><a href="" class="social-link"><svg class="social-icon" viewBox="0 0 49.652 49.652" >
+
+		<path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+			C49.652,11.137,38.516,0,24.826,0z M33.219,36.659c-1.15,0.542-2.196,0.926-3.134,1.144c-0.936,0.217-1.944,0.328-3.032,0.328
+			c-1.233,0-1.963-0.156-2.91-0.467c-0.949-0.313-1.758-0.76-2.427-1.333c-0.672-0.577-1.134-1.19-1.393-1.839
+			c-0.259-0.65-0.389-1.593-0.389-2.828v-9.466h-3.668v-3.824c1.06-0.344,2.289-0.837,3.044-1.48
+			c0.758-0.645,1.365-1.416,1.82-2.318c0.461-0.899,0.775-2.048,0.948-3.438h3.839v6.241h6.241v4.82h-6.241v6.92
+			c0,1.565-0.021,2.471,0.146,2.914c0.166,0.44,0.578,0.899,1.027,1.164c0.601,0.358,1.28,0.538,2.049,0.538
+			c1.367,0,2.728-0.443,4.078-1.332v4.256H33.219L33.219,36.659z"/>
+
+</svg></a></li>
+           <li><a href="" class="social-link"><svg class="twitter-b" viewBox="0 0 612 612">
+ 
+		<path  d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+			c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+			c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+			c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+			c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+			c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+			c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"/>
+ 
+</svg> </a></li>
+ 
+           
+           </ul>
+</footer>
+
+</body>
+</html>
