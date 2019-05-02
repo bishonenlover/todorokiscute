@@ -42,6 +42,7 @@ font-family:'Roboto Condensed';
  svg{
 max-width:20px;
 box-sizing:content-box;
+cursor:pointer;
 }
 a{
 text-decoration:none;
@@ -64,12 +65,29 @@ background:white;
 
 }
 .menu{
+display:grid;
+grid-template-columns:repeat(6, 1fr);
+width:80%;
+margin:auto;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+.menu-2{
 display:flex;
 justify-content:space-evenly;
 align-items:center;
+grid-column:span 4;
+}
+.follow-b{
+grid-column:span 1;
+}
+.car{
+grid-column:span 1;
+ 
 }
 
-.menu a{
+.menu-2 a{
 color:#444;
 font-size:.9em;
 font-weight:600;
@@ -446,8 +464,73 @@ border:none;
 .wrapper, .container{
 width:100%;
 }
+.menu-2 a{
+all:unset;
+display:flex;
+width:100%;
+padding:calc(100vh / 6) 0;
+line-height:0;
+align-items:center;
+margin:0;
+font-size:1.1em;
+justify-content:center;
+}
+.menu-2 a:hover{
+background:#eee;
+cursor:pointer;
+}
+ .menu-2{
+line-height:0;
+all:unset;
+ position:fixed;
+ width:100%;
+ height:100%;
+ top:0;
+left:0;
+ background:white;
+ z-index:3;
+ display:none;
+ }
+  .open-menu{
+ display:block;
+ }
+ .menu{
+display:flex;
+ justify-content:space-between;
+ }
 
- 
+ .menu-toggle{
+	width:20px;
+	height:20px;
+	 position:relative;
+	display:flex;
+		justify-content:center;
+	align-items:center;
+	cursor:pointer;
+  z-index:9;
+    
+}
+.plus{
+	position:absolute;
+	width:25px;
+	height:4px;
+	background:#FF5C67;
+border-radius:5px;
+	transition:all ease-in-out .3s;
+}
+.plus::after{
+	content:' ';
+	position:absolute;
+	width:25px;
+	height:4px;
+    left:0;
+background:#FF5C67;
+	transform:rotate(90deg);
+ border-radius:5px;
+}
+.rotate{
+	transform:rotate(135deg);
+}
  
 }
 @media(max-width:450px){
@@ -474,11 +557,15 @@ font-size:1.2em;
  
  <div class="nav">
 <div class="menu">
+<div class="follow-b">
 <a class="follow" href="">+ Follow</a>
+</div>
+<div class="menu-2">
 <a href="">Sign In</a>
 <a href="">Shopping Guide</a>
 <a href="">Create Shop</a>
- 
+ </div>
+ <div class="car">
 <svg class="cart" viewBox="0 0 511.999 511.999">
 
 		<path d="M214.685,402.828c-24.829,0-45.029,20.2-45.029,45.029c0,24.829,20.2,45.029,45.029,45.029s45.029-20.2,45.029-45.029
@@ -502,8 +589,10 @@ font-size:1.2em;
 			C513.008,123.266,511.136,115.627,506.341,109.744z M451.69,296.301H135.619l-35.161-170.674l386.393,0.001L451.69,296.301z"/>
 
 </svg>
-
- 
+</div>
+<div class="menu-toggle">
+ <div class="plus"></div>
+ </div>
 </div><!-- menu -->
 </div><!-- nav -->
 <div class="content">
@@ -846,6 +935,16 @@ Bishonenlover
 </div>
 </div><!-- footer -->
 
-
+<script>
+function plus(){
+	const menu = document.querySelector('.menu-toggle');
+    const open = document.querySelector('.menu-2');
+	const plus = document.querySelector('.plus');
+	menu.addEventListener('click', _=>{
+    open.classList.toggle('open-menu');
+		plus.classList.toggle('rotate');
+	});
+}plus();
+</script>
 </body>
 </html>
