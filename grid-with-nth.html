@@ -1,0 +1,308 @@
+<!DOCTYPE html><!--
+
+
+
+by todorokiscute.tumblr.com
+
+
+
+
+--><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Grid with :nth-of-type() selector</title>
+<!-- scripts -->
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+ 
+
+</head>
+<style>
+ *{
+ box-sizing:border-box;
+ }
+ body{
+ margin:0;
+ font:.9em/1.5 'Roboto';
+ }
+ .container{
+ display:grid;
+ grid-template-columns:repeat(5, 1fr);
+ grid-template-rows:repeat(3, 1fr);
+ grid-gap:2px;
+ width:80%;
+ margin:2em auto;
+ grid-auto-flow:dense;
+ max-width:800px;
+ }
+ .item{
+ background:lavender;
+ height:40vh;
+ padding:1em;
+ overflow:hidden;
+ position:relative;
+ text-align:justify;
+ 
+ }
+ .item::after{
+ content:' ';
+ position:absolute;
+ width:100%;
+ height:1.4em;
+ bottom:0;
+ left:0;  
+ background:lavender;
+ z-index:1;
+ }
+ .overlay{
+ position:absolute;
+ width:100%;
+ height:100%;
+ background:rgba(250,250,250,0.5);
+ bottom:0;
+ right:0;
+ margin:auto;
+ padding:1em;
+ top:0;
+ left:0;
+ z-index:4;
+ visibility:hidden;
+ transition:visibility .6s, opacity .6s; 
+opacity:0;
+display:flex;
+justify-content:center;
+align-items:center;
+ }
+ .info{
+ width:80%;
+ font-weight:900;
+ font-size:1.2em;
+ margin:0 auto;
+ text-align:center;
+ 
+ }
+ .item:hover .overlay{
+ visibility:visible;
+opacity:1
+ }
+
+ .item img{
+ width:100%;
+ height:100%;
+position:absolute;
+top:0;
+object-fit:cover;
+left:0;
+ z-index:2;
+ 
+ }
+  
+ 
+ 
+ 
+ .ask{
+ background:thistle;
+ border-radius:4px;
+ padding:.5em;
+ margin-bottom:3em;
+ width:calc(100% - 20px);
+ position:relative;
+ 
+ }
+ .ask::after{
+ content:' ';
+ position:absolute;
+ border:4px solid transparent;
+ border-right-color:thistle;
+right:0;
+bottom:-5px;
+ }
+  .reply{
+ background:#facada;
+ border-radius:4px;
+ padding:.5em;
+ position:relative;
+ width:calc(100% - 20px);
+ margin-left:20px;
+ }
+ .reply::after{
+ content:' ';
+ position:absolute;
+ border:4px solid transparent;
+ border-left-color:#facada;
+left:0;
+bottom:-4px;
+ }
+ .ask-icon img,
+ .reply-icon img{
+ width:25px;
+ height:25px;
+
+ }
+ .ask-icon{
+ position:absolute;
+bottom:-.5em;
+right:1em;
+ }
+  .reply-icon{
+ position:absolute;
+bottom:-.5em;
+left:-.5em;
+ }
+.photoset-grid div{
+ display:none;
+}
+.photoset-grid div:first-of-type{
+display:block;
+}
+ 
+video{
+position: absolute;
+top:0;
+left: 0;
+bottom:0;
+right:0;
+margin:auto;
+width: 100%;
+height: 100%;
+z-index:3;
+object-fit:cover;
+}
+
+
+.item:nth-of-type(1){
+grid-column:1 / span 3;
+}
+.item:nth-of-type(2){
+grid-column:4 / span 2;
+}
+.item:nth-of-type(3){
+grid-column:1 / span 2;
+}
+.item:nth-of-type(4){
+grid-column:5 / span 1;
+}
+.item:nth-of-type(5){
+grid-column:3 / span 2;
+}
+.item:nth-of-type(6){
+grid-column:1 / span 2;
+}
+.item:nth-of-type(7){
+grid-column:3 / span 1;
+}
+.item:nth-of-type(8){
+grid-column:4 / span 2;
+}
+ 
+ @media(max-width:650px){
+ .container{
+ display:block;
+ 
+ }
+ .item + .item{
+ margin-top:4em;
+ }
+  
+ .overlay{
+  visibility:visible;
+opacity:1;
+height:30px;
+bottom:2em;
+top:100%;
+ }
+ }
+</style>
+</head>
+<body>
+
+ <div class="container">
+ <div class="item wide">
+  
+ <img src="https://i.imgur.com/vigkZha.gif">
+  <div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ <div class="item big"> I heard this rumor where the humans are our owners, pfft, what do they know?! get video posted to internet for chasing red dot howl on top of tall thing. . Murr i hate humans they are so annoying. Cough kitty loves pigs. Purr claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? i hate cucumber pls dont throw it at me. Spill litter box, scratch at owner, destroy all furniture, especially couch swat at dog licks paws lick the other cats or bite off I heard this rumor where the humans are our owners, pfft, what do they know?! get video posted to internet for chasing red dot howl on top of tall thing. . Murr i hate humans they are so annoying. Cough kitty loves pigs. Purr claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? i hate cucumber pls dont throw it at me. Spill litter box, scratch at owner, destroy all furniture, especially couch swat at dog licks paws lick the other cats or bite off 
+ <div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ <div class="item  two">
+ 
+ <div class="question">
+ 
+ <div class="ask">bla bla bla
+ <div class="ask-icon"><img src="https://66.media.tumblr.com/avatar_a395459e6e66_128.pnj"></div>
+ </div>
+ <div class="reply"> yes
+  <div class="reply-icon"><img src="https://66.media.tumblr.com/avatar_68aa18566c46_128.pnj"></div>
+ </div>
+ </div>
+ <div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ 
+ 
+ <div class="item">
+ <img src="https://66.media.tumblr.com/2da3458122d863489639ea821135355b/tumblr_pqrwbryi3m1vlvhpho3_500.gif">
+  <div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ <div class="item five"> 
+<video controls="">
+<source src="https://dl.dropbox.com/s/brz5699b4pyp5yr/rilakkuma.mp4" type="video/mp4">
+</video>
+<div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ <div class="item">
+ 
+ <div class="photoset-grid">
+ <div><img src="https://66.media.tumblr.com/50472920faed3881bf9fb2f401233a0c/tumblr_ppea23UB831vlvhpho1_540.gif"></div>
+  <div><img src="https://66.media.tumblr.com/5aa9aeb8880bfc40f159b0d9a08b36be/tumblr_ppea23UB831vlvhpho8_540.gif"></div>
+   <div><img src="https://66.media.tumblr.com/4f21ec571f492279d9941871a4d73d9f/tumblr_ppea23UB831vlvhpho10_540.gif"></div>
+ </div>
+ <div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ <div class="item">
+ I heard this rumor where the humans are our owners, pfft, what do they know?! get video posted to internet for chasing red dot howl on top of tall thing. . Murr i hate humans they are so annoying. 
+  <div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ 
+ <div class="item three">
+ <img src="https://66.media.tumblr.com/dfd93a6990c9baef4088edb8fe3afeed/tumblr_pqxdc4t6qP1vlvhpho2_540.gif">
+  <div class="overlay">
+ <div class="info">
+ date, notes, permalink, reblog, like
+ </div>
+  </div>
+ </div>
+ 
+ </div>
+ 
+</body>
+</html>
