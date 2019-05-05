@@ -135,10 +135,11 @@ Cat dog hate mouse eat string barf pillow no baths hate everything catch mouse a
 </div>
 <script>
 
-var open = document.querySelector('.popup-open')
-  var close = document.querySelector('.close, .popup')
-var popup = document.querySelector('.popup')
- 
+
+var open = document.querySelector('.popup-open');
+  var close = document.querySelector('.close');
+var popup = document.querySelector('.popup');
+
 
 open.addEventListener('click', function(){
 	popup.classList.toggle('opened');
@@ -148,9 +149,15 @@ document.body.classList.add("fix");
  
  
 close.addEventListener('click', function(){
- popup.classList.toggle('opened');
+ popup.classList.remove('opened');
  document.body.classList.remove("fix");
 })
+ 
+  window.addEventListener('click', function(e){
+  if (e.target == popup) {
+ popup.classList.remove('opened');
+  }
+});
  
  
 </script>
