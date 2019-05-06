@@ -1,0 +1,463 @@
+ <!DOCTYPE html> <!---
+
+
+
+☆ THEME BY BISHONENLOVER ☆
+
+
+
+---><html>
+<head>
+<link rel="shortcut icon" href="{PortraitUrl-128}"/>
+<title>Bishonenlover About Page Grid</title>
+ <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
+<script src='https://static.tumblr.com/hb9yb56/Y5qpdv7kt/tooltip.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet"/>
+ <link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
+<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+ <style>
+
+ 
+ {CustomCSS}
+ :root{
+--clr-light:#f5f5f5;
+--clr-dark-pink:#eaa8a8;
+--clr-accent:#ffb0bb;
+--clr-dark:#888;
+--clr-grey:#ece6e6;
+
+
+--ff-1:'Roboto';
+--ff-2:'Roboto Condensed';
+
+--fs-normal:1em;
+--fs-small:.9em;
+--fs-smaller:.8em;
+}
+ *{
+ box-sizing:border-box;
+ 
+ }
+  
+ body{
+ margin:0;
+ padding:0;
+ font:1em/1.8 var(--ff-1);
+ background:var(--clr-light);
+ cursor:default;
+ }
+ /* basics */
+ a{
+ color:var(--clr-dark-pink);
+ text-decoration:none;
+ transition:.5s;
+ }
+  a:hover{
+ color:var(--clr-accent);;
+ text-decoration:none;
+ transition:.5s;
+ cursor:pointer;
+ }
+ i, em{
+ color:var(--clr-dark);
+ }
+ b, strong{
+ color:var(--clr-dark-pink);
+ }
+ u{
+  color:var(--clr-accent);;
+ }
+ s, strike{
+ color:var(--clr-grey);
+ }
+ small{
+  color:var(--clr-accent);;
+ text-transform:uppercase;
+ }
+ *::selection{
+ background:var(--clr-accent);;
+  color:black;
+ }
+ ::-webkit-scrollbar{
+ width:10px;
+ height:0;
+border:4px solid var(--clr-light);
+background: var(--clr-accent);
+ }
+ ::-webkit-scrollbar-thumb{
+ background: var(--clr-accent);
+ }
+  
+
+/* all */
+.content{
+width:80%;
+margin:4em auto;
+  display:grid;
+  grid-template-columns:repeat(6, 12vw);
+  grid-template-rows:repeat(2, 10vh);
+  grid-auto-flow:dense;
+  place-items:start;
+  grid-gap:1em;
+  max-width:900px;
+ 
+}
+ 
+.box{
+  background:white;
+  border:1px solid var(--clr-grey);
+border-radius:4px;
+color:var(--clr-dark);
+font-family:var(--ff-1);
+  padding:1em;
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  flex-direction:column;
+     width:100%;
+ position:relative;
+  height:100%;
+  overflow:hidden;
+
+  
+}
+.gif{
+ 
+  grid-column:3 / span 4;
+  grid-row: span 4;
+}
+.description, .menu{  
+  grid-column:span 2;
+  
+ 
+  grid-row: span 2;
+}
+.description{
+  justify-content:center;
+  text-align:center;
+ 
+}
+.links{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-template-rows:repeat(3, 1fr);
+  grid-gap:.2em;
+  text-align:center;
+  width:100%;
+  height:100%;
+}
+.links a{
+  background:var(--clr-light);
+  padding:1em .5em;
+  font-size:var(--fs-smaller);
+  
+}
+.links a:nth-of-type(1){
+ grid-column:span 2;
+}
+.links a:nth-of-type(2){
+  grid-column:span 2;
+ 
+}
+ .links a:nth-of-type(3){
+   grid-column:span 4;
+
+}
+  .links a:nth-of-type(4){
+  grid-column:span 1;
+ 
+}
+  .links a:nth-of-type(5){
+  grid-column:span 3;
+ 
+}
+img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+ 
+}
+.about{
+  grid-column:span 6;
+  grid-row:span 1;
+}
+
+.blog, .details, .gifs-freak{
+  height:30vh;
+ grid-column:span 2;
+  grid-row:span 1;
+ 
+ 
+}
+.see{
+ position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(255, 176, 187, .4);
+  z-index:2;
+  display:grid;
+  place-items:center;
+  visibility:hidden;
+  opacity:0;
+  transition: visibility .3s, opacity .3s;
+}
+[class^="button-"]{
+  background:var(--clr-accent);
+  color:white;
+  padding:.3em .9em;
+  cursor:pointer;
+}
+
+.border::after{
+  content:'';
+  position:absolute;
+  height:1em;
+  background:white;
+  width:100%;
+  bottom:0;
+}
+.border:hover .see{
+  visibility:visible;
+  opacity:1;
+}
+
+h1{
+font-family:var(--ff-2);
+font-weight:100;
+text-align: center;
+font-size:1.8rem;
+color:;
+margin:0;
+padding:0;
+}
+ 
+ h2{
+ font-family:var(--ff-2);
+ font-weight:100;
+ font-size:1.5em;
+ }
+ 
+ 
+ 
+ 
+ .header{
+background:var(--clr-accent);
+width:100%;
+position:fixed;
+top:0;
+left:0;
+height:5vh;
+}
+ 
+ 
+.follow{
+position:fixed;
+top:8vh;
+right:1em;
+font-size:var(--fs-smaller);
+ }
+ .follow a{
+ background:white;
+ border:1px solid var(--clr-grey);
+ border-radius:3px;
+ padding:.5em .6em;
+ }
+
+.show-content{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(255, 176, 187, .8);
+  overflow:scroll;
+  height:100%;
+  z-index:7;
+  display:grid;
+  place-items:center;
+}
+ 
+.show-content .see{
+  display:none;
+}
+.close{
+  display:none;
+}
+.show-content [class^="close-"]{
+  display:block;
+  position:absolute;
+  top:1.5em;
+  right:1.5em;
+  cursor:pointer;
+  color:white;
+  font-size:1.5em;
+}
+ 
+.show-content p{
+  width:80%;
+  margin: 0 auto;
+  background:white;
+  padding:1em;
+ 
+}
+
+.show-content::after{
+  display:none;
+}
+
+
+.show-content img{
+  width:200px; 
+  display:block;
+  margin:0 auto;
+  
+}
+.content-3 p:nth-of-type(2){
+  background:transparent;
+}
+
+
+
+
+@media(max-width:740px){
+  .content{
+    display:block;
+  }
+  .content > div{
+    margin-bottom:2em;
+  }
+  .links a{
+    font-size:1em;
+  }
+  .see, [class^="close-"]{
+    display:none;
+  }
+  .box{
+    height:auto;
+    text-align:justify;
+  }
+ 
+ 
+}
+
+
+
+ 
+ </style>
+<body>
+ <div class="follow"><a href="https://www.tumblr.com/follow/bishonenlover" target="_blank">Follow</a></div>
+<div class="header">
+
+</div>
+<!-- all -->
+<div class="content">
+ 
+  <div class="box gif">
+    <img src="https://i.imgur.com/5GIMa5w.gif" alt="">
+  </div>
+<div class="box description">
+  Fernanda, gifmaker. Anime, bishonen and boys love
+  </div>
+  
+  
+  <div class="box menu">
+    <div class="links">
+      <a href="">Posts</a>
+      <a href="">Tags</a>
+      <a href="">Anime Planet</a>
+      <a href="">Links</a>
+      <a href="">MyAnimeList</a>
+    </div>
+  </div>
+  
+  <div class="box about">
+ <p>  I’m Fernanda, I love to watch animes. I’m obsessed with making gifs of everything and everyone I find cute. As you can see, I love bishonens and I love to gif them. I’m very passionate for BL, and I like to watch and gif even if its only a fanservice scene (ﾉ´ヮ´)ﾉ*: ･ﾟ.
+
+</p><p>Also, if you have any issue about fanservice in no-BL anime, please refrain yourself of come and say something, or add any commentary on my posts (or even reply my post, like a person did).  I really don’t care about fujoshi bait content ( ´థ౪థ) actually I like it. Make sure to understand that I don’t have actual OTPs in animes that are not romantic, and everything I post on my Boy x Boy tag (that are not canon couples) is only for fun, I want to have fun and is not forbbiden to have brotp ships in no-romantics anime, right?!.
+ </p> </div>
+  
+  <div class="box blog border content-1" data-box="db">
+    
+ <p>   I created this blog as an archive, to post the gifs I make while watching an anime, and to make easy to find it later by its anime name. The blog just started to grow up and have notes and followers, since I tagged the anime name or some character name. After see that there were actual people liking and reblogging my posts, I decided to make it more organized, with a neat tag system, withouth post so much in one day, and to not respond to anymous asks, to avoid spam in any kind.
+
+    </p><p>In this blog you’ll find only gifs of bishonens, anime scenes, BL, etc. If you want to block some of my tags, you can visit this page and see my most used tags (but please keep it in mind that this is my blog and I’m free to post whatever I want to). I don’t do warnings of a gifset spoiler (from an episode that aired just now). As I said above, my ask is closed for anonymous questions basically so I can maintain this blog clean and neat (I know how annoying is to enter a blog and there are tons of pages with people talking, and anonymous hate, and stuff like tat), which means I’m going to reply you in private and that’s okay, I’m a simple person just like you!
+    <b>This is a secondary blog, so I can't do followbacks!</b>
+  
+  <div class="see">
+    <div class="button-1" data-open="do"> see full</div>
+    </div>
+    <div class="close-1" data-close="dc">x</div>
+  </div>
+  
+  <div class="box details border content-2"  data-box="db">
+   <p> About all those technical details… I download animes from these sites. I use this to make all my gifs. I’m not very strict about copyrights, since I don’t own the anime episodes, I have no rights to demand credits if reposting (I’ll be sad if you repost and say it was you who made them, but that’s all). If you don’t claim as yours that’s fine. You can also use them as your icon, or on your theme, or wherever you want, there’s no need to credit me. If you add my gifs using the tumblr option, that’s great!, there’s no need to credit at all. :*(*❦ω❦)*:.
+
+</p><p>About this theme, I always make my own themes, I code everything I use in all my three blogs! I really love to coding, altough tumblr always pisses me off because is not always I can edit my stuff (sometimes I can’t even post!!!  (*≧m≦*) argh). Also, I’m always changing my theme!! You can see my coding stuff or coding talking in my main blog.
+ <div class="see">
+    <div class="button-2" data-open="do"> see full</div>
+    </div>
+    <div class="close-2" data-close="dc">x</div>
+  </div>
+  
+  <div class="box gifs-freak border content-3"  data-box="db">
+<p>    ☆ Here are some gifs that represents me so well:  ♥  ♥  ♥  ♥ ☆
+
+    </p><p><img class="imgur" src="https://66.media.tumblr.com/d7ae33edaeeb6a68055e1bdb09d13f06/tumblr_inline_pq0lk1F8jS1vow54i_540.png" alt="">
+
+    </p><p>Gifs?? I’m a gif freak. I love gifs, make gifs, see gifs. My imgur page has +12k gifs  ( ✧Д✧) YES!!, it says images but it’s only gifs. I love gifs. That’s all. Gifs.. gifs.. gifs.. ﾟ+｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡+ﾟ
+    </p>
+    <div class="see">
+    <div class="button-3" data-open="do"> see full</div>
+    </div>
+    <div class="close-3"  data-close="dc">x</div>
+  </div>
+</div><!-- all end-->
+ 
+ 
+ <script>
+ 
+ const  button1 = document.querySelector('.button-1');
+const  button2 = document.querySelector('.button-2');
+const  button3 = document.querySelector('.button-3');
+const content1 = document.querySelector('.content-1');
+const content2 = document.querySelector('.content-2');
+const content3 = document.querySelector('.content-3');
+const close1 = document.querySelector('.close-1');
+const close2 = document.querySelector('.close-2');
+const close3 = document.querySelector('.close-3');
+button1.addEventListener('click', function(){
+   content1.classList.add('show-content');
+ 
+});
+
+close1.addEventListener('click', function(){
+   content1.classList.remove('show-content');
+});
+
+button2.addEventListener('click', function(){
+   content2.classList.add('show-content');
+});
+
+close2.addEventListener('click', function(){
+   content2.classList.remove('show-content');
+});
+
+button3.addEventListener('click', function(){
+   content3.classList.add('show-content');
+});
+
+close3.addEventListener('click', function(){
+   content3.classList.remove('show-content');
+});
+
+
+ 
+
+
+</script>
+ </body>
+</html>
