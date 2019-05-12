@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,8 +42,12 @@ position:relative;
  .content{
  width:80%;
  margin:4em auto;
- max-width:500px;
+ max-width:800px;
  text-align:justify;
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ grid-gap:1em;
+ align-items:flex-start;
  }
  h1{
  font-weight:normal;
@@ -80,11 +85,19 @@ position:relative;
  }
  .box{
 background:white;
-margin-bottom:6em;
+margin-bottom:1em;
 box-shadow: 0 0 15px rgba(0,0,0,0.06);
 padding:2em;
 text-align:justify;
 
+}
+@media(max-width:730px){
+.content{
+grid-template-columns:1fr;
+}
+.box{
+margin-bottom:3em;
+}
 }
 </style>
 </head>
@@ -336,7 +349,31 @@ A responsive and simple layout using css grid and flexbox, featuring characters 
  
  </div>
             
+ <script>
  
+const masonryLayout = (containerElem, itemsElems, columns) => {
+  containerElem.classList.add('masonry-layout', `columns-${columns}`)
+  let columnsElements = []
+  
+  for( let i = 1; i <= columns; i++){
+    let column = document.createElement('div')
+    column.classList.add('masonry-column', `column-${i}`)
+    containerElem.appendChild(column)
+    columnsElements.push(column)
+  }
+  
+  for(let m = 0; m < Math.ceil(itemsElems.length / columns); m++){
+    for(let n = 0; n < columns; n++){
+      let item = itemsElems[ m * columns + n]
+      columnsElements[n].appendChild(item)
+      item.classList.add('masonry-item')
+    }
+  }
+}
+
+masonryLayout(document.querySelector('.content'),
+              document.querySelectorAll('.box'), 2)
+              </script>
 
 </body>
 </html>
