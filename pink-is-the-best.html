@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Pink is, indeed, the best!</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    :root {
+        --main: #ef81a0;
+        --dark: #444;
+        --light: #f5f5f5;
+        --light-2: #fed0d1;
+    }
+    
+    body {
+        background: var(--light);
+        margin: 0;
+        font: .9em/1.4 'Roboto';
+    }
+    
+    .content {
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1em;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+        position: relative;
+        padding-bottom: 2em;
+    }
+    
+    .content::after {
+        content: ' ';
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        top: 0;
+        left: 67%;
+        background: #ddd;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .top {
+        width: 100%;
+        height: 55px;
+        background: var(--main);
+        line-height: 0;
+    }
+    
+    .inner {
+        max-width: 800px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        margin: 0 auto;
+        line-height: 0;
+    }
+    
+    .name {
+        font-size: 1.6rem;
+        color: white;
+        font-family: 'Roboto Condensed';
+    }
+    
+    .header {
+        width: 100%;
+        height: 350px;
+        background: url(https://i.ibb.co/pR7YpRB/001.jpg) center / cover;
+        grid-column: span 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2em;
+        align-items: flex-start;
+        position: relative;
+        z-index: 3;
+    }
+    
+    .post {
+        grid-column: span 4;
+        padding: .5em 1em;
+        color: #444;
+        text-align: justify;
+    }
+    
+    p {
+        margin: 0;
+    }
+    
+    p + p {
+        margin-top: .5em;
+    }
+    
+    .sidebar {
+        grid-column: span 2;
+        order: 2;
+        padding: .5em 1em;
+    }
+    
+    .box {
+        margin-bottom: 2em;
+    }
+    
+    .title {
+        background: var(--main);
+        width: 100%;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .header-title,
+    .desc {
+        font-size: 1.7rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: .3em .7em;
+    }
+    
+    .desc {
+        font-size: 1em;
+        margin-top: 1em;
+        font-style: italic;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: #444;
+        padding: .4em .6em;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    
+    .menu a + a {
+        margin-left: 2em;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    @media(max-width:680px) {
+        .header {
+            height: 250px;
+        }
+        .header-title {
+            font-size: 1.3rem;
+        }
+        .post {
+            grid-column: span 6;
+        }
+        .content {
+            padding-bottom: 0;
+        }
+        .content::after {
+            display: none;
+        }
+        .sidebar {
+            grid-column: span 6;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+        .sidebar::after {
+            content: '';
+            position: absolute;
+            top: -.5em;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #ddd;
+        }
+        .box {
+            width: 30%;
+        }
+        .menu a + a {
+            margin-left: 1.3em;
+        }
+    }
+    
+    @media(max-width:450px) {
+        .top {
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+        }
+        .inner,
+        .content {
+            width: 94%;
+            max-width: none;
+        }
+        .content {
+            margin-top: 55px;
+        }
+        .header {
+            padding: 1em;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-title {
+            align-self: flex-start;
+            font-size: 1.2rem;
+        }
+        .desc {
+            align-self: flex-end;
+        }
+        .sidebar {
+            flex-direction: column;
+        }
+        .box {
+            width: 100%;
+            margin-bottom: 3em;
+        }
+        .menu {
+            all: unset;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: var(--main);
+            z-index: 9;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility .3s, opacity .3s;
+        }
+        .menu a + a {
+            margin: 0;
+        }
+        .menu a {
+            all: unset;
+            display: flex;
+            font-size: 1.5rem;
+            line-height: 0;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            flex-direction: column;
+            padding: calc(100vh / 8) 0;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .menu a:hover,
+        .menu a:focus {
+            background: var(--dark);
+        }
+        .menu-toggle {
+            line-height: 0;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 99999;
+        }
+        .hamburger,
+        .hamburger::before,
+        .hamburger::after {
+            content: ' ';
+            width: 35px;
+            height: 4px;
+            background: white;
+            position: relative;
+            display: block;
+            border-radius: 4px;
+            transition: all ease-in-out .3s;
+        }
+        .hamburger::before,
+        .hamburger::after {
+            position: absolute;
+        }
+        .hamburger::before {
+            top: -9px;
+        }
+        .hamburger::after {
+            top: 9px;
+        }
+        .menu-is-open {
+            visibility: visible;
+            opacity: 1;
+        }
+        .open.hamburger {
+            background: transparent;
+        }
+        .open::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        .open::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="top">
+        <div class="inner">
+            <div class="name">Page</div>
+            <div class="menu">
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+            </div>
+            <div class="menu-toggle" onclick="openMenu()">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="header-title">Page's title goes here</div>
+            <div class="desc">Description</div>
+        </div>
+        <div class="sidebar">
+
+            <div class="box">
+                <div class="title">Sidebar Title</div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nemo.</div>
+            <div class="box">
+                <div class="title">Sidebar Title</div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nemo.</div>
+            <div class="box">
+                <div class="title">Sidebar Title</div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nemo.</div>
+        </div>
+        <div class="post">
+            <img src="https://i.ibb.co/zGDSd2Y/9P1OwCO.jpg" alt="" class="post-image">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas ullam temporibus asperiores doloribus aut dignissimos consectetur et, voluptates, voluptatum a eligendi ipsa quasi excepturi hic nisi explicabo ex, incidunt debitis totam.</p>
+            <p>Voluptatem dolorem ducimus autem doloribus, sapiente est magnam quaerat quos fugit ipsa quasi vitae numquam temporibus saepe consequatur vero error deleniti repellendus recusandae. Non ipsam deserunt necessitatibus dolor, incidunt aut numquam officia, quam minima dolore officiis dicta esse libero accusantium. Sit dignissimos alias repudiandae id et quisquam, sed repellendus.
+            </p>
+        </div>
+    </div>
+    <script>
+        const button = document.querySelector(".menu-toggle");
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu");
+
+        function openMenu() {
+            menu.classList.toggle("menu-is-open");
+            hamburger.classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>
