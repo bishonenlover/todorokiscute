@@ -1,402 +1,432 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>My Codes</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
-<link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png"/>
-<style>
-*, *::after, *::before{
-box-sizing: border-box;
-}
-
-body {
-margin:0;
-font:1em/1.8 'Roboto';
-cursor:default;
-background:rgba(230, 230, 250,.3);
-color:#444;
-}
-blockquote{
-padding:.6em .8em;
-margin:auto;
-color:#444;
-font-style:italic;
-background: #faebd7;
- font-size:.9em;
-}
-p{
-margin:.1em;
-
-}
-a{
-color:lightcoral;
-text-decoration:none;
-position:relative;
-}
-  
- .content{
- width:80%;
- margin:4em auto;
- max-width:800px;
- text-align:justify;
- display:grid;
- grid-template-columns:1fr 1fr;
- grid-gap:1em;
- align-items:flex-start;
- }
- *::selection{
- background: #faebd7;
- color:black;
- }
- ::-webkit-scrollbar{
- background:#eaa8a8;
- border:4px solid #f7f7fd;
- width:10px;
- height:0;
- }
- ::-webkit-scrollbar-thumb{
- background:#faebd7;
- border:1px solid #eaa8a8;
- }
- h1{
- font-weight:normal;
- font-family:'Roboto Condensed';
- font-size:2.3em;
- text-align:center;
- margin:0;
- }
- 
- b{
- font-weight:normal;
-  font-family:'Roboto Condensed';
-  font-size:1.3em;
-  vertical-align:middle;
-  display:block;
- }
- .button{
- text-align:right;
- margin-top:1em;
-  font-family:'Roboto Condensed';
- 
- }
- .button a{
- background:#faebd7;
- padding:.5em .8em;
- border-radius:4px;
- color:#eaa8a8;
- border:1px solid #faebd7;
- transition:all ease-in-out .3s;
- font-size:.9em;
- }
- .button a:hover{
- background:white;
- border:1px solid #eaa8a8;
- }
- .box{
-background:white;
-margin-bottom:1em;
-box-shadow: 0 0 15px rgba(0,0,0,0.06);
-padding:2em;
-text-align:justify;
-
-}
-@media(max-width:730px){
-.content{
-grid-template-columns:1fr;
-}
-.box{
-margin-bottom:3em;
-}
-}
-</style>
+    <title>My Codes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://i.imgur.com/5J0SfIs.png" />
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font: 1em/1.8 'Roboto';
+            cursor: default;
+            background: rgba(230, 230, 250, .3);
+            color: #444;
+        }
+        
+        blockquote {
+            padding: .6em .8em;
+            margin: auto;
+            color: #444;
+            font-style: italic;
+            background: #faebd7;
+            font-size: .9em;
+        }
+        
+        p {
+            margin: .1em;
+        }
+        
+        a {
+            color: lightcoral;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .content {
+            width: 80%;
+            margin: 4em auto;
+            max-width: 800px;
+            text-align: justify;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+            align-items: flex-start;
+        }
+        
+        *::selection {
+            background: #faebd7;
+            color: black;
+        }
+        
+        ::-webkit-scrollbar {
+            background: #eaa8a8;
+            border: 4px solid #f7f7fd;
+            width: 10px;
+            height: 0;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #faebd7;
+            border: 1px solid #eaa8a8;
+        }
+        
+        h1 {
+            font-weight: normal;
+            font-family: 'Roboto Condensed';
+            font-size: 2.3em;
+            text-align: center;
+            margin: 0;
+        }
+        
+        b {
+            font-weight: normal;
+            font-family: 'Roboto Condensed';
+            font-size: 1.3em;
+            vertical-align: middle;
+            display: block;
+        }
+        
+        .button {
+            text-align: right;
+            margin-top: 1em;
+            font-family: 'Roboto Condensed';
+        }
+        
+        .button a {
+            background: #faebd7;
+            padding: .5em .8em;
+            border-radius: 4px;
+            color: #eaa8a8;
+            border: 1px solid #faebd7;
+            transition: all ease-in-out .3s;
+            font-size: .9em;
+        }
+        
+        .button a:hover {
+            background: white;
+            border: 1px solid #eaa8a8;
+        }
+        
+        .box {
+            background: white;
+            margin-bottom: 1em;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+            padding: 2em;
+            text-align: justify;
+        }
+        
+        @media(max-width:730px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            .box {
+                margin-bottom: 3em;
+            }
+        }
+    </style>
 </head>
+
 <body>
- <div class="content">
- <div class="box">
-<h1>My Codes </h1>
-<blockquote>This is a repository to host some layouts types I've learned and made while following tutorials.
-</blockquote> 
-</div><!-- box -->
-<div class="box">
- <b> ☆ My First Jquery Code:</b> This is the first code I write, basing with jquery basics <i>.click, .toggleClass(), .hide()    and .show().</i> I can't believe I just started the script with $(".btn-menu").click(function(){ and tried a few          things I've learned so far and actually wrote my own very first jquery code.  
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/jqcode.html" target="_blank">view</a>
- </div>
- </div><!-- box -->
-<div class="box">
-   
- <b> ☆ A facebook inspired post style:</b>  This was really cool and funny to made.  
-  And I was very impressed on how less time I used to code this little thing.
- 
-  credits to flaticon.com for the svg icons.  
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/fb-post.html" target="_blank">view</a>
-</div>
- </div><!-- box -->
-<div class="box">
-
- <b> ☆ My first pop up box written with Jquery:</b> I wrote from scratch yeassssssssss  
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/pop-up-box.html" target="_blank">view</a>
-</div>
-</div><!-- box -->
-<div class="box">
-
-<b> ☆ Abeno's Porfolio:</b>  This is a site result of <a href="https://www.youtube.com/watch?v=dRuMoGNcJfw&list=PL4-IK0AVhVjNRKd4KBrXHpNtmMvR0qYz4" target="_blank">this tutorial</a> by Kevin Powell on how to make a portfolio with slide navigation and a modal gallery. 
-  The character on the 'Porfolio' is <i>Abeno Haruitsuki</i> from the anime <i>Fukigen na Mononokean</i>  
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/abenos-portfolio.html" target="_blank">view</a>
-</div>
-</div><!-- box -->
-<div class="box">
-   
- <b> ☆ Image animation on scroll:</b>  It was a tutorial I've learned with this <a href="https://www.youtube.com/user/origamidlabs" target="_blank">brazilian youtube channel</a>.  
- 
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/animation-scroll.html" target="_blank">view</a>
- </div>
-</div><!-- box -->
-<div class="box">
-
- <b> ☆ CSS Grid Layout with Column-Count:</b>  Was a tutorial I've refreshed my memory with this <a href="https://w3bits.com/css-masonry/" target="_blank">site</a>.  
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/grid-layout.html" target="_blank">view</a>
-</div>
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ My first Sticky with Javascript:</b> The first javascript code I wrote ever!!! I've tried some js things I've learned in the past week and came up alone, with a sticky sidebar on scroll effect!!!  
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/first-js-sticky.html" target="_blank">view</a>
-</div>
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ My first Pop Up Box with Javascript:</b>  After doing the sticky sidebar with javascript only, I tried a few things and could create a click show and hide box, a popup box with fade in and out effects!! 
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/first-js-popup.html"  target="_blank">view</a>
-</div>
- 
-</div><!-- box -->
-<div class="box">
- 
- <b> ☆ Posts changing content to a menu content</b> It was inspired by those false iframe menu that was trend in tumblrs of tutorials, back in 2013. 
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/change-content.html"  target="_blank">view</a>
-</div>
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ Menu Fake Iframe</b>  Since I wrote a post content that changes into a menu content, based on the <a href="https://www.google.com/search?q=menu+falso+iframe&oq=menu+falso+iframe&aqs=chrome..69i57j69i60.3155j1j7&sourceid=chrome&ie=UTF-8" target="_blank">fake iframe tutorial</a>, I decided to make the actual menu fake iframe following some of these tutorials. I created nothing here. 
- 
- 
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/fakeiframe.html" target="_blank">view</a>
- </div>
- 
-  </div><!-- box -->
-<div class="box">
- 
- <b> ☆ My Hamburger Menu with Pure Javascript</b>  I just made a hamburger menu with javascript only! <p>The horizontal menu changes to a full page and vertical menu on mobile.  
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/js-hamburger.html" target="_blank">view</a>
- </div>
- 
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ Horizontal Layout with Display Grid</b>   A responsive horizontal layout using display grid. 
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/horizontal-grid.html" target="_blank">view</a>
-</div>
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ Cool Sidebar</b>   A simple responsive layout with a cool sidebar style.  
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/cool-sidebar.html" target="_blank">view</a>
-</div>
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ Grid Layout with Grid Menus</b>   A simple and responsive grid layout with some grid menus inside of the boxes. 
- 
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/grid-layout-menus.html" target="_blank">view</a>
- </div>
-</div><!-- box -->
-<div class="box">
- 
- <b> ☆ Sticky sidebar in a Grid Layout</b> A simple and responsive grid layout, and the sidebar sticks on top when scrolled, using position sticky.  
- 
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/sticky-grid-layout.html" target="_blank">view</a> 
- </div>
- 
-  </div><!-- box -->
-<div class="box">
- 
- <b> ☆ Sidebar Examples</b>  Some simple examples of sidebar (mostly the welcome gif/description).  
-
-<div class="button">
-<a href="https://bishonenlover.github.io/todorokiscute/sidebar-examples.html" target="_blank">view</a>
-</div>
- 
- 
- 
- 
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ Display Grid with Javascript</b>   A simple two columns grid layout fixing height issues with javascript. This layout I did while following <a href="https://www.youtube.com/watch?v=DEXKAUrl2q0&list=WL&index=2&t=2109s" target="_blank">this youtube tutorial</a>. 
- 
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/js-grid.html" target="_blank">view</a>
- </div>
- 
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ A story with css</b>  An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell. I didn't know position sticky could as useful and cool as this.  
- 
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/sticky-story.html" target="_blank">view</a>
- </div>
- </div><!-- box -->
-<div class="box">
- 
- <b> ☆ Javascript Lightbox</b>  This is really really really weird lightbox script I just wrote. It's really funny and I don't know how I cannot get repetitive but, well, that worked! lol  
- 
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/js-lightbox" target="_blank">view</a>
- </div>
-
- </div><!-- box -->
-  
-  <div class="box">
- 
- <b> ☆ Colors Full Page</b> I decided to split the colors page into two: one with my fave colors for real, and other for colors I think is cute but are not my faves.
- <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/colors-full.html" target="_blank">view</a>
- </div>
-
- </div><!-- box -->
-  
-  
-   <div class="box">
- 
- <b> ☆ Responsive Portfolio Mobile First</b> 
-One of the first ones responsives layouts I made while following responsive tutorials. This one is the result of following this <a href="https://www.youtube.com/watch?v=XsEnj-1hG2o">tutorial</a>
-    on youtube. I was trying to figure out the 'mobile first' layout. <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/responsive-portfolio.html" target="_blank">view</a>
- </div>
-
- </div><!-- box -->
-   
-    <div class="box">
- 
- <b> ☆ Fun Grid</b> 
-Trying new things with grid-column and grid-row to make a grid layout. <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/fun-grid.html" target="_blank">view</a>
- </div>
-
- </div><!-- box -->
-  
-    
-    <div class="box">
- 
- <b> ☆ Grid with some Tumblr Posts</b> 
-Altough display grid is not the best to tumblr (or other blogs) posts, I tried to make a grid layout using some of my blog's posts as examples. I think is very nice, but is not perfect for blogs. I recommend column-count, even though it will change the posts order.
-   <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/tumblr-posts-grid.html" target="_blank">view</a>
- </div>
-
- </div><!-- box -->
-  
-  
-  
-      <div class="box">
- 
- <b> ☆ Hoozuki no Reitetsu Layout</b> 
-A responsive and simple layout using css grid and flexbox, featuring characters from the anime Hoozuki no Reitetsu. The layout was inspired by <a href="https://www.youtube.com/watch?v=TByfwPhM7gY" target="blank">this youtube video</a>. Since I made the coding on my own, when he updated with the <a href="https://www.youtube.com/watch?v=zyNhxN6sToM">coding process</a>, I decided to follow the tutorial as well, to see things I did different, or similar, etc. 
-   <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/hoozuki-no-reitetsu.html" target="_blank">view ver 1</a>   <a href="https://bishonenlover.github.io/todorokiscute/hoozuki-no-reitetsu-2.html" target="_blank">view ver 2</a> 
- </div>
-
- </div><!-- box -->
-  
-     <div class="box">
- 
- <b> ☆ Ten Count Site Inspired Layout</b> 
-      A responsive and simple layout ispired by the <a href="https://10count-official.booth.pm/">shop site</a> of manga (and soon anime) Ten Count. I used css grid, flexbox and lots of position absolute/relative in some of the parts of the layout. It was fun!
-   <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/ten-count.html" target="_blank">view</a>
- </div>
-
- </div><!-- box -->
-  
-  
-       <div class="box">
- 
- <b> ☆ Tumblr posts as a mosaic grid layout</b> 
-     I just tried a different thing using display grid with actual posts on tumblr. Instead of trying to figure out which size each post must have, i just trew a nth-of-type stuff and forced the post to fit that part of the grid, and hid things with overflow hidden. It has option to hover the post and see links to like, reblog and permalink (which should be a full ver of the post.
-   <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/grid-with-nth.html" target="_blank">view</a>
- </div>
-
- </div><!-- box -->
-  
+    <div class="content">
         <div class="box">
- 
- <b> ☆ Bishonenlover About Page</b> 
- An about page inspired by the current theme of the blog <a href="https://bishonenlover.tumblr.com/" target="_blank">bishonenlover</a>. In addition, the last three boxes, that had the contents hidden, show said contents when clicking, as a popup box kind of. 
-   <div class="button">
- <a href="https://bishonenlover.github.io/todorokiscute/bishonenlover-about-page-grid.html" target="_blank">view</a>
- </div>
+            <h1>My Codes </h1>
+            <blockquote>This is a repository to host some layouts types I've learned and made while following tutorials.
+            </blockquote>
+        </div>
+        <!-- box -->
+        <div class="box">
+            <b> ☆ My First Jquery Code:</b> This is the first code I write, basing with jquery basics <i>.click, .toggleClass(), .hide()    and .show().</i> I can't believe I just started the script with $(".btn-menu").click(function(){ and tried a few things I've learned so far and actually wrote my own very first jquery code.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/jqcode.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
 
- </div><!-- box -->
- </div>
-            
- <script>
- 
-const masonryLayout = (containerElem, itemsElems, columns) => {
-  containerElem.classList.add('masonry-layout', 'columns-${columns}')
-  let columnsElements = []
-  
-  for( let i = 1; i <= columns; i++){
-    let column = document.createElement('div')
-    column.classList.add('masonry-column', 'column-${i}')
-    containerElem.appendChild(column)
-    columnsElements.push(column)
-  }
-  
-  for(let m = 0; m < Math.ceil(itemsElems.length / columns); m++){
-    for(let n = 0; n < columns; n++){
-      let item = itemsElems[ m * columns + n]
-      columnsElements[n].appendChild(item)
-      item.classList.add('masonry-item')
-    }
-  }
-}
+            <b> ☆ A facebook inspired post style:</b> This was really cool and funny to made. And I was very impressed on how less time I used to code this little thing. credits to flaticon.com for the svg icons.
 
-masonryLayout(document.querySelector('.content'),
-              document.querySelectorAll('.box'), 2)
-              </script>
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/fb-post.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ My first pop up box written with Jquery:</b> I wrote from scratch yeassssssssss
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/pop-up-box.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Abeno's Porfolio:</b> This is a site result of <a href="https://www.youtube.com/watch?v=dRuMoGNcJfw&list=PL4-IK0AVhVjNRKd4KBrXHpNtmMvR0qYz4" target="_blank">this tutorial</a> by Kevin Powell on how to make a portfolio with slide navigation and a modal gallery. The character on the 'Porfolio' is <i>Abeno Haruitsuki</i> from the anime <i>Fukigen na Mononokean</i>
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/abenos-portfolio.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Image animation on scroll:</b> It was a tutorial I've learned with this <a href="https://www.youtube.com/user/origamidlabs" target="_blank">brazilian youtube channel</a>.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/animation-scroll.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ CSS Grid Layout with Column-Count:</b> Was a tutorial I've refreshed my memory with this <a href="https://w3bits.com/css-masonry/" target="_blank">site</a>.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/grid-layout.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ My first Sticky with Javascript:</b> The first javascript code I wrote ever!!! I've tried some js things I've learned in the past week and came up alone, with a sticky sidebar on scroll effect!!!
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/first-js-sticky.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ My first Pop Up Box with Javascript:</b> After doing the sticky sidebar with javascript only, I tried a few things and could create a click show and hide box, a popup box with fade in and out effects!!
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/first-js-popup.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Posts changing content to a menu content</b> It was inspired by those false iframe menu that was trend in tumblrs of tutorials, back in 2013.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/change-content.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Menu Fake Iframe</b> Since I wrote a post content that changes into a menu content, based on the <a href="https://www.google.com/search?q=menu+falso+iframe&oq=menu+falso+iframe&aqs=chrome..69i57j69i60.3155j1j7&sourceid=chrome&ie=UTF-8" target="_blank">fake iframe tutorial</a>, I decided to make the actual menu fake iframe following some of these tutorials. I created nothing here.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/fakeiframe.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ My Hamburger Menu with Pure Javascript</b> I just made a hamburger menu with javascript only!
+            <p>The horizontal menu changes to a full page and vertical menu on mobile.
+                <div class="button">
+                    <a href="https://bishonenlover.github.io/todorokiscute/js-hamburger.html" target="_blank">view</a>
+                </div>
+
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Horizontal Layout with Display Grid</b> A responsive horizontal layout using display grid.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/horizontal-grid.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Cool Sidebar</b> A simple responsive layout with a cool sidebar style.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/cool-sidebar.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Grid Layout with Grid Menus</b> A simple and responsive grid layout with some grid menus inside of the boxes.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/grid-layout-menus.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Sticky sidebar in a Grid Layout</b> A simple and responsive grid layout, and the sidebar sticks on top when scrolled, using position sticky.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/sticky-grid-layout.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Sidebar Examples</b> Some simple examples of sidebar (mostly the welcome gif/description).
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/sidebar-examples.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Display Grid with Javascript</b> A simple two columns grid layout fixing height issues with javascript. This layout I did while following <a href="https://www.youtube.com/watch?v=DEXKAUrl2q0&list=WL&index=2&t=2109s" target="_blank">this youtube tutorial</a>.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/js-grid.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ A story with css</b> An engaging story with css, using position sticky, while following <a href="https://www.youtube.com/watch?v=ErSwQhrfbuc" target="_blank">this youtube tutorial</a> by Kevin Powell. I didn't know position sticky could as useful and cool as this.
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/sticky-story.html" target="_blank">view</a>
+            </div>
+        </div>
+        <!-- box -->
+        <div class="box">
+
+            <b> ☆ Javascript Lightbox</b> This is really really really weird lightbox script I just wrote. It's really funny and I don't know how I cannot get repetitive but, well, that worked! lol
+
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/js-lightbox" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Colors Full Page</b> I decided to split the colors page into two: one with my fave colors for real, and other for colors I think is cute but are not my faves.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/colors-full.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Responsive Portfolio Mobile First</b> One of the first ones responsives layouts I made while following responsive tutorials. This one is the result of following this <a href="https://www.youtube.com/watch?v=XsEnj-1hG2o">tutorial</a> on youtube. I was trying to figure out the 'mobile first' layout.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/responsive-portfolio.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Fun Grid</b> Trying new things with grid-column and grid-row to make a grid layout.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/fun-grid.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Grid with some Tumblr Posts</b> Altough display grid is not the best to tumblr (or other blogs) posts, I tried to make a grid layout using some of my blog's posts as examples. I think is very nice, but is not perfect for blogs. I recommend column-count, even though it will change the posts order.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/tumblr-posts-grid.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Hoozuki no Reitetsu Layout</b> A responsive and simple layout using css grid and flexbox, featuring characters from the anime Hoozuki no Reitetsu. The layout was inspired by <a href="https://www.youtube.com/watch?v=TByfwPhM7gY" target="blank">this youtube video</a>. Since I made the coding on my own, when he updated with the <a href="https://www.youtube.com/watch?v=zyNhxN6sToM">coding process</a>, I decided to follow the tutorial as well, to see things I did different, or similar, etc.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/hoozuki-no-reitetsu.html" target="_blank">view ver 1</a> <a href="https://bishonenlover.github.io/todorokiscute/hoozuki-no-reitetsu-2.html" target="_blank">view ver 2</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Ten Count Site Inspired Layout</b> A responsive and simple layout ispired by the <a href="https://10count-official.booth.pm/">shop site</a> of manga (and soon anime) Ten Count. I used css grid, flexbox and lots of position absolute/relative in some of the parts of the layout. It was fun!
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/ten-count.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Tumblr posts as a mosaic grid layout</b> I just tried a different thing using display grid with actual posts on tumblr. Instead of trying to figure out which size each post must have, i just trew a nth-of-type stuff and forced the post to fit that part of the grid, and hid things with overflow hidden. It has option to hover the post and see links to like, reblog and permalink (which should be a full ver of the post.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/grid-with-nth.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Bishonenlover About Page</b> An about page inspired by the current theme of the blog <a href="https://bishonenlover.tumblr.com/" target="_blank">bishonenlover</a>. In addition, the last three boxes, that had the contents hidden, show said contents when clicking, as a popup box kind of.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/bishonenlover-about-page-grid.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+        <div class="box">
+
+            <b> ☆ Pink is, indeed, the best!</b> A simple but powerfull responsive layout with a strong pink color as accent. It was used a lot of css grid and flexbox to build it. It also has a hamburger menu when on small screens.
+            <div class="button">
+                <a href="https://bishonenlover.github.io/todorokiscute/pink-is-the-best.html" target="_blank">view</a>
+            </div>
+
+        </div>
+        <!-- box -->
+
+    </div>
+
+    <script>
+        const masonryLayout = (containerElem, itemsElems, columns) => {
+            containerElem.classList.add('masonry-layout', 'columns-${columns}')
+            let columnsElements = []
+
+            for (let i = 1; i <= columns; i++) {
+                let column = document.createElement('div')
+                column.classList.add('masonry-column', 'column-${i}')
+                containerElem.appendChild(column)
+                columnsElements.push(column)
+            }
+
+            for (let m = 0; m < Math.ceil(itemsElems.length / columns); m++) {
+                for (let n = 0; n < columns; n++) {
+                    let item = itemsElems[m * columns + n]
+                    columnsElements[n].appendChild(item)
+                    item.classList.add('masonry-item')
+                }
+            }
+        }
+
+        masonryLayout(document.querySelector('.content'),
+            document.querySelectorAll('.box'), 2)
+    </script>
 
 </body>
+
 </html>
