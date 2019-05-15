@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,6 +49,20 @@ position:relative;
  grid-template-columns:1fr 1fr;
  grid-gap:1em;
  align-items:flex-start;
+ }
+ *::selection{
+ background: #faebd7;
+ color:black;
+ }
+ ::-webkit-scrollbar{
+ background:#eaa8a8;
+ border:4px solid #f7f7fd;
+ width:10px;
+ height:0;
+ }
+ ::-webkit-scrollbar-thumb{
+ background:#faebd7;
+ border:1px solid #eaa8a8;
  }
  h1{
  font-weight:normal;
@@ -360,12 +375,12 @@ A responsive and simple layout using css grid and flexbox, featuring characters 
  <script>
  
 const masonryLayout = (containerElem, itemsElems, columns) => {
-  containerElem.classList.add('masonry-layout', `columns-${columns}`)
+  containerElem.classList.add('masonry-layout', 'columns-${columns}')
   let columnsElements = []
   
   for( let i = 1; i <= columns; i++){
     let column = document.createElement('div')
-    column.classList.add('masonry-column', `column-${i}`)
+    column.classList.add('masonry-column', 'column-${i}')
     containerElem.appendChild(column)
     columnsElements.push(column)
   }
