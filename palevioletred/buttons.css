@@ -1,0 +1,48 @@
+body{
+    background:honeydew;
+    font:.9rem / 1.6 'Roboto';
+}
+*{
+    box-sizing:border-box;
+}
+.box{
+width:300px;
+background:white;
+padding:1em;
+margin:2em auto;
+border-radius:4px;
+box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.1) ;
+text-align:justify;
+}
+.buttons{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    margin-top:1em;
+}
+.buttons svg{
+    box-sizing:content-box;
+ border-radius:4px;
+fill:white;
+background:orangered;
+padding:.6em;
+--size:18px;
+width:var(--size);
+height:var(--size);
+cursor:pointer;
+transition:all 0.3s;
+ border-radius:100%;
+}
+svg.like,
+svg.reblog{
+    width:12px;
+    height:12px;
+}
+ 
+.buttons svg+svg{
+    margin-left:.3em;
+}
+.buttons svg:hover{
+    fill:black;
+}
+ 
